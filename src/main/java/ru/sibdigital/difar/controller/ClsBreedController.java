@@ -1,11 +1,10 @@
 package ru.sibdigital.difar.controller;
 
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-import ru.sibdigital.difar.domain.ClsBreedEntity;
-import ru.sibdigital.difar.repository.ClsBreedRepository;
+import org.springframework.web.bind.annotation.*;
+import ru.sibdigital.difar.domain.catalog.ClsBreedEntity;
+import ru.sibdigital.difar.repository.catalog.ClsBreedRepository;
+
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/breed")
@@ -21,4 +20,18 @@ public class ClsBreedController {
     public void create(@RequestBody ClsBreedEntity breed) {
         clsBreedRepository.save(breed);
     }
+
+    @GetMapping("/{id}")
+    public ClsBreedEntity read(@PathVariable long id) {
+        Optional<ClsBreedEntity> breedOptional = clsBreedRepository.findById(id);
+
+        return breedOptional.orElse(null);
+    }
+
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable long id) {
+        Optional<ClsBreedEntity> breedOptional = clsBreedRepository.findById(id);
+        breedOptional.ifPresent(clsBreedEntity -> clsBreedRepository.delete(clsBreedEntity));
+    }
+
 }

@@ -1,0 +1,16 @@
+\include_relative ./base/create0.sql
+\include_relative ./dict/create1.sql
+\include_relative ./org/create2.sql
+\include_relative ./accs/create3.sql
+\include_relative ./dict/create4.sql
+\include_relative ./org/create5.sql
+\include_relative ./agrc/create6.sql
+\include_relative ./agrc/create7.sql
+\include_relative ./agrc/create8.sql
+\include_relative ./agrc/create9.sql
+\include_relative ./agrc/create10.sql
+\include_relative ./breed/create11.sql
+\include_relative ./breed/create12.sql
+\include_relative ./breed/create13.sql
+\include_relative ./fill_defaults14.sql
+\include_relative ./fill_defaults15.sql

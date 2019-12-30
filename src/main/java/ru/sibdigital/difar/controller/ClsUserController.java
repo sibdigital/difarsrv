@@ -1,8 +1,8 @@
 package ru.sibdigital.difar.controller;
 
 import org.springframework.web.bind.annotation.*;
-import ru.sibdigital.difar.domain.ClsUserEntity;
-import ru.sibdigital.difar.repository.ClsUserRepository;
+import ru.sibdigital.difar.domain.catalog.ClsUserEntity;
+import ru.sibdigital.difar.repository.catalog.ClsUserRepository;
 
 import java.util.Map;
 import java.util.Optional;
@@ -44,7 +44,7 @@ public class ClsUserController {
     @DeleteMapping("/{id}")
     public void delete(@PathVariable long id) {
         Optional<ClsUserEntity> userOptional = clsUserRepository.findById(id);
-
         userOptional.ifPresent(clsUserEntity -> clsUserRepository.delete(clsUserEntity));
     }
+
 }

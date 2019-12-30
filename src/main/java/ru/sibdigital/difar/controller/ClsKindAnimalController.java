@@ -1,11 +1,10 @@
 package ru.sibdigital.difar.controller;
 
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-import ru.sibdigital.difar.domain.ClsKindAnimalEntity;
-import ru.sibdigital.difar.repository.ClsKindAnimalRepository;
+import org.springframework.web.bind.annotation.*;
+import ru.sibdigital.difar.domain.catalog.ClsKindAnimalEntity;
+import ru.sibdigital.difar.repository.catalog.ClsKindAnimalRepository;
+
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/kind")
@@ -21,4 +20,18 @@ public class ClsKindAnimalController {
     public void create(@RequestBody ClsKindAnimalEntity kindAnimal) {
         clsKindAnimalRepository.save(kindAnimal);
     }
+
+    @GetMapping("/{id}")
+    public ClsKindAnimalEntity read(@PathVariable long id) {
+        Optional<ClsKindAnimalEntity> kindAnimalOptional = clsKindAnimalRepository.findById(id);
+
+        return kindAnimalOptional.orElse(null);
+    }
+
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable long id) {
+        Optional<ClsKindAnimalEntity> kindAnimalOptional = clsKindAnimalRepository.findById(id);
+        kindAnimalOptional.ifPresent(clsBreedEntity -> clsKindAnimalRepository.delete(clsBreedEntity));
+    }
+
 }
