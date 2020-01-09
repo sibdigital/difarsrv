@@ -18,7 +18,7 @@ public class ClsAnimalRetirementCauseEntity {
     private String code;
     private long id;
     private long idParent;
-    private Object parentPath;
+    private String parentPath;
     private Collection<TpAnimalRetirementAnimalEntity> tpAnimalRetirementAnimalsById;
     private Collection<TpAnimalRetirementAnimalGroupEntity> tpAnimalRetirementAnimalGroupsById;
 
@@ -102,13 +102,12 @@ public class ClsAnimalRetirementCauseEntity {
         this.idParent = idParent;
     }
 
-    @Basic
-    @Column(name = "parent_path", nullable = true)
-    public Object getParentPath() {
+    @Column(columnDefinition = "ltree", name = "parent_path", nullable = true)
+    public String getParentPath() {
         return parentPath;
     }
 
-    public void setParentPath(Object parentPath) {
+    public void setParentPath(String parentPath) {
         this.parentPath = parentPath;
     }
 

@@ -13,7 +13,7 @@ public class ClsWorkTypeEntity {
     private String number;
     private long id;
     private long idParent;
-    private Object parentPath;
+    private String parentPath;
 
     @Basic
     @Column(name = "id_user_creator", nullable = false)
@@ -85,13 +85,12 @@ public class ClsWorkTypeEntity {
         this.idParent = idParent;
     }
 
-    @Basic
-    @Column(name = "parent_path", nullable = false)
-    public Object getParentPath() {
+    @Column(columnDefinition = "ltree", name = "parent_path", nullable = false)
+    public String getParentPath() {
         return parentPath;
     }
 
-    public void setParentPath(Object parentPath) {
+    public void setParentPath(String parentPath) {
         this.parentPath = parentPath;
     }
 

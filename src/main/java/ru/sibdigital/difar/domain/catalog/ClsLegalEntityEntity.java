@@ -1,11 +1,17 @@
 package ru.sibdigital.difar.domain.catalog;
 
+import com.fasterxml.jackson.databind.JsonNode;
+import com.vladmihalcea.hibernate.type.json.JsonNodeBinaryType;
+import org.hibernate.annotations.Type;
+import org.hibernate.annotations.TypeDef;
+
 import javax.persistence.*;
 import java.sql.Timestamp;
 import java.util.Collection;
 
 @Entity
 @Table(name = "cls_legal_entity", schema = "dict")
+@TypeDef(name = "jsonb-node", typeClass = JsonNodeBinaryType.class)
 public class ClsLegalEntityEntity {
     private long idUserCreator;
     private String name;
@@ -14,7 +20,7 @@ public class ClsLegalEntityEntity {
     private String number;
     private long id;
     private String inn;
-    private Object description;
+    private JsonNode description;
     private Collection<ClsOrganizationEntity> clsOrganizationsById;
     private Collection<ClsPartnerEntity> clsPartnersById;
     private Collection<ClsDepartEntity> clsDepartsById;
@@ -89,13 +95,13 @@ public class ClsLegalEntityEntity {
         this.inn = inn;
     }
 
-    @Basic
+    @Type(type = "jsonb-node")
     @Column(name = "description", nullable = true)
-    public Object getDescription() {
+    public JsonNode getDescription() {
         return description;
     }
 
-    public void setDescription(Object description) {
+    public void setDescription(JsonNode description) {
         this.description = description;
     }
 

@@ -1,5 +1,10 @@
 package ru.sibdigital.difar.domain.catalog;
 
+import com.fasterxml.jackson.databind.JsonNode;
+import com.vladmihalcea.hibernate.type.json.JsonNodeBinaryType;
+import org.hibernate.annotations.Type;
+import org.hibernate.annotations.TypeDef;
+import org.locationtech.jts.geom.Point;
 import ru.sibdigital.difar.domain.register.RegWeatherStationReadingEntity;
 
 import javax.persistence.*;
@@ -8,6 +13,7 @@ import java.util.Collection;
 
 @Entity
 @Table(name = "cls_weather_station", schema = "agrc")
+@TypeDef(name = "jsonb-node", typeClass = JsonNodeBinaryType.class)
 public class ClsWeatherStationEntity {
     private long idUserCreator;
     private String name;
@@ -16,8 +22,8 @@ public class ClsWeatherStationEntity {
     private String number;
     private long id;
     private long idOrganization;
-    private Object description;
-    private Object point;
+    private JsonNode description;
+    private Point point;
     private ClsOrganizationEntity clsOrganizationByIdOrganization;
     private Collection<RegWeatherStationReadingEntity> regWeatherStationReadingsById;
 
@@ -91,23 +97,23 @@ public class ClsWeatherStationEntity {
         this.idOrganization = idOrganization;
     }
 
-    @Basic
+    @Type(type = "jsonb-node")
     @Column(name = "description", nullable = true)
-    public Object getDescription() {
+    public JsonNode getDescription() {
         return description;
     }
 
-    public void setDescription(Object description) {
+    public void setDescription(JsonNode description) {
         this.description = description;
     }
 
-    @Basic
+    @Type(type="org.hibernate.spatial.GeometryType")
     @Column(name = "point", nullable = true)
-    public Object getPoint() {
+    public Point getPoint() {
         return point;
     }
 
-    public void setPoint(Object point) {
+    public void setPoint(Point point) {
         this.point = point;
     }
 

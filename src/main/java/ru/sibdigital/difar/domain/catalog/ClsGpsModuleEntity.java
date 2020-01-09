@@ -1,5 +1,9 @@
 package ru.sibdigital.difar.domain.catalog;
 
+import com.fasterxml.jackson.databind.JsonNode;
+import org.hibernate.annotations.Type;
+import org.locationtech.jts.geom.Geometry;
+import org.locationtech.jts.geom.Point;
 import ru.sibdigital.difar.domain.register.RegGpsModuleOrganizationEquipmentEntity;
 import ru.sibdigital.difar.domain.register.RegGpsModuleReadingEntity;
 
@@ -17,8 +21,8 @@ public class ClsGpsModuleEntity {
     private String number;
     private long id;
     private long idOrganization;
-    private Object description;
-    private Object point;
+    private JsonNode description;
+    private Point point;
     private ClsOrganizationEntity clsOrganizationByIdOrganization;
     private Collection<RegGpsModuleOrganizationEquipmentEntity> regGpsModuleOrganizationEquipmentsById;
     private Collection<RegGpsModuleReadingEntity> regGpsModuleReadingsById;
@@ -93,23 +97,23 @@ public class ClsGpsModuleEntity {
         this.idOrganization = idOrganization;
     }
 
-    @Basic
+    @Type(type = "jsonb-node")
     @Column(name = "description", nullable = true)
-    public Object getDescription() {
+    public JsonNode getDescription() {
         return description;
     }
 
-    public void setDescription(Object description) {
+    public void setDescription(JsonNode description) {
         this.description = description;
     }
 
-    @Basic
-    @Column(name = "point", nullable = true)
-    public Object getPoint() {
+    @Type(type="org.hibernate.spatial.GeometryType")
+    @Column(columnDefinition="Geometry", name = "point", nullable = true)
+    public Point getPoint() {
         return point;
     }
 
-    public void setPoint(Object point) {
+    public void setPoint(Point point) {
         this.point = point;
     }
 

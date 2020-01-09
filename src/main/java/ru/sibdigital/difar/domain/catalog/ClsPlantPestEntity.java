@@ -1,5 +1,9 @@
 package ru.sibdigital.difar.domain.catalog;
 
+import com.fasterxml.jackson.databind.JsonNode;
+import com.vladmihalcea.hibernate.type.json.JsonNodeBinaryType;
+import org.hibernate.annotations.Type;
+import org.hibernate.annotations.TypeDef;
 import ru.sibdigital.difar.domain.tableparts.TpPlantPestAffectedCropEntity;
 import ru.sibdigital.difar.domain.tableparts.TpPlantPestPeriodEntity;
 import ru.sibdigital.difar.domain.tableparts.TpPlantPestPlantOrganEntity;
@@ -11,6 +15,7 @@ import java.util.Collection;
 
 @Entity
 @Table(name = "cls_plant_pest", schema = "agrc")
+@TypeDef(name = "jsonb-node", typeClass = JsonNodeBinaryType.class)
 public class ClsPlantPestEntity {
     private long idUserCreator;
     private String name;
@@ -20,10 +25,10 @@ public class ClsPlantPestEntity {
     private String code;
     private long id;
     private long idUnit;
-    private Object photos;
-    private Object additionalNames;
-    private Object condition;
-    private Object description;
+    private JsonNode photos;
+    private JsonNode additionalNames;
+    private JsonNode condition;
+    private JsonNode description;
     private Integer minIncubPeriod;
     private Integer maxIncubPeriod;
     private ClsUnitEntity clsUnitByIdUnit;
@@ -112,43 +117,43 @@ public class ClsPlantPestEntity {
         this.idUnit = idUnit;
     }
 
-    @Basic
+    @Type(type = "jsonb-node")
     @Column(name = "photos", nullable = true)
-    public Object getPhotos() {
+    public JsonNode getPhotos() {
         return photos;
     }
 
-    public void setPhotos(Object photos) {
+    public void setPhotos(JsonNode photos) {
         this.photos = photos;
     }
 
-    @Basic
+    @Type(type = "jsonb-node")
     @Column(name = "additional_names", nullable = true)
-    public Object getAdditionalNames() {
+    public JsonNode getAdditionalNames() {
         return additionalNames;
     }
 
-    public void setAdditionalNames(Object additionalNames) {
+    public void setAdditionalNames(JsonNode additionalNames) {
         this.additionalNames = additionalNames;
     }
 
-    @Basic
+    @Type(type = "jsonb-node")
     @Column(name = "condition", nullable = true)
-    public Object getCondition() {
+    public JsonNode getCondition() {
         return condition;
     }
 
-    public void setCondition(Object condition) {
+    public void setCondition(JsonNode condition) {
         this.condition = condition;
     }
 
-    @Basic
+    @Type(type = "jsonb-node")
     @Column(name = "description", nullable = true)
-    public Object getDescription() {
+    public JsonNode getDescription() {
         return description;
     }
 
-    public void setDescription(Object description) {
+    public void setDescription(JsonNode description) {
         this.description = description;
     }
 

@@ -1,5 +1,7 @@
 package ru.sibdigital.difar.domain.catalog;
 
+import org.hibernate.annotations.Type;
+import org.locationtech.jts.geom.Geometry;
 import ru.sibdigital.difar.domain.document.DocAnimalTransferEntity;
 import ru.sibdigital.difar.domain.register.*;
 
@@ -19,7 +21,7 @@ public class ClsRanchEntity {
     private long idOrganization;
     private long idDepart;
     private long idDistrict;
-    private Object coord;
+    private Geometry coord;
     private Collection<DocAnimalTransferEntity> docAnimalTransfersById;
     private Collection<DocAnimalTransferEntity> docAnimalTransfersById_0;
     private Collection<RegAnimalGroupEntity> regAnimalGroupsById;
@@ -122,13 +124,13 @@ public class ClsRanchEntity {
         this.idDistrict = idDistrict;
     }
 
-    @Basic
-    @Column(name = "coord", nullable = true)
-    public Object getCoord() {
+    @Type(type="org.hibernate.spatial.GeometryType")
+    @Column(columnDefinition="Geometry", name = "coord", nullable = true)
+    public Geometry getCoord() {
         return coord;
     }
 
-    public void setCoord(Object coord) {
+    public void setCoord(Geometry coord) {
         this.coord = coord;
     }
 
