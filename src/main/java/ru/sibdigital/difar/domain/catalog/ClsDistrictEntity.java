@@ -33,7 +33,7 @@ public class ClsDistrictEntity {
     private Collection<ClsRanchEntity> clsRanchesById;
 
     @Basic
-    @Column(name = "id_user_creator", nullable = false)
+    @Column(name = "id_user_creator", nullable = false, insertable = false, updatable = false)
     public long getIdUserCreator() {
         return idUserCreator;
     }
@@ -95,7 +95,7 @@ public class ClsDistrictEntity {
     }
 
     @Basic
-    @Column(name = "id_region", nullable = false)
+    @Column(name = "id_region", nullable = false, insertable = false, updatable = false)
     public long getIdRegion() {
         return idRegion;
     }

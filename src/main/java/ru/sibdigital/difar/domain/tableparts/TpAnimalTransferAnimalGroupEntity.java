@@ -24,7 +24,7 @@ public class TpAnimalTransferAnimalGroupEntity {
     private RegAnimalGroupEntity regAnimalGroupByIdAnimalGroup;
 
     @Basic
-    @Column(name = "id_user_creator", nullable = false)
+    @Column(name = "id_user_creator", nullable = false, insertable = false, updatable = false)
     public long getIdUserCreator() {
         return idUserCreator;
     }
@@ -64,7 +64,7 @@ public class TpAnimalTransferAnimalGroupEntity {
     }
 
     @Basic
-    @Column(name = "id_animal_transfer", nullable = false)
+    @Column(name = "id_animal_transfer", nullable = false, insertable = false, updatable = false)
     public long getIdAnimalTransfer() {
         return idAnimalTransfer;
     }
@@ -74,7 +74,7 @@ public class TpAnimalTransferAnimalGroupEntity {
     }
 
     @Basic
-    @Column(name = "id_animal_group", nullable = false)
+    @Column(name = "id_animal_group", nullable = false, insertable = false, updatable = false)
     public long getIdAnimalGroup() {
         return idAnimalGroup;
     }

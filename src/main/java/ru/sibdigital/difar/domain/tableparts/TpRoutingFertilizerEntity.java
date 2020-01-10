@@ -25,7 +25,7 @@ public class TpRoutingFertilizerEntity {
     private ClsUnitEntity clsUnitByIdFertilizerUnit;
 
     @Basic
-    @Column(name = "id_user_creator", nullable = false)
+    @Column(name = "id_user_creator", nullable = false, insertable = false, updatable = false)
     public long getIdUserCreator() {
         return idUserCreator;
     }
@@ -65,7 +65,7 @@ public class TpRoutingFertilizerEntity {
     }
 
     @Basic
-    @Column(name = "id_routing", nullable = false)
+    @Column(name = "id_routing", nullable = false, insertable = false, updatable = false)
     public long getIdRouting() {
         return idRouting;
     }
@@ -75,7 +75,7 @@ public class TpRoutingFertilizerEntity {
     }
 
     @Basic
-    @Column(name = "id_routing_work", nullable = false)
+    @Column(name = "id_routing_work", nullable = false, insertable = false, updatable = false)
     public long getIdRoutingWork() {
         return idRoutingWork;
     }
@@ -85,7 +85,7 @@ public class TpRoutingFertilizerEntity {
     }
 
     @Basic
-    @Column(name = "id_organization_fertilizer", nullable = false)
+    @Column(name = "id_organization_fertilizer", nullable = false, insertable = false, updatable = false)
     public long getIdOrganizationFertilizer() {
         return idOrganizationFertilizer;
     }
@@ -95,7 +95,7 @@ public class TpRoutingFertilizerEntity {
     }
 
     @Basic
-    @Column(name = "id_fertilizer_unit", nullable = false)
+    @Column(name = "id_fertilizer_unit", nullable = false, insertable = false, updatable = false)
     public long getIdFertilizerUnit() {
         return idFertilizerUnit;
     }

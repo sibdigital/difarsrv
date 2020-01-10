@@ -27,7 +27,7 @@ public class DocAnimalBeatingEntity {
     private Collection<TpAnimalBeatingAnimalGroupEntity> tpAnimalBeatingAnimalGroupsById;
 
     @Basic
-    @Column(name = "id_user_creator", nullable = false)
+    @Column(name = "id_user_creator", nullable = false, insertable = false, updatable = false)
     public long getIdUserCreator() {
         return idUserCreator;
     }
@@ -87,7 +87,7 @@ public class DocAnimalBeatingEntity {
     }
 
     @Basic
-    @Column(name = "id_organization", nullable = false)
+    @Column(name = "id_organization", nullable = false, insertable = false, updatable = false)
     public long getIdOrganization() {
         return idOrganization;
     }
@@ -97,7 +97,7 @@ public class DocAnimalBeatingEntity {
     }
 
     @Basic
-    @Column(name = "id_type_animal_event", nullable = false)
+    @Column(name = "id_type_animal_event", nullable = false, insertable = false, updatable = false)
     public long getIdTypeAnimalEvent() {
         return idTypeAnimalEvent;
     }

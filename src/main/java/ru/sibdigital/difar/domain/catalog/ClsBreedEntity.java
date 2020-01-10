@@ -23,7 +23,7 @@ public class ClsBreedEntity {
     private Collection<RegExternalAnimalEntity> regExternalAnimalsById;
 
     @Basic
-    @Column(name = "id_user_creator", nullable = false)
+    @Column(name = "id_user_creator", nullable = false, insertable = false, updatable = false)
     public long getIdUserCreator() {
         return idUserCreator;
     }
@@ -85,7 +85,7 @@ public class ClsBreedEntity {
     }
 
     @Basic
-    @Column(name = "id_kind_animal", nullable = false)
+    @Column(name = "id_kind_animal", nullable = false, insertable = false, updatable = false)
     public long getIdKindAnimal() {
         return idKindAnimal;
     }

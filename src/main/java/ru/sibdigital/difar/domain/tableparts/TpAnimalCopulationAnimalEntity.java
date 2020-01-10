@@ -27,7 +27,7 @@ public class TpAnimalCopulationAnimalEntity {
     private RegAnimalEntity regAnimalByIdAnimalMale;
 
     @Basic
-    @Column(name = "id_user_creator", nullable = false)
+    @Column(name = "id_user_creator", nullable = false, insertable = false, updatable = false)
     public long getIdUserCreator() {
         return idUserCreator;
     }
@@ -67,7 +67,7 @@ public class TpAnimalCopulationAnimalEntity {
     }
 
     @Basic
-    @Column(name = "id_animal_copulation", nullable = false)
+    @Column(name = "id_animal_copulation", nullable = false, insertable = false, updatable = false)
     public long getIdAnimalCopulation() {
         return idAnimalCopulation;
     }
@@ -77,7 +77,7 @@ public class TpAnimalCopulationAnimalEntity {
     }
 
     @Basic
-    @Column(name = "id_animal_female", nullable = false)
+    @Column(name = "id_animal_female", nullable = false, insertable = false, updatable = false)
     public long getIdAnimalFemale() {
         return idAnimalFemale;
     }
@@ -87,7 +87,7 @@ public class TpAnimalCopulationAnimalEntity {
     }
 
     @Basic
-    @Column(name = "id_animal_male", nullable = false)
+    @Column(name = "id_animal_male", nullable = false, insertable = false, updatable = false)
     public long getIdAnimalMale() {
         return idAnimalMale;
     }

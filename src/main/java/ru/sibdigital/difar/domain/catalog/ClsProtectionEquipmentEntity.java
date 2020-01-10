@@ -29,7 +29,7 @@ public class ClsProtectionEquipmentEntity {
     private Collection<TpPlantPestAffectedCropEntity> tpPlantPestAffectedCropsById;
 
     @Basic
-    @Column(name = "id_user_creator", nullable = false)
+    @Column(name = "id_user_creator", nullable = false, insertable = false, updatable = false)
     public long getIdUserCreator() {
         return idUserCreator;
     }
@@ -101,7 +101,7 @@ public class ClsProtectionEquipmentEntity {
     }
 
     @Basic
-    @Column(name = "id_unit", nullable = false)
+    @Column(name = "id_unit", nullable = false, insertable = false, updatable = false)
     public long getIdUnit() {
         return idUnit;
     }

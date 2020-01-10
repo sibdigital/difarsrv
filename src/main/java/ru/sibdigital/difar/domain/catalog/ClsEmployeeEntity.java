@@ -36,7 +36,7 @@ public class ClsEmployeeEntity {
     private ClsOrganizationEntity clsOrganizationByIdOrganization;
 
     @Basic
-    @Column(name = "id_user_creator", nullable = false)
+    @Column(name = "id_user_creator", nullable = false, insertable = false, updatable = false)
     public long getIdUserCreator() {
         return idUserCreator;
     }
@@ -128,7 +128,7 @@ public class ClsEmployeeEntity {
     }
 
     @Basic
-    @Column(name = "id_depart", nullable = false)
+    @Column(name = "id_depart", nullable = false, insertable = false, updatable = false)
     public long getIdDepart() {
         return idDepart;
     }
@@ -138,7 +138,7 @@ public class ClsEmployeeEntity {
     }
 
     @Basic
-    @Column(name = "id_organization", nullable = false)
+    @Column(name = "id_organization", nullable = false, insertable = false, updatable = false)
     public long getIdOrganization() {
         return idOrganization;
     }

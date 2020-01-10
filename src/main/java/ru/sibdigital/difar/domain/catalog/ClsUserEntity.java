@@ -24,7 +24,7 @@ public class ClsUserEntity {
     private Collection<RegUserRoleEntity> regUserRolesById;
 
     @Basic
-    @Column(name = "id_user_creator", nullable = false)
+    @Column(name = "id_user_creator", nullable = false, insertable = false, updatable = false)
     public long getIdUserCreator() {
         return idUserCreator;
     }
@@ -96,7 +96,7 @@ public class ClsUserEntity {
     }
 
     @Basic
-    @Column(name = "id_organization", nullable = false)
+    @Column(name = "id_organization", nullable = false, insertable = false, updatable = false)
     public long getIdOrganization() {
         return idOrganization;
     }
@@ -106,7 +106,7 @@ public class ClsUserEntity {
     }
 
     @Basic
-    @Column(name = "id_employee", nullable = false)
+    @Column(name = "id_employee", nullable = false, insertable = false, updatable = false)
     public long getIdEmployee() {
         return idEmployee;
     }

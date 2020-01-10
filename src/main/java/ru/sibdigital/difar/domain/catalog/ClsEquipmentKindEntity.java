@@ -21,7 +21,7 @@ public class ClsEquipmentKindEntity {
     private Collection<RegOrganizationEquipmentEntity> regOrganizationEquipmentsById;
 
     @Basic
-    @Column(name = "id_user_creator", nullable = false)
+    @Column(name = "id_user_creator", nullable = false, insertable = false, updatable = false)
     public long getIdUserCreator() {
         return idUserCreator;
     }
@@ -83,7 +83,7 @@ public class ClsEquipmentKindEntity {
     }
 
     @Basic
-    @Column(name = "id_equipment_type", nullable = false)
+    @Column(name = "id_equipment_type", nullable = false, insertable = false, updatable = false)
     public long getIdEquipmentType() {
         return idEquipmentType;
     }

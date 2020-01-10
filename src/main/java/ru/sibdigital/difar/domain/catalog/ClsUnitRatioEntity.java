@@ -22,7 +22,7 @@ public class ClsUnitRatioEntity {
     private ClsUnitEntity clsUnitByIdUnitTo;
 
     @Basic
-    @Column(name = "id_user_creator", nullable = false)
+    @Column(name = "id_user_creator", nullable = false, insertable = false, updatable = false)
     public long getIdUserCreator() {
         return idUserCreator;
     }
@@ -84,7 +84,7 @@ public class ClsUnitRatioEntity {
     }
 
     @Basic
-    @Column(name = "id_unit_from", nullable = false)
+    @Column(name = "id_unit_from", nullable = false, insertable = false, updatable = false)
     public long getIdUnitFrom() {
         return idUnitFrom;
     }
@@ -94,7 +94,7 @@ public class ClsUnitRatioEntity {
     }
 
     @Basic
-    @Column(name = "id_unit_to", nullable = false)
+    @Column(name = "id_unit_to", nullable = false, insertable = false, updatable = false)
     public long getIdUnitTo() {
         return idUnitTo;
     }

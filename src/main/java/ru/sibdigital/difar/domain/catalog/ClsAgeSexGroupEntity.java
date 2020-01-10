@@ -20,7 +20,7 @@ public class ClsAgeSexGroupEntity {
     private Integer endAge;
 
     @Basic
-    @Column(name = "id_user_creator", nullable = false)
+    @Column(name = "id_user_creator", nullable = false, insertable = false, updatable = false)
     public long getIdUserCreator() {
         return idUserCreator;
     }

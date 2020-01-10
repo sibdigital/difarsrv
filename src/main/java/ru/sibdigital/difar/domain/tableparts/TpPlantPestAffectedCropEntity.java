@@ -31,7 +31,7 @@ public class TpPlantPestAffectedCropEntity {
     private ClsProtectionEquipmentEntity clsProtectionEquipmentByIdProtectionEquipment;
 
     @Basic
-    @Column(name = "id_user_creator", nullable = false)
+    @Column(name = "id_user_creator", nullable = false, insertable = false, updatable = false)
     public long getIdUserCreator() {
         return idUserCreator;
     }
@@ -71,7 +71,7 @@ public class TpPlantPestAffectedCropEntity {
     }
 
     @Basic
-    @Column(name = "id_crop", nullable = false)
+    @Column(name = "id_crop", nullable = false, insertable = false, updatable = false)
     public long getIdCrop() {
         return idCrop;
     }
@@ -81,7 +81,7 @@ public class TpPlantPestAffectedCropEntity {
     }
 
     @Basic
-    @Column(name = "id_plant_pest", nullable = false)
+    @Column(name = "id_plant_pest", nullable = false, insertable = false, updatable = false)
     public long getIdPlantPest() {
         return idPlantPest;
     }
@@ -91,7 +91,7 @@ public class TpPlantPestAffectedCropEntity {
     }
 
     @Basic
-    @Column(name = "id_veget_period", nullable = false)
+    @Column(name = "id_veget_period", nullable = false, insertable = false, updatable = false)
     public long getIdVegetPeriod() {
         return idVegetPeriod;
     }
@@ -101,7 +101,7 @@ public class TpPlantPestAffectedCropEntity {
     }
 
     @Basic
-    @Column(name = "id_protection_equipment", nullable = false)
+    @Column(name = "id_protection_equipment", nullable = false, insertable = false, updatable = false)
     public long getIdProtectionEquipment() {
         return idProtectionEquipment;
     }

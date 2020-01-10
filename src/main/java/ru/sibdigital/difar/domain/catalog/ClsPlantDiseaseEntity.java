@@ -39,7 +39,7 @@ public class ClsPlantDiseaseEntity {
     private Collection<TpPlantDiseaseTypicalAreaEntity> tpPlantDiseaseTypicalAreasById;
 
     @Basic
-    @Column(name = "id_user_creator", nullable = false)
+    @Column(name = "id_user_creator", nullable = false, insertable = false, updatable = false)
     public long getIdUserCreator() {
         return idUserCreator;
     }
@@ -111,7 +111,7 @@ public class ClsPlantDiseaseEntity {
     }
 
     @Basic
-    @Column(name = "id_unit", nullable = false)
+    @Column(name = "id_unit", nullable = false, insertable = false, updatable = false)
     public long getIdUnit() {
         return idUnit;
     }

@@ -24,7 +24,7 @@ public class ClsEquipmentBaseEntity {
     private ClsRanchEntity clsRanchByIdRanch;
 
     @Basic
-    @Column(name = "id_user_creator", nullable = false)
+    @Column(name = "id_user_creator", nullable = false, insertable = false, updatable = false)
     public long getIdUserCreator() {
         return idUserCreator;
     }
@@ -86,7 +86,7 @@ public class ClsEquipmentBaseEntity {
     }
 
     @Basic
-    @Column(name = "id_organization", nullable = false)
+    @Column(name = "id_organization", nullable = false, insertable = false, updatable = false)
     public long getIdOrganization() {
         return idOrganization;
     }
@@ -96,7 +96,7 @@ public class ClsEquipmentBaseEntity {
     }
 
     @Basic
-    @Column(name = "id_depart", nullable = false)
+    @Column(name = "id_depart", nullable = false, insertable = false, updatable = false)
     public long getIdDepart() {
         return idDepart;
     }
@@ -106,7 +106,7 @@ public class ClsEquipmentBaseEntity {
     }
 
     @Basic
-    @Column(name = "id_district", nullable = false)
+    @Column(name = "id_district", nullable = false, insertable = false, updatable = false)
     public long getIdDistrict() {
         return idDistrict;
     }
@@ -116,7 +116,7 @@ public class ClsEquipmentBaseEntity {
     }
 
     @Basic
-    @Column(name = "id_ranch", nullable = false)
+    @Column(name = "id_ranch", nullable = false, insertable = false, updatable = false)
     public long getIdRanch() {
         return idRanch;
     }

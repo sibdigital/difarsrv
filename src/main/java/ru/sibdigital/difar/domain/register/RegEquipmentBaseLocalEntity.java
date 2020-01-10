@@ -22,7 +22,7 @@ public class RegEquipmentBaseLocalEntity {
     private ClsRanchEntity clsRanchByIdRanch;
 
     @Basic
-    @Column(name = "id_user_creator", nullable = false)
+    @Column(name = "id_user_creator", nullable = false, insertable = false, updatable = false)
     public long getIdUserCreator() {
         return idUserCreator;
     }
@@ -72,7 +72,7 @@ public class RegEquipmentBaseLocalEntity {
     }
 
     @Basic
-    @Column(name = "id_organization", nullable = false)
+    @Column(name = "id_organization", nullable = false, insertable = false, updatable = false)
     public long getIdOrganization() {
         return idOrganization;
     }
@@ -82,7 +82,7 @@ public class RegEquipmentBaseLocalEntity {
     }
 
     @Basic
-    @Column(name = "id_organization_equipment", nullable = false)
+    @Column(name = "id_organization_equipment", nullable = false, insertable = false, updatable = false)
     public long getIdOrganizationEquipment() {
         return idOrganizationEquipment;
     }
@@ -92,7 +92,7 @@ public class RegEquipmentBaseLocalEntity {
     }
 
     @Basic
-    @Column(name = "id_ranch", nullable = false)
+    @Column(name = "id_ranch", nullable = false, insertable = false, updatable = false)
     public long getIdRanch() {
         return idRanch;
     }

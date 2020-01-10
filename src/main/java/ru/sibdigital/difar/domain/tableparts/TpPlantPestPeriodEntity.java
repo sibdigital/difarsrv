@@ -27,7 +27,7 @@ public class TpPlantPestPeriodEntity {
     private ClsVegetPeriodEntity clsVegetPeriodByIdVegetPeriod;
 
     @Basic
-    @Column(name = "id_user_creator", nullable = false)
+    @Column(name = "id_user_creator", nullable = false, insertable = false, updatable = false)
     public long getIdUserCreator() {
         return idUserCreator;
     }
@@ -67,7 +67,7 @@ public class TpPlantPestPeriodEntity {
     }
 
     @Basic
-    @Column(name = "id_crop", nullable = false)
+    @Column(name = "id_crop", nullable = false, insertable = false, updatable = false)
     public long getIdCrop() {
         return idCrop;
     }
@@ -77,7 +77,7 @@ public class TpPlantPestPeriodEntity {
     }
 
     @Basic
-    @Column(name = "id_plant_pest", nullable = false)
+    @Column(name = "id_plant_pest", nullable = false, insertable = false, updatable = false)
     public long getIdPlantPest() {
         return idPlantPest;
     }
@@ -87,7 +87,7 @@ public class TpPlantPestPeriodEntity {
     }
 
     @Basic
-    @Column(name = "id_veget_period", nullable = false)
+    @Column(name = "id_veget_period", nullable = false, insertable = false, updatable = false)
     public long getIdVegetPeriod() {
         return idVegetPeriod;
     }

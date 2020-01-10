@@ -28,7 +28,7 @@ public class RegOrganizationConsumableEntity {
     private ClsConsumableEntity clsConsumableByIdConsumable;
 
     @Basic
-    @Column(name = "id_user_creator", nullable = false)
+    @Column(name = "id_user_creator", nullable = false, insertable = false, updatable = false)
     public long getIdUserCreator() {
         return idUserCreator;
     }
@@ -78,7 +78,7 @@ public class RegOrganizationConsumableEntity {
     }
 
     @Basic
-    @Column(name = "id_organization", nullable = false)
+    @Column(name = "id_organization", nullable = false, insertable = false, updatable = false)
     public long getIdOrganization() {
         return idOrganization;
     }
@@ -88,7 +88,7 @@ public class RegOrganizationConsumableEntity {
     }
 
     @Basic
-    @Column(name = "id_consumable", nullable = false)
+    @Column(name = "id_consumable", nullable = false, insertable = false, updatable = false)
     public long getIdConsumable() {
         return idConsumable;
     }

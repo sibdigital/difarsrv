@@ -21,7 +21,7 @@ public class RegCvitantionEntity {
     private ClsRoleEntity clsRoleByIdRole;
 
     @Basic
-    @Column(name = "id_user_creator", nullable = false)
+    @Column(name = "id_user_creator", nullable = false, insertable = false, updatable = false)
     public long getIdUserCreator() {
         return idUserCreator;
     }
@@ -71,7 +71,7 @@ public class RegCvitantionEntity {
     }
 
     @Basic
-    @Column(name = "id_resource", nullable = false)
+    @Column(name = "id_resource", nullable = false, insertable = false, updatable = false)
     public long getIdResource() {
         return idResource;
     }
@@ -81,7 +81,7 @@ public class RegCvitantionEntity {
     }
 
     @Basic
-    @Column(name = "id_role", nullable = false)
+    @Column(name = "id_role", nullable = false, insertable = false, updatable = false)
     public long getIdRole() {
         return idRole;
     }

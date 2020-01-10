@@ -23,7 +23,7 @@ public class ClsStandardPeriodEntity {
     private Collection<ClsArbitraryPeriodEntity> ClsArbitraryPeriodsById;
 
     @Basic
-    @Column(name = "id_user_creator", nullable = false)
+    @Column(name = "id_user_creator", nullable = false, insertable = false, updatable = false)
     public long getIdUserCreator() {
         return idUserCreator;
     }

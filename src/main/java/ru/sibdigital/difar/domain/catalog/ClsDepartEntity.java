@@ -27,7 +27,7 @@ public class ClsDepartEntity {
     private Collection<ClsRanchEntity> clsRanchesById;
 
     @Basic
-    @Column(name = "id_user_creator", nullable = false)
+    @Column(name = "id_user_creator", nullable = false, insertable = false, updatable = false)
     public long getIdUserCreator() {
         return idUserCreator;
     }
@@ -89,7 +89,7 @@ public class ClsDepartEntity {
     }
 
     @Basic
-    @Column(name = "id_legal_entity", nullable = false)
+    @Column(name = "id_legal_entity", nullable = false, insertable = false, updatable = false)
     public long getIdLegalEntity() {
         return idLegalEntity;
     }
@@ -99,7 +99,7 @@ public class ClsDepartEntity {
     }
 
     @Basic
-    @Column(name = "id_organization", nullable = false)
+    @Column(name = "id_organization", nullable = false, insertable = false, updatable = false)
     public long getIdOrganization() {
         return idOrganization;
     }

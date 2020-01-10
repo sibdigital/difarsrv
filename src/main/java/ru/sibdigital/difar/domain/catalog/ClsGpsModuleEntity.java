@@ -31,7 +31,7 @@ public class ClsGpsModuleEntity {
     private Collection<RegGpsModuleReadingEntity> regGpsModuleReadingsById;
 
     @Basic
-    @Column(name = "id_user_creator", nullable = false)
+    @Column(name = "id_user_creator", nullable = false, insertable = false, updatable = false)
     public long getIdUserCreator() {
         return idUserCreator;
     }
@@ -93,7 +93,7 @@ public class ClsGpsModuleEntity {
     }
 
     @Basic
-    @Column(name = "id_organization", nullable = false)
+    @Column(name = "id_organization", nullable = false, insertable = false, updatable = false)
     public long getIdOrganization() {
         return idOrganization;
     }

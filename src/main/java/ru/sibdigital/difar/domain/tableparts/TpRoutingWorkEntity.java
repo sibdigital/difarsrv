@@ -29,7 +29,7 @@ public class TpRoutingWorkEntity {
     private TpRoutingStageEntity tpRoutingStageByIdRoutingStage;
 
     @Basic
-    @Column(name = "id_user_creator", nullable = false)
+    @Column(name = "id_user_creator", nullable = false, insertable = false, updatable = false)
     public long getIdUserCreator() {
         return idUserCreator;
     }
@@ -69,7 +69,7 @@ public class TpRoutingWorkEntity {
     }
 
     @Basic
-    @Column(name = "id_routing", nullable = false)
+    @Column(name = "id_routing", nullable = false, insertable = false, updatable = false)
     public long getIdRouting() {
         return idRouting;
     }
@@ -79,7 +79,7 @@ public class TpRoutingWorkEntity {
     }
 
     @Basic
-    @Column(name = "id_routing_stage", nullable = false)
+    @Column(name = "id_routing_stage", nullable = false, insertable = false, updatable = false)
     public long getIdRoutingStage() {
         return idRoutingStage;
     }

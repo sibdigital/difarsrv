@@ -27,7 +27,7 @@ public class TpPlantDiseaseDiseaseFeatureEntity {
     private ClsDiseaseFeatureEntity clsDiseaseFeatureByIdDiseaseFeature;
 
     @Basic
-    @Column(name = "id_user_creator", nullable = false)
+    @Column(name = "id_user_creator", nullable = false, insertable = false, updatable = false)
     public long getIdUserCreator() {
         return idUserCreator;
     }
@@ -67,7 +67,7 @@ public class TpPlantDiseaseDiseaseFeatureEntity {
     }
 
     @Basic
-    @Column(name = "id_crop", nullable = false)
+    @Column(name = "id_crop", nullable = false, insertable = false, updatable = false)
     public long getIdCrop() {
         return idCrop;
     }
@@ -77,7 +77,7 @@ public class TpPlantDiseaseDiseaseFeatureEntity {
     }
 
     @Basic
-    @Column(name = "id_plant_disease", nullable = false)
+    @Column(name = "id_plant_disease", nullable = false, insertable = false, updatable = false)
     public long getIdPlantDisease() {
         return idPlantDisease;
     }
@@ -87,7 +87,7 @@ public class TpPlantDiseaseDiseaseFeatureEntity {
     }
 
     @Basic
-    @Column(name = "id_disease_feature", nullable = false)
+    @Column(name = "id_disease_feature", nullable = false, insertable = false, updatable = false)
     public long getIdDiseaseFeature() {
         return idDiseaseFeature;
     }

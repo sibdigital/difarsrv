@@ -71,7 +71,7 @@ public class RegAnimalEntity {
     private Collection<TpAnimalTransferAnimalEntity> tpAnimalTransferAnimalsById;
 
     @Basic
-    @Column(name = "id_user_creator", nullable = false)
+    @Column(name = "id_user_creator", nullable = false, insertable = false, updatable = false)
     public long getIdUserCreator() {
         return idUserCreator;
     }
@@ -121,7 +121,7 @@ public class RegAnimalEntity {
     }
 
     @Basic
-    @Column(name = "id_organization", nullable = false)
+    @Column(name = "id_organization", nullable = false, insertable = false, updatable = false)
     public long getIdOrganization() {
         return idOrganization;
     }
@@ -131,7 +131,7 @@ public class RegAnimalEntity {
     }
 
     @Basic
-    @Column(name = "id_partner", nullable = false)
+    @Column(name = "id_partner", nullable = false, insertable = false, updatable = false)
     public long getIdPartner() {
         return idPartner;
     }
@@ -141,7 +141,7 @@ public class RegAnimalEntity {
     }
 
     @Basic
-    @Column(name = "id_kind_animal", nullable = false)
+    @Column(name = "id_kind_animal", nullable = false, insertable = false, updatable = false)
     public long getIdKindAnimal() {
         return idKindAnimal;
     }
@@ -151,7 +151,7 @@ public class RegAnimalEntity {
     }
 
     @Basic
-    @Column(name = "id_breed", nullable = false)
+    @Column(name = "id_breed", nullable = false, insertable = false, updatable = false)
     public long getIdBreed() {
         return idBreed;
     }
@@ -161,7 +161,7 @@ public class RegAnimalEntity {
     }
 
     @Basic
-    @Column(name = "id_region", nullable = false)
+    @Column(name = "id_region", nullable = false, insertable = false, updatable = false)
     public long getIdRegion() {
         return idRegion;
     }
@@ -171,7 +171,7 @@ public class RegAnimalEntity {
     }
 
     @Basic
-    @Column(name = "id_district", nullable = false)
+    @Column(name = "id_district", nullable = false, insertable = false, updatable = false)
     public long getIdDistrict() {
         return idDistrict;
     }
@@ -181,7 +181,7 @@ public class RegAnimalEntity {
     }
 
     @Basic
-    @Column(name = "id_area", nullable = false)
+    @Column(name = "id_area", nullable = false, insertable = false, updatable = false)
     public long getIdArea() {
         return idArea;
     }
@@ -191,7 +191,7 @@ public class RegAnimalEntity {
     }
 
     @Basic
-    @Column(name = "id_mother", nullable = false)
+    @Column(name = "id_mother", nullable = false, insertable = false, updatable = false)
     public long getIdMother() {
         return idMother;
     }
@@ -201,7 +201,7 @@ public class RegAnimalEntity {
     }
 
     @Basic
-    @Column(name = "id_father", nullable = false)
+    @Column(name = "id_father", nullable = false, insertable = false, updatable = false)
     public long getIdFather() {
         return idFather;
     }
@@ -211,7 +211,7 @@ public class RegAnimalEntity {
     }
 
     @Basic
-    @Column(name = "id_group_mother", nullable = false)
+    @Column(name = "id_group_mother", nullable = false, insertable = false, updatable = false)
     public long getIdGroupMother() {
         return idGroupMother;
     }
@@ -221,7 +221,7 @@ public class RegAnimalEntity {
     }
 
     @Basic
-    @Column(name = "id_group_father", nullable = false)
+    @Column(name = "id_group_father", nullable = false, insertable = false, updatable = false)
     public long getIdGroupFather() {
         return idGroupFather;
     }
@@ -231,7 +231,7 @@ public class RegAnimalEntity {
     }
 
     @Basic
-    @Column(name = "id_external_mother", nullable = false)
+    @Column(name = "id_external_mother", nullable = false, insertable = false, updatable = false)
     public long getIdExternalMother() {
         return idExternalMother;
     }
@@ -241,7 +241,7 @@ public class RegAnimalEntity {
     }
 
     @Basic
-    @Column(name = "id_external_father", nullable = false)
+    @Column(name = "id_external_father", nullable = false, insertable = false, updatable = false)
     public long getIdExternalFather() {
         return idExternalFather;
     }

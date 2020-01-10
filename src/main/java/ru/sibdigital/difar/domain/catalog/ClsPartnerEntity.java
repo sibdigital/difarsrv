@@ -28,7 +28,7 @@ public class ClsPartnerEntity {
     private Collection<RegOrganizationPartnerEntity> regOrganizationPartnersById;
 
     @Basic
-    @Column(name = "id_user_creator", nullable = false)
+    @Column(name = "id_user_creator", nullable = false, insertable = false, updatable = false)
     public long getIdUserCreator() {
         return idUserCreator;
     }
@@ -100,7 +100,7 @@ public class ClsPartnerEntity {
     }
 
     @Basic
-    @Column(name = "id_legal_entity", nullable = false)
+    @Column(name = "id_legal_entity", nullable = false, insertable = false, updatable = false)
     public long getIdLegalEntity() {
         return idLegalEntity;
     }

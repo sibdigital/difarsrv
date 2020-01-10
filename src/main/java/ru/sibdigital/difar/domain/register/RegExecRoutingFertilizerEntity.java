@@ -37,7 +37,7 @@ public class RegExecRoutingFertilizerEntity {
     private ClsUnitEntity clsUnitByIdFertilizerUnit;
 
     @Basic
-    @Column(name = "id_user_creator", nullable = false)
+    @Column(name = "id_user_creator", nullable = false, insertable = false, updatable = false)
     public long getIdUserCreator() {
         return idUserCreator;
     }
@@ -87,7 +87,7 @@ public class RegExecRoutingFertilizerEntity {
     }
 
     @Basic
-    @Column(name = "id_routing", nullable = false)
+    @Column(name = "id_routing", nullable = false, insertable = false, updatable = false)
     public long getIdRouting() {
         return idRouting;
     }
@@ -97,7 +97,7 @@ public class RegExecRoutingFertilizerEntity {
     }
 
     @Basic
-    @Column(name = "id_routing_work", nullable = false)
+    @Column(name = "id_routing_work", nullable = false, insertable = false, updatable = false)
     public long getIdRoutingWork() {
         return idRoutingWork;
     }
@@ -107,7 +107,7 @@ public class RegExecRoutingFertilizerEntity {
     }
 
     @Basic
-    @Column(name = "id_maker", nullable = false)
+    @Column(name = "id_maker", nullable = false, insertable = false, updatable = false)
     public long getIdMaker() {
         return idMaker;
     }
@@ -117,7 +117,7 @@ public class RegExecRoutingFertilizerEntity {
     }
 
     @Basic
-    @Column(name = "id_employee", nullable = false)
+    @Column(name = "id_employee", nullable = false, insertable = false, updatable = false)
     public long getIdEmployee() {
         return idEmployee;
     }
@@ -127,7 +127,7 @@ public class RegExecRoutingFertilizerEntity {
     }
 
     @Basic
-    @Column(name = "id_organization_fertilizer", nullable = false)
+    @Column(name = "id_organization_fertilizer", nullable = false, insertable = false, updatable = false)
     public long getIdOrganizationFertilizer() {
         return idOrganizationFertilizer;
     }
@@ -137,7 +137,7 @@ public class RegExecRoutingFertilizerEntity {
     }
 
     @Basic
-    @Column(name = "id_routing_fertilizer", nullable = false)
+    @Column(name = "id_routing_fertilizer", nullable = false, insertable = false, updatable = false)
     public long getIdRoutingFertilizer() {
         return idRoutingFertilizer;
     }
@@ -147,7 +147,7 @@ public class RegExecRoutingFertilizerEntity {
     }
 
     @Basic
-    @Column(name = "id_exec_routing_work", nullable = false)
+    @Column(name = "id_exec_routing_work", nullable = false, insertable = false, updatable = false)
     public long getIdExecRoutingWork() {
         return idExecRoutingWork;
     }
@@ -157,7 +157,7 @@ public class RegExecRoutingFertilizerEntity {
     }
 
     @Basic
-    @Column(name = "id_fertilizer_unit", nullable = false)
+    @Column(name = "id_fertilizer_unit", nullable = false, insertable = false, updatable = false)
     public long getIdFertilizerUnit() {
         return idFertilizerUnit;
     }

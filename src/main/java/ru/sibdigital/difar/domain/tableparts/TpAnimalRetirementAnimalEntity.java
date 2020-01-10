@@ -27,7 +27,7 @@ public class TpAnimalRetirementAnimalEntity {
     private ClsAnimalRetirementCauseEntity clsAnimalRetirementCauseByIdAnimalRetirementCause;
 
     @Basic
-    @Column(name = "id_user_creator", nullable = false)
+    @Column(name = "id_user_creator", nullable = false, insertable = false, updatable = false)
     public long getIdUserCreator() {
         return idUserCreator;
     }
@@ -67,7 +67,7 @@ public class TpAnimalRetirementAnimalEntity {
     }
 
     @Basic
-    @Column(name = "id_animal_retirement", nullable = false)
+    @Column(name = "id_animal_retirement", nullable = false, insertable = false, updatable = false)
     public long getIdAnimalRetirement() {
         return idAnimalRetirement;
     }
@@ -77,7 +77,7 @@ public class TpAnimalRetirementAnimalEntity {
     }
 
     @Basic
-    @Column(name = "id_animal", nullable = false)
+    @Column(name = "id_animal", nullable = false, insertable = false, updatable = false)
     public long getIdAnimal() {
         return idAnimal;
     }
@@ -87,7 +87,7 @@ public class TpAnimalRetirementAnimalEntity {
     }
 
     @Basic
-    @Column(name = "id_animal_retirement_cause", nullable = false)
+    @Column(name = "id_animal_retirement_cause", nullable = false, insertable = false, updatable = false)
     public long getIdAnimalRetirementCause() {
         return idAnimalRetirementCause;
     }

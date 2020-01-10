@@ -42,7 +42,7 @@ public class RegAnimalGroupEntity {
     private Collection<TpAnimalTransferAnimalGroupEntity> tpAnimalTransferAnimalGroupsById;
 
     @Basic
-    @Column(name = "id_user_creator", nullable = false)
+    @Column(name = "id_user_creator", nullable = false, insertable = false, updatable = false)
     public long getIdUserCreator() {
         return idUserCreator;
     }
@@ -92,7 +92,7 @@ public class RegAnimalGroupEntity {
     }
 
     @Basic
-    @Column(name = "id_organization", nullable = false)
+    @Column(name = "id_organization", nullable = false, insertable = false, updatable = false)
     public long getIdOrganization() {
         return idOrganization;
     }
@@ -102,7 +102,7 @@ public class RegAnimalGroupEntity {
     }
 
     @Basic
-    @Column(name = "id_ranch", nullable = false)
+    @Column(name = "id_ranch", nullable = false, insertable = false, updatable = false)
     public long getIdRanch() {
         return idRanch;
     }
@@ -112,7 +112,7 @@ public class RegAnimalGroupEntity {
     }
 
     @Basic
-    @Column(name = "id_animal", nullable = false)
+    @Column(name = "id_animal", nullable = false, insertable = false, updatable = false)
     public long getIdAnimal() {
         return idAnimal;
     }
@@ -122,7 +122,7 @@ public class RegAnimalGroupEntity {
     }
 
     @Basic
-    @Column(name = "id_animal_group_kind", nullable = false)
+    @Column(name = "id_animal_group_kind", nullable = false, insertable = false, updatable = false)
     public long getIdAnimalGroupKind() {
         return idAnimalGroupKind;
     }

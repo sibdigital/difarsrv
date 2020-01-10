@@ -27,7 +27,7 @@ public class TpPlantDiseasePlantOrganEntity {
     private ClsPlantOrganEntity clsPlantOrganByIdPlantOrgan;
 
     @Basic
-    @Column(name = "id_user_creator", nullable = false)
+    @Column(name = "id_user_creator", nullable = false, insertable = false, updatable = false)
     public long getIdUserCreator() {
         return idUserCreator;
     }
@@ -67,7 +67,7 @@ public class TpPlantDiseasePlantOrganEntity {
     }
 
     @Basic
-    @Column(name = "id_crop", nullable = false)
+    @Column(name = "id_crop", nullable = false, insertable = false, updatable = false)
     public long getIdCrop() {
         return idCrop;
     }
@@ -77,7 +77,7 @@ public class TpPlantDiseasePlantOrganEntity {
     }
 
     @Basic
-    @Column(name = "id_plant_disease", nullable = false)
+    @Column(name = "id_plant_disease", nullable = false, insertable = false, updatable = false)
     public long getIdPlantDisease() {
         return idPlantDisease;
     }
@@ -87,7 +87,7 @@ public class TpPlantDiseasePlantOrganEntity {
     }
 
     @Basic
-    @Column(name = "id_plant_organ", nullable = false)
+    @Column(name = "id_plant_organ", nullable = false, insertable = false, updatable = false)
     public long getIdPlantOrgan() {
         return idPlantOrgan;
     }

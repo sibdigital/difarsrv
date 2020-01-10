@@ -29,7 +29,7 @@ public class ClsAreaEntity {
     private ClsDistrictEntity clsDistrictByIdDistrict;
 
     @Basic
-    @Column(name = "id_user_creator", nullable = false)
+    @Column(name = "id_user_creator", nullable = false, insertable = false, updatable = false)
     public long getIdUserCreator() {
         return idUserCreator;
     }
@@ -91,7 +91,7 @@ public class ClsAreaEntity {
     }
 
     @Basic
-    @Column(name = "id_district", nullable = false)
+    @Column(name = "id_district", nullable = false, insertable = false, updatable = false)
     public long getIdDistrict() {
         return idDistrict;
     }

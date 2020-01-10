@@ -18,7 +18,7 @@ public class ClsCropVarietyEntity {
     private ClsCropEntity clsCropByIdCrop;
 
     @Basic
-    @Column(name = "id_user_creator", nullable = false)
+    @Column(name = "id_user_creator", nullable = false, insertable = false, updatable = false)
     public long getIdUserCreator() {
         return idUserCreator;
     }
@@ -80,7 +80,7 @@ public class ClsCropVarietyEntity {
     }
 
     @Basic
-    @Column(name = "id_crop", nullable = false)
+    @Column(name = "id_crop", nullable = false, insertable = false, updatable = false)
     public long getIdCrop() {
         return idCrop;
     }

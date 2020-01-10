@@ -25,7 +25,7 @@ public class TpRoutingProtectionEquipmentEntity {
     private ClsUnitEntity clsUnitByIdProtectionEquipmentUnit;
 
     @Basic
-    @Column(name = "id_user_creator", nullable = false)
+    @Column(name = "id_user_creator", nullable = false, insertable = false, updatable = false)
     public long getIdUserCreator() {
         return idUserCreator;
     }
@@ -65,7 +65,7 @@ public class TpRoutingProtectionEquipmentEntity {
     }
 
     @Basic
-    @Column(name = "id_routing", nullable = false)
+    @Column(name = "id_routing", nullable = false, insertable = false, updatable = false)
     public long getIdRouting() {
         return idRouting;
     }
@@ -75,7 +75,7 @@ public class TpRoutingProtectionEquipmentEntity {
     }
 
     @Basic
-    @Column(name = "id_routing_work", nullable = false)
+    @Column(name = "id_routing_work", nullable = false, insertable = false, updatable = false)
     public long getIdRoutingWork() {
         return idRoutingWork;
     }
@@ -85,7 +85,7 @@ public class TpRoutingProtectionEquipmentEntity {
     }
 
     @Basic
-    @Column(name = "id_organization_protection_equipment", nullable = false)
+    @Column(name = "id_organization_protection_equipment", nullable = false, insertable = false, updatable = false)
     public long getIdOrganizationProtectionEquipment() {
         return idOrganizationProtectionEquipment;
     }
@@ -95,7 +95,7 @@ public class TpRoutingProtectionEquipmentEntity {
     }
 
     @Basic
-    @Column(name = "id_protection_equipment_unit", nullable = false)
+    @Column(name = "id_protection_equipment_unit", nullable = false, insertable = false, updatable = false)
     public long getIdProtectionEquipmentUnit() {
         return idProtectionEquipmentUnit;
     }

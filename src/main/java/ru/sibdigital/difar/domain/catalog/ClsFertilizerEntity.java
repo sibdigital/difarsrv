@@ -25,7 +25,7 @@ public class ClsFertilizerEntity {
     private Collection<RegOrganizationFertilizerEntity> regOrganizationFertilizersById;
 
     @Basic
-    @Column(name = "id_user_creator", nullable = false)
+    @Column(name = "id_user_creator", nullable = false, insertable = false, updatable = false)
     public long getIdUserCreator() {
         return idUserCreator;
     }
@@ -97,7 +97,7 @@ public class ClsFertilizerEntity {
     }
 
     @Basic
-    @Column(name = "id_unit", nullable = false)
+    @Column(name = "id_unit", nullable = false, insertable = false, updatable = false)
     public long getIdUnit() {
         return idUnit;
     }

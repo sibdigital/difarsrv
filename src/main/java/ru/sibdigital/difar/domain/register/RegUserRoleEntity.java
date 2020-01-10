@@ -20,7 +20,7 @@ public class RegUserRoleEntity {
     private ClsRoleEntity clsRoleByIdRole;
 
     @Basic
-    @Column(name = "id_user_creator", nullable = false)
+    @Column(name = "id_user_creator", nullable = false, insertable = false, updatable = false)
     public long getIdUserCreator() {
         return idUserCreator;
     }
@@ -70,7 +70,7 @@ public class RegUserRoleEntity {
     }
 
     @Basic
-    @Column(name = "id_user", nullable = false)
+    @Column(name = "id_user", nullable = false, insertable = false, updatable = false)
     public long getIdUser() {
         return idUser;
     }
@@ -80,7 +80,7 @@ public class RegUserRoleEntity {
     }
 
     @Basic
-    @Column(name = "id_role", nullable = false)
+    @Column(name = "id_role", nullable = false, insertable = false, updatable = false)
     public long getIdRole() {
         return idRole;
     }

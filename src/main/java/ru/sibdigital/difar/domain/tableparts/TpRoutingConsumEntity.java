@@ -25,7 +25,7 @@ public class TpRoutingConsumEntity {
     private ClsUnitEntity clsUnitByIdConsumableUnit;
 
     @Basic
-    @Column(name = "id_user_creator", nullable = false)
+    @Column(name = "id_user_creator", nullable = false, insertable = false, updatable = false)
     public long getIdUserCreator() {
         return idUserCreator;
     }
@@ -65,7 +65,7 @@ public class TpRoutingConsumEntity {
     }
 
     @Basic
-    @Column(name = "id_routing", nullable = false)
+    @Column(name = "id_routing", nullable = false, insertable = false, updatable = false)
     public long getIdRouting() {
         return idRouting;
     }
@@ -75,7 +75,7 @@ public class TpRoutingConsumEntity {
     }
 
     @Basic
-    @Column(name = "id_routing_work", nullable = false)
+    @Column(name = "id_routing_work", nullable = false, insertable = false, updatable = false)
     public long getIdRoutingWork() {
         return idRoutingWork;
     }
@@ -85,7 +85,7 @@ public class TpRoutingConsumEntity {
     }
 
     @Basic
-    @Column(name = "id_organization_consumable", nullable = false)
+    @Column(name = "id_organization_consumable", nullable = false, insertable = false, updatable = false)
     public long getIdOrganizationConsumable() {
         return idOrganizationConsumable;
     }
@@ -95,7 +95,7 @@ public class TpRoutingConsumEntity {
     }
 
     @Basic
-    @Column(name = "id_consumable_unit", nullable = false)
+    @Column(name = "id_consumable_unit", nullable = false, insertable = false, updatable = false)
     public long getIdConsumableUnit() {
         return idConsumableUnit;
     }

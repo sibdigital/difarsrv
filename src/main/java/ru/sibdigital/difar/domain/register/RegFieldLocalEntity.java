@@ -28,7 +28,7 @@ public class RegFieldLocalEntity {
     private ClsDepartEntity clsDepartByIdDepart;
 
     @Basic
-    @Column(name = "id_user_creator", nullable = false)
+    @Column(name = "id_user_creator", nullable = false, insertable = false, updatable = false)
     public long getIdUserCreator() {
         return idUserCreator;
     }
@@ -78,7 +78,7 @@ public class RegFieldLocalEntity {
     }
 
     @Basic
-    @Column(name = "id_field", nullable = false)
+    @Column(name = "id_field", nullable = false, insertable = false, updatable = false)
     public long getIdField() {
         return idField;
     }
@@ -88,7 +88,7 @@ public class RegFieldLocalEntity {
     }
 
     @Basic
-    @Column(name = "id_region", nullable = false)
+    @Column(name = "id_region", nullable = false, insertable = false, updatable = false)
     public long getIdRegion() {
         return idRegion;
     }
@@ -98,7 +98,7 @@ public class RegFieldLocalEntity {
     }
 
     @Basic
-    @Column(name = "id_district", nullable = false)
+    @Column(name = "id_district", nullable = false, insertable = false, updatable = false)
     public long getIdDistrict() {
         return idDistrict;
     }
@@ -108,7 +108,7 @@ public class RegFieldLocalEntity {
     }
 
     @Basic
-    @Column(name = "id_area", nullable = false)
+    @Column(name = "id_area", nullable = false, insertable = false, updatable = false)
     public long getIdArea() {
         return idArea;
     }
@@ -118,7 +118,7 @@ public class RegFieldLocalEntity {
     }
 
     @Basic
-    @Column(name = "id_depart", nullable = false)
+    @Column(name = "id_depart", nullable = false, insertable = false, updatable = false)
     public long getIdDepart() {
         return idDepart;
     }

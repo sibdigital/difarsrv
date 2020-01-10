@@ -44,7 +44,7 @@ public class RegExternalAnimalEntity {
     private ClsAreaEntity clsAreaByIdArea;
 
     @Basic
-    @Column(name = "id_user_creator", nullable = false)
+    @Column(name = "id_user_creator", nullable = false, insertable = false, updatable = false)
     public long getIdUserCreator() {
         return idUserCreator;
     }
@@ -94,7 +94,7 @@ public class RegExternalAnimalEntity {
     }
 
     @Basic
-    @Column(name = "id_organization", nullable = false)
+    @Column(name = "id_organization", nullable = false, insertable = false, updatable = false)
     public long getIdOrganization() {
         return idOrganization;
     }
@@ -104,7 +104,7 @@ public class RegExternalAnimalEntity {
     }
 
     @Basic
-    @Column(name = "id_partner", nullable = false)
+    @Column(name = "id_partner", nullable = false, insertable = false, updatable = false)
     public long getIdPartner() {
         return idPartner;
     }
@@ -114,7 +114,7 @@ public class RegExternalAnimalEntity {
     }
 
     @Basic
-    @Column(name = "id_kind_animal", nullable = false)
+    @Column(name = "id_kind_animal", nullable = false, insertable = false, updatable = false)
     public long getIdKindAnimal() {
         return idKindAnimal;
     }
@@ -124,7 +124,7 @@ public class RegExternalAnimalEntity {
     }
 
     @Basic
-    @Column(name = "id_breed", nullable = false)
+    @Column(name = "id_breed", nullable = false, insertable = false, updatable = false)
     public long getIdBreed() {
         return idBreed;
     }
@@ -134,7 +134,7 @@ public class RegExternalAnimalEntity {
     }
 
     @Basic
-    @Column(name = "id_region", nullable = false)
+    @Column(name = "id_region", nullable = false, insertable = false, updatable = false)
     public long getIdRegion() {
         return idRegion;
     }
@@ -144,7 +144,7 @@ public class RegExternalAnimalEntity {
     }
 
     @Basic
-    @Column(name = "id_district", nullable = false)
+    @Column(name = "id_district", nullable = false, insertable = false, updatable = false)
     public long getIdDistrict() {
         return idDistrict;
     }
@@ -154,7 +154,7 @@ public class RegExternalAnimalEntity {
     }
 
     @Basic
-    @Column(name = "id_area", nullable = false)
+    @Column(name = "id_area", nullable = false, insertable = false, updatable = false)
     public long getIdArea() {
         return idArea;
     }
@@ -164,7 +164,7 @@ public class RegExternalAnimalEntity {
     }
 
     @Basic
-    @Column(name = "id_mother", nullable = false)
+    @Column(name = "id_mother", nullable = false, insertable = false, updatable = false)
     public long getIdMother() {
         return idMother;
     }
@@ -174,7 +174,7 @@ public class RegExternalAnimalEntity {
     }
 
     @Basic
-    @Column(name = "id_father", nullable = false)
+    @Column(name = "id_father", nullable = false, insertable = false, updatable = false)
     public long getIdFather() {
         return idFather;
     }

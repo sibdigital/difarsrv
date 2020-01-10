@@ -30,7 +30,7 @@ public class RegWeatherStationReadingEntity {
     private ClsOrganizationEntity clsOrganizationByIdOrganization;
 
     @Basic
-    @Column(name = "id_user_creator", nullable = false)
+    @Column(name = "id_user_creator", nullable = false, insertable = false, updatable = false)
     public long getIdUserCreator() {
         return idUserCreator;
     }
@@ -80,7 +80,7 @@ public class RegWeatherStationReadingEntity {
     }
 
     @Basic
-    @Column(name = "id_weather_station", nullable = false)
+    @Column(name = "id_weather_station", nullable = false, insertable = false, updatable = false)
     public long getIdWeatherStation() {
         return idWeatherStation;
     }
@@ -90,7 +90,7 @@ public class RegWeatherStationReadingEntity {
     }
 
     @Basic
-    @Column(name = "id_organization", nullable = false)
+    @Column(name = "id_organization", nullable = false, insertable = false, updatable = false)
     public long getIdOrganization() {
         return idOrganization;
     }

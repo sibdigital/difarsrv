@@ -30,7 +30,7 @@ public class TpAnimalBeatingAnimalGroupEntity {
     private RegAnimalEntity regAnimalByIdAnimalChild;
 
     @Basic
-    @Column(name = "id_user_creator", nullable = false)
+    @Column(name = "id_user_creator", nullable = false, insertable = false, updatable = false)
     public long getIdUserCreator() {
         return idUserCreator;
     }
@@ -70,7 +70,7 @@ public class TpAnimalBeatingAnimalGroupEntity {
     }
 
     @Basic
-    @Column(name = "id_animal_beating", nullable = false)
+    @Column(name = "id_animal_beating", nullable = false, insertable = false, updatable = false)
     public long getIdAnimalBeating() {
         return idAnimalBeating;
     }
@@ -80,7 +80,7 @@ public class TpAnimalBeatingAnimalGroupEntity {
     }
 
     @Basic
-    @Column(name = "id_animal_mother_group", nullable = false)
+    @Column(name = "id_animal_mother_group", nullable = false, insertable = false, updatable = false)
     public long getIdAnimalMotherGroup() {
         return idAnimalMotherGroup;
     }
@@ -90,7 +90,7 @@ public class TpAnimalBeatingAnimalGroupEntity {
     }
 
     @Basic
-    @Column(name = "id_animal_child", nullable = false)
+    @Column(name = "id_animal_child", nullable = false, insertable = false, updatable = false)
     public long getIdAnimalChild() {
         return idAnimalChild;
     }

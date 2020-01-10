@@ -23,7 +23,7 @@ public class TpPlantDiseaseTypicalAreaEntity {
     private ClsAreaEntity clsAreaByIdArea;
 
     @Basic
-    @Column(name = "id_user_creator", nullable = false)
+    @Column(name = "id_user_creator", nullable = false, insertable = false, updatable = false)
     public long getIdUserCreator() {
         return idUserCreator;
     }
@@ -63,7 +63,7 @@ public class TpPlantDiseaseTypicalAreaEntity {
     }
 
     @Basic
-    @Column(name = "id_crop", nullable = false)
+    @Column(name = "id_crop", nullable = false, insertable = false, updatable = false)
     public long getIdCrop() {
         return idCrop;
     }
@@ -73,7 +73,7 @@ public class TpPlantDiseaseTypicalAreaEntity {
     }
 
     @Basic
-    @Column(name = "id_plant_disease", nullable = false)
+    @Column(name = "id_plant_disease", nullable = false, insertable = false, updatable = false)
     public long getIdPlantDisease() {
         return idPlantDisease;
     }
@@ -83,7 +83,7 @@ public class TpPlantDiseaseTypicalAreaEntity {
     }
 
     @Basic
-    @Column(name = "id_region", nullable = false)
+    @Column(name = "id_region", nullable = false, insertable = false, updatable = false)
     public long getIdRegion() {
         return idRegion;
     }
@@ -93,7 +93,7 @@ public class TpPlantDiseaseTypicalAreaEntity {
     }
 
     @Basic
-    @Column(name = "id_district", nullable = false)
+    @Column(name = "id_district", nullable = false, insertable = false, updatable = false)
     public long getIdDistrict() {
         return idDistrict;
     }
@@ -103,7 +103,7 @@ public class TpPlantDiseaseTypicalAreaEntity {
     }
 
     @Basic
-    @Column(name = "id_area", nullable = false)
+    @Column(name = "id_area", nullable = false, insertable = false, updatable = false)
     public long getIdArea() {
         return idArea;
     }

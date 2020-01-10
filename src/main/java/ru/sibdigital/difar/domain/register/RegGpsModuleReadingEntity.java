@@ -27,7 +27,7 @@ public class RegGpsModuleReadingEntity {
     private ClsOrganizationEntity clsOrganizationByIdOrganization;
 
     @Basic
-    @Column(name = "id_user_creator", nullable = false)
+    @Column(name = "id_user_creator", nullable = false, insertable = false, updatable = false)
     public long getIdUserCreator() {
         return idUserCreator;
     }
@@ -77,7 +77,7 @@ public class RegGpsModuleReadingEntity {
     }
 
     @Basic
-    @Column(name = "id_gps_module", nullable = false)
+    @Column(name = "id_gps_module", nullable = false, insertable = false, updatable = false)
     public long getIdGpsModule() {
         return idGpsModule;
     }
@@ -87,7 +87,7 @@ public class RegGpsModuleReadingEntity {
     }
 
     @Basic
-    @Column(name = "id_organization", nullable = false)
+    @Column(name = "id_organization", nullable = false, insertable = false, updatable = false)
     public long getIdOrganization() {
         return idOrganization;
     }

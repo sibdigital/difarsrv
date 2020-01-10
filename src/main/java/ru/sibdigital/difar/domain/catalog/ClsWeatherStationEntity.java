@@ -29,7 +29,7 @@ public class ClsWeatherStationEntity {
     private Collection<RegWeatherStationReadingEntity> regWeatherStationReadingsById;
 
     @Basic
-    @Column(name = "id_user_creator", nullable = false)
+    @Column(name = "id_user_creator", nullable = false, insertable = false, updatable = false)
     public long getIdUserCreator() {
         return idUserCreator;
     }
@@ -91,7 +91,7 @@ public class ClsWeatherStationEntity {
     }
 
     @Basic
-    @Column(name = "id_organization", nullable = false)
+    @Column(name = "id_organization", nullable = false, insertable = false, updatable = false)
     public long getIdOrganization() {
         return idOrganization;
     }

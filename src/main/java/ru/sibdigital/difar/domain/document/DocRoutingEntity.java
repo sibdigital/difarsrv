@@ -43,7 +43,7 @@ public class DocRoutingEntity {
     private Collection<TpRoutingWorkEntity> tpRoutingWorksById;
 
     @Basic
-    @Column(name = "id_user_creator", nullable = false)
+    @Column(name = "id_user_creator", nullable = false, insertable = false, updatable = false)
     public long getIdUserCreator() {
         return idUserCreator;
     }
@@ -103,7 +103,7 @@ public class DocRoutingEntity {
     }
 
     @Basic
-    @Column(name = "id_organization", nullable = false)
+    @Column(name = "id_organization", nullable = false, insertable = false, updatable = false)
     public long getIdOrganization() {
         return idOrganization;
     }
@@ -113,7 +113,7 @@ public class DocRoutingEntity {
     }
 
     @Basic
-    @Column(name = "id_standard_period", nullable = false)
+    @Column(name = "id_standard_period", nullable = false, insertable = false, updatable = false)
     public long getIdStandardPeriod() {
         return idStandardPeriod;
     }
@@ -123,7 +123,7 @@ public class DocRoutingEntity {
     }
 
     @Basic
-    @Column(name = "id_crop", nullable = false)
+    @Column(name = "id_crop", nullable = false, insertable = false, updatable = false)
     public long getIdCrop() {
         return idCrop;
     }
@@ -133,7 +133,7 @@ public class DocRoutingEntity {
     }
 
     @Basic
-    @Column(name = "id_field", nullable = false)
+    @Column(name = "id_field", nullable = false, insertable = false, updatable = false)
     public long getIdField() {
         return idField;
     }
@@ -143,7 +143,7 @@ public class DocRoutingEntity {
     }
 
     @Basic
-    @Column(name = "id_unit", nullable = false)
+    @Column(name = "id_unit", nullable = false, insertable = false, updatable = false)
     public long getIdUnit() {
         return idUnit;
     }

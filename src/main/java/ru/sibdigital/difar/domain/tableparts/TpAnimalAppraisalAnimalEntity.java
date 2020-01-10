@@ -24,7 +24,7 @@ public class TpAnimalAppraisalAnimalEntity {
     private RegAnimalEntity regAnimalByIdAnimal;
 
     @Basic
-    @Column(name = "id_user_creator", nullable = false)
+    @Column(name = "id_user_creator", nullable = false, insertable = false, updatable = false)
     public long getIdUserCreator() {
         return idUserCreator;
     }
@@ -64,7 +64,7 @@ public class TpAnimalAppraisalAnimalEntity {
     }
 
     @Basic
-    @Column(name = "id_animal_appraisal", nullable = false)
+    @Column(name = "id_animal_appraisal", nullable = false, insertable = false, updatable = false)
     public long getIdAnimalAppraisal() {
         return idAnimalAppraisal;
     }
@@ -74,7 +74,7 @@ public class TpAnimalAppraisalAnimalEntity {
     }
 
     @Basic
-    @Column(name = "id_animal", nullable = false)
+    @Column(name = "id_animal", nullable = false, insertable = false, updatable = false)
     public long getIdAnimal() {
         return idAnimal;
     }

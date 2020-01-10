@@ -29,7 +29,7 @@ public class RegOrganizationEquipmentEntity {
     private ClsEquipmentKindEntity clsEquipmentKindByIdEquipmentKind;
 
     @Basic
-    @Column(name = "id_user_creator", nullable = false)
+    @Column(name = "id_user_creator", nullable = false, insertable = false, updatable = false)
     public long getIdUserCreator() {
         return idUserCreator;
     }
@@ -79,7 +79,7 @@ public class RegOrganizationEquipmentEntity {
     }
 
     @Basic
-    @Column(name = "id_organization", nullable = false)
+    @Column(name = "id_organization", nullable = false, insertable = false, updatable = false)
     public long getIdOrganization() {
         return idOrganization;
     }
@@ -89,7 +89,7 @@ public class RegOrganizationEquipmentEntity {
     }
 
     @Basic
-    @Column(name = "id_equipment_kind", nullable = false)
+    @Column(name = "id_equipment_kind", nullable = false, insertable = false, updatable = false)
     public long getIdEquipmentKind() {
         return idEquipmentKind;
     }

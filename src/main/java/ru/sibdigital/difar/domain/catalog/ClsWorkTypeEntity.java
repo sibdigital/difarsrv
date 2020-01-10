@@ -18,7 +18,7 @@ public class ClsWorkTypeEntity {
 //    private String parentPath;
 
     @Basic
-    @Column(name = "id_user_creator", nullable = false)
+    @Column(name = "id_user_creator", nullable = false, insertable = false, updatable = false)
     public long getIdUserCreator() {
         return idUserCreator;
     }
@@ -80,7 +80,7 @@ public class ClsWorkTypeEntity {
     }
 
     @Basic
-    @Column(name = "id_parent", nullable = false)
+    @Column(name = "id_parent", nullable = false, insertable = false, updatable = false)
     public long getIdParent() {
         return idParent;
     }

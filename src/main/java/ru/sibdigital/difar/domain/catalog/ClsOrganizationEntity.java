@@ -56,7 +56,7 @@ public class ClsOrganizationEntity {
     private Collection<RegOrganizationEquipmentEntity> regOrganizationEquipmentsById;
 
     @Basic
-    @Column(name = "id_user_creator", nullable = false)
+    @Column(name = "id_user_creator", nullable = false, insertable = false, updatable = false)
     public long getIdUserCreator() {
         return idUserCreator;
     }
@@ -128,7 +128,7 @@ public class ClsOrganizationEntity {
     }
 
     @Basic
-    @Column(name = "id_legal_entity", nullable = false)
+    @Column(name = "id_legal_entity", nullable = false, insertable = false, updatable = false)
     public long getIdLegalEntity() {
         return idLegalEntity;
     }

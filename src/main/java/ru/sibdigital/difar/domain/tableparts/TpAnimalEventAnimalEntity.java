@@ -27,7 +27,7 @@ public class TpAnimalEventAnimalEntity {
     private RegAnimalEntity regAnimalByIdAnimal2;
 
     @Basic
-    @Column(name = "id_user_creator", nullable = false)
+    @Column(name = "id_user_creator", nullable = false, insertable = false, updatable = false)
     public long getIdUserCreator() {
         return idUserCreator;
     }
@@ -67,7 +67,7 @@ public class TpAnimalEventAnimalEntity {
     }
 
     @Basic
-    @Column(name = "id_animal_event", nullable = false)
+    @Column(name = "id_animal_event", nullable = false, insertable = false, updatable = false)
     public long getIdAnimalEvent() {
         return idAnimalEvent;
     }
@@ -77,7 +77,7 @@ public class TpAnimalEventAnimalEntity {
     }
 
     @Basic
-    @Column(name = "id_animal1", nullable = false)
+    @Column(name = "id_animal1", nullable = false, insertable = false, updatable = false)
     public long getIdAnimal1() {
         return idAnimal1;
     }
@@ -87,7 +87,7 @@ public class TpAnimalEventAnimalEntity {
     }
 
     @Basic
-    @Column(name = "id_animal2", nullable = false)
+    @Column(name = "id_animal2", nullable = false, insertable = false, updatable = false)
     public long getIdAnimal2() {
         return idAnimal2;
     }

@@ -33,7 +33,7 @@ public class RegOrganizationProtectionEquipmentEntity {
     private Collection<TpRoutingProtectionEquipmentEntity> tpRoutingProtectionEquipmentsById;
 
     @Basic
-    @Column(name = "id_user_creator", nullable = false)
+    @Column(name = "id_user_creator", nullable = false, insertable = false, updatable = false)
     public long getIdUserCreator() {
         return idUserCreator;
     }
@@ -83,7 +83,7 @@ public class RegOrganizationProtectionEquipmentEntity {
     }
 
     @Basic
-    @Column(name = "id_organization", nullable = false)
+    @Column(name = "id_organization", nullable = false, insertable = false, updatable = false)
     public long getIdOrganization() {
         return idOrganization;
     }
@@ -93,7 +93,7 @@ public class RegOrganizationProtectionEquipmentEntity {
     }
 
     @Basic
-    @Column(name = "id_protection_equipment", nullable = false)
+    @Column(name = "id_protection_equipment", nullable = false, insertable = false, updatable = false)
     public long getIdProtectionEquipment() {
         return idProtectionEquipment;
     }

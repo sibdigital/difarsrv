@@ -26,7 +26,7 @@ public class ClsArbitraryPeriodEntity {
     private ClsOrganizationEntity clsOrganizationByIdOrganization;
 
     @Basic
-    @Column(name = "id_user_creator", nullable = false)
+    @Column(name = "id_user_creator", nullable = false, insertable = false, updatable = false)
     public long getIdUserCreator() {
         return idUserCreator;
     }
@@ -88,7 +88,7 @@ public class ClsArbitraryPeriodEntity {
     }
 
     @Basic
-    @Column(name = "id_standard_period", nullable = false)
+    @Column(name = "id_standard_period", nullable = false, insertable = false, updatable = false)
     public long getIdStandardPeriod() {
         return idStandardPeriod;
     }
@@ -98,7 +98,7 @@ public class ClsArbitraryPeriodEntity {
     }
 
     @Basic
-    @Column(name = "id_region", nullable = false)
+    @Column(name = "id_region", nullable = false, insertable = false, updatable = false)
     public long getIdRegion() {
         return idRegion;
     }
@@ -108,7 +108,7 @@ public class ClsArbitraryPeriodEntity {
     }
 
     @Basic
-    @Column(name = "id_district", nullable = false)
+    @Column(name = "id_district", nullable = false, insertable = false, updatable = false)
     public long getIdDistrict() {
         return idDistrict;
     }
@@ -118,7 +118,7 @@ public class ClsArbitraryPeriodEntity {
     }
 
     @Basic
-    @Column(name = "id_organization", nullable = false)
+    @Column(name = "id_organization", nullable = false, insertable = false, updatable = false)
     public long getIdOrganization() {
         return idOrganization;
     }

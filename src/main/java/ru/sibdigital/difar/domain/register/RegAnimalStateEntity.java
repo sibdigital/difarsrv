@@ -28,7 +28,7 @@ public class RegAnimalStateEntity {
     private ClsTypeAnimalEventEntity clsTypeAnimalEventByIdTypeAnimalEvent;
 
     @Basic
-    @Column(name = "id_user_creator", nullable = false)
+    @Column(name = "id_user_creator", nullable = false, insertable = false, updatable = false)
     public long getIdUserCreator() {
         return idUserCreator;
     }
@@ -78,7 +78,7 @@ public class RegAnimalStateEntity {
     }
 
     @Basic
-    @Column(name = "id_organization", nullable = false)
+    @Column(name = "id_organization", nullable = false, insertable = false, updatable = false)
     public long getIdOrganization() {
         return idOrganization;
     }
@@ -88,7 +88,7 @@ public class RegAnimalStateEntity {
     }
 
     @Basic
-    @Column(name = "id_ranch", nullable = false)
+    @Column(name = "id_ranch", nullable = false, insertable = false, updatable = false)
     public long getIdRanch() {
         return idRanch;
     }
@@ -98,7 +98,7 @@ public class RegAnimalStateEntity {
     }
 
     @Basic
-    @Column(name = "id_animal", nullable = false)
+    @Column(name = "id_animal", nullable = false, insertable = false, updatable = false)
     public long getIdAnimal() {
         return idAnimal;
     }
@@ -108,7 +108,7 @@ public class RegAnimalStateEntity {
     }
 
     @Basic
-    @Column(name = "id_doc", nullable = false)
+    @Column(name = "id_doc", nullable = false, insertable = false, updatable = false)
     public long getIdDoc() {
         return idDoc;
     }
@@ -118,7 +118,7 @@ public class RegAnimalStateEntity {
     }
 
     @Basic
-    @Column(name = "id_type_animal_event", nullable = false)
+    @Column(name = "id_type_animal_event", nullable = false, insertable = false, updatable = false)
     public long getIdTypeAnimalEvent() {
         return idTypeAnimalEvent;
     }

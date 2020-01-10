@@ -33,7 +33,7 @@ public class RegOrganizationFertilizerEntity {
     private Collection<TpRoutingFertilizerEntity> tpRoutingFertilizersById;
 
     @Basic
-    @Column(name = "id_user_creator", nullable = false)
+    @Column(name = "id_user_creator", nullable = false, insertable = false, updatable = false)
     public long getIdUserCreator() {
         return idUserCreator;
     }
@@ -83,7 +83,7 @@ public class RegOrganizationFertilizerEntity {
     }
 
     @Basic
-    @Column(name = "id_organization", nullable = false)
+    @Column(name = "id_organization", nullable = false, insertable = false, updatable = false)
     public long getIdOrganization() {
         return idOrganization;
     }
@@ -93,7 +93,7 @@ public class RegOrganizationFertilizerEntity {
     }
 
     @Basic
-    @Column(name = "id_fertilizer", nullable = false)
+    @Column(name = "id_fertilizer", nullable = false, insertable = false, updatable = false)
     public long getIdFertilizer() {
         return idFertilizer;
     }
