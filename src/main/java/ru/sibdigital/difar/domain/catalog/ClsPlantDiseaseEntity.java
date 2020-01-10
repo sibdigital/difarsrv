@@ -1,8 +1,10 @@
 package ru.sibdigital.difar.domain.catalog;
 
 import com.fasterxml.jackson.databind.JsonNode;
+import com.vladmihalcea.hibernate.type.json.JsonNodeBinaryType;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.Type;
+import org.hibernate.annotations.TypeDef;
 import ru.sibdigital.difar.domain.tableparts.*;
 
 import javax.persistence.*;
@@ -11,6 +13,7 @@ import java.util.Date;
 
 @Entity
 @Table(name = "cls_plant_disease", schema = "agrc")
+@TypeDef(name = "jsonb-node", typeClass = JsonNodeBinaryType.class)
 public class ClsPlantDiseaseEntity {
     private long idUserCreator;
     private String name;

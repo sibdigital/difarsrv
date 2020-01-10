@@ -22,7 +22,7 @@ public class ClsRanchEntity {
     private long idOrganization;
     private long idDepart;
     private long idDistrict;
-    private Geometry coord;
+//    private Geometry coord;
     private Collection<DocAnimalTransferEntity> docAnimalTransfersById;
     private Collection<DocAnimalTransferEntity> docAnimalTransfersById_0;
     private Collection<RegAnimalGroupEntity> regAnimalGroupsById;
@@ -127,49 +127,49 @@ public class ClsRanchEntity {
         this.idDistrict = idDistrict;
     }
 
-    @Type(type="org.hibernate.spatial.GeometryType")
-    @Column(columnDefinition="Geometry", name = "coord", nullable = true)
-    public Geometry getCoord() {
-        return coord;
-    }
-
-    public void setCoord(Geometry coord) {
-        this.coord = coord;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        ClsRanchEntity that = (ClsRanchEntity) o;
-
-        if (idUserCreator != that.idUserCreator) return false;
-        if (id != that.id) return false;
-        if (idOrganization != that.idOrganization) return false;
-        if (idDepart != that.idDepart) return false;
-        if (idDistrict != that.idDistrict) return false;
-        if (name != null ? !name.equals(that.name) : that.name != null) return false;
-        if (dateCreate != null ? !dateCreate.equals(that.dateCreate) : that.dateCreate != null) return false;
-        if (isDeleted != null ? !isDeleted.equals(that.isDeleted) : that.isDeleted != null) return false;
-        if (number != null ? !number.equals(that.number) : that.number != null) return false;
-        return coord != null ? coord.equals(that.coord) : that.coord == null;
-    }
-
-    @Override
-    public int hashCode() {
-        int result = (int) (idUserCreator ^ (idUserCreator >>> 32));
-        result = 31 * result + (name != null ? name.hashCode() : 0);
-        result = 31 * result + (dateCreate != null ? dateCreate.hashCode() : 0);
-        result = 31 * result + (isDeleted != null ? isDeleted.hashCode() : 0);
-        result = 31 * result + (number != null ? number.hashCode() : 0);
-        result = 31 * result + (int) (id ^ (id >>> 32));
-        result = 31 * result + (int) (idOrganization ^ (idOrganization >>> 32));
-        result = 31 * result + (int) (idDepart ^ (idDepart >>> 32));
-        result = 31 * result + (int) (idDistrict ^ (idDistrict >>> 32));
-        result = 31 * result + (coord != null ? coord.hashCode() : 0);
-        return result;
-    }
+//    @Type(type="org.hibernate.spatial.GeometryType")
+//    @Column(columnDefinition="Geometry", name = "coord", nullable = true)
+//    public Geometry getCoord() {
+//        return coord;
+//    }
+//
+//    public void setCoord(Geometry coord) {
+//        this.coord = coord;
+//    }
+//
+//    @Override
+//    public boolean equals(Object o) {
+//        if (this == o) return true;
+//        if (o == null || getClass() != o.getClass()) return false;
+//
+//        ClsRanchEntity that = (ClsRanchEntity) o;
+//
+//        if (idUserCreator != that.idUserCreator) return false;
+//        if (id != that.id) return false;
+//        if (idOrganization != that.idOrganization) return false;
+//        if (idDepart != that.idDepart) return false;
+//        if (idDistrict != that.idDistrict) return false;
+//        if (name != null ? !name.equals(that.name) : that.name != null) return false;
+//        if (dateCreate != null ? !dateCreate.equals(that.dateCreate) : that.dateCreate != null) return false;
+//        if (isDeleted != null ? !isDeleted.equals(that.isDeleted) : that.isDeleted != null) return false;
+//        if (number != null ? !number.equals(that.number) : that.number != null) return false;
+//        return coord != null ? coord.equals(that.coord) : that.coord == null;
+//    }
+//
+//    @Override
+//    public int hashCode() {
+//        int result = (int) (idUserCreator ^ (idUserCreator >>> 32));
+//        result = 31 * result + (name != null ? name.hashCode() : 0);
+//        result = 31 * result + (dateCreate != null ? dateCreate.hashCode() : 0);
+//        result = 31 * result + (isDeleted != null ? isDeleted.hashCode() : 0);
+//        result = 31 * result + (number != null ? number.hashCode() : 0);
+//        result = 31 * result + (int) (id ^ (id >>> 32));
+//        result = 31 * result + (int) (idOrganization ^ (idOrganization >>> 32));
+//        result = 31 * result + (int) (idDepart ^ (idDepart >>> 32));
+//        result = 31 * result + (int) (idDistrict ^ (idDistrict >>> 32));
+//        result = 31 * result + (coord != null ? coord.hashCode() : 0);
+//        return result;
+//    }
 
     @OneToMany(mappedBy = "clsRanchByIdRanch")
     public Collection<DocAnimalTransferEntity> getDocAnimalTransfersById() {

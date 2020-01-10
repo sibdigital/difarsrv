@@ -15,7 +15,7 @@ public class TpRoutingWorkEntity {
     private long id;
     private long idRouting;
     private long idRoutingStage;
-    private Object execTime;
+//    private Object execTime;
     private Collection<RegExecRoutingConsumEntity> regExecRoutingConsumsById;
     private Collection<RegExecRoutingEquipmentEntity> regExecRoutingEquipmentsById;
     private Collection<RegExecRoutingFertilizerEntity> regExecRoutingFertilizersById;
@@ -88,43 +88,43 @@ public class TpRoutingWorkEntity {
         this.idRoutingStage = idRoutingStage;
     }
 
-    @Basic
-    @Column(name = "exec_time", nullable = true)
-    public Object getExecTime() {
-        return execTime;
-    }
+//    @Basic
+//    @Column(name = "exec_time", nullable = true)
+//    public Object getExecTime() {
+//        return execTime;
+//    }
+//
+//    public void setExecTime(Object execTime) {
+//        this.execTime = execTime;
+//    }
+//
+//    @Override
+//    public boolean equals(Object o) {
+//        if (this == o) return true;
+//        if (o == null || getClass() != o.getClass()) return false;
+//
+//        TpRoutingWorkEntity that = (TpRoutingWorkEntity) o;
+//
+//        if (idUserCreator != that.idUserCreator) return false;
+//        if (number != that.number) return false;
+//        if (id != that.id) return false;
+//        if (idRouting != that.idRouting) return false;
+//        if (idRoutingStage != that.idRoutingStage) return false;
+//        if (isDeleted != null ? !isDeleted.equals(that.isDeleted) : that.isDeleted != null) return false;
+//        return execTime != null ? execTime.equals(that.execTime) : that.execTime == null;
+//    }
 
-    public void setExecTime(Object execTime) {
-        this.execTime = execTime;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        TpRoutingWorkEntity that = (TpRoutingWorkEntity) o;
-
-        if (idUserCreator != that.idUserCreator) return false;
-        if (number != that.number) return false;
-        if (id != that.id) return false;
-        if (idRouting != that.idRouting) return false;
-        if (idRoutingStage != that.idRoutingStage) return false;
-        if (isDeleted != null ? !isDeleted.equals(that.isDeleted) : that.isDeleted != null) return false;
-        return execTime != null ? execTime.equals(that.execTime) : that.execTime == null;
-    }
-
-    @Override
-    public int hashCode() {
-        int result = (int) (idUserCreator ^ (idUserCreator >>> 32));
-        result = 31 * result + (isDeleted != null ? isDeleted.hashCode() : 0);
-        result = 31 * result + (int) (number ^ (number >>> 32));
-        result = 31 * result + (int) (id ^ (id >>> 32));
-        result = 31 * result + (int) (idRouting ^ (idRouting >>> 32));
-        result = 31 * result + (int) (idRoutingStage ^ (idRoutingStage >>> 32));
-        result = 31 * result + (execTime != null ? execTime.hashCode() : 0);
-        return result;
-    }
+//    @Override
+//    public int hashCode() {
+//        int result = (int) (idUserCreator ^ (idUserCreator >>> 32));
+//        result = 31 * result + (isDeleted != null ? isDeleted.hashCode() : 0);
+//        result = 31 * result + (int) (number ^ (number >>> 32));
+//        result = 31 * result + (int) (id ^ (id >>> 32));
+//        result = 31 * result + (int) (idRouting ^ (idRouting >>> 32));
+//        result = 31 * result + (int) (idRoutingStage ^ (idRoutingStage >>> 32));
+//        result = 31 * result + (execTime != null ? execTime.hashCode() : 0);
+//        return result;
+//    }
 
     @OneToMany(mappedBy = "tpRoutingWorkByIdRoutingWork")
     public Collection<RegExecRoutingConsumEntity> getRegExecRoutingConsumsById() {

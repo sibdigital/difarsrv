@@ -88,7 +88,7 @@ public class ClsConsumableEntity {
     }
 
     @Basic
-    @Column(name = "id_consumable_kind", nullable = false)
+    @Column(name = "id_consumable_kind", nullable = false, insertable = false, updatable = false)
     public long getIdConsumableKind() {
         return idConsumableKind;
     }
@@ -98,7 +98,7 @@ public class ClsConsumableEntity {
     }
 
     @Basic
-    @Column(name = "id_unit", nullable = false)
+    @Column(name = "id_unit", nullable = false, insertable = false, updatable = false)
     public long getIdUnit() {
         return idUnit;
     }

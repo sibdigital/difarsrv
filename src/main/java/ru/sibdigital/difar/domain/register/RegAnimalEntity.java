@@ -1,5 +1,9 @@
 package ru.sibdigital.difar.domain.register;
 
+import com.fasterxml.jackson.databind.JsonNode;
+import com.vladmihalcea.hibernate.type.json.JsonNodeBinaryType;
+import org.hibernate.annotations.Type;
+import org.hibernate.annotations.TypeDef;
 import ru.sibdigital.difar.domain.catalog.*;
 import ru.sibdigital.difar.domain.tableparts.*;
 
@@ -9,6 +13,7 @@ import java.util.Collection;
 
 @Entity
 @Table(name = "reg_animal", schema = "breed")
+@TypeDef(name = "jsonb-node", typeClass = JsonNodeBinaryType.class)
 public class RegAnimalEntity {
     private long idUserCreator;
     private Timestamp dateCreate;
@@ -32,10 +37,10 @@ public class RegAnimalEntity {
     private Timestamp dateRetirement;
     private Integer sex;
     private String chipIdent;
-    private Object ident;
+    private JsonNode ident;
     private String nick;
-    private Object motherPath;
-    private Object fatherPath;
+//    private Object motherPath;
+//    private Object fatherPath;
     private ClsOrganizationEntity clsOrganizationByIdOrganization;
     private ClsPartnerEntity clsPartnerByIdPartner;
     private ClsKindAnimalEntity clsKindAnimalByIdKindAnimal;
@@ -285,13 +290,13 @@ public class RegAnimalEntity {
         this.chipIdent = chipIdent;
     }
 
-    @Basic
+    @Type(type = "jsonb-node")
     @Column(name = "ident", nullable = true)
-    public Object getIdent() {
+    public JsonNode getIdent() {
         return ident;
     }
 
-    public void setIdent(Object ident) {
+    public void setIdent(JsonNode ident) {
         this.ident = ident;
     }
 
@@ -305,92 +310,92 @@ public class RegAnimalEntity {
         this.nick = nick;
     }
 
-    @Basic
-    @Column(name = "mother_path", nullable = true)
-    public Object getMotherPath() {
-        return motherPath;
-    }
+//    @Basic
+//    @Column(name = "mother_path", nullable = true)
+//    public Object getMotherPath() {
+//        return motherPath;
+//    }
+//
+//    public void setMotherPath(Object motherPath) {
+//        this.motherPath = motherPath;
+//    }
+//
+//    @Basic
+//    @Column(name = "father_path", nullable = true)
+//    public Object getFatherPath() {
+//        return fatherPath;
+//    }
+//
+//    public void setFatherPath(Object fatherPath) {
+//        this.fatherPath = fatherPath;
+//    }
 
-    public void setMotherPath(Object motherPath) {
-        this.motherPath = motherPath;
-    }
-
-    @Basic
-    @Column(name = "father_path", nullable = true)
-    public Object getFatherPath() {
-        return fatherPath;
-    }
-
-    public void setFatherPath(Object fatherPath) {
-        this.fatherPath = fatherPath;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        RegAnimalEntity that = (RegAnimalEntity) o;
-
-        if (idUserCreator != that.idUserCreator) return false;
-        if (id != that.id) return false;
-        if (idOrganization != that.idOrganization) return false;
-        if (idPartner != that.idPartner) return false;
-        if (idKindAnimal != that.idKindAnimal) return false;
-        if (idBreed != that.idBreed) return false;
-        if (idRegion != that.idRegion) return false;
-        if (idDistrict != that.idDistrict) return false;
-        if (idArea != that.idArea) return false;
-        if (idMother != that.idMother) return false;
-        if (idFather != that.idFather) return false;
-        if (idGroupMother != that.idGroupMother) return false;
-        if (idGroupFather != that.idGroupFather) return false;
-        if (idExternalMother != that.idExternalMother) return false;
-        if (idExternalFather != that.idExternalFather) return false;
-        if (dateCreate != null ? !dateCreate.equals(that.dateCreate) : that.dateCreate != null) return false;
-        if (dateBegin != null ? !dateBegin.equals(that.dateBegin) : that.dateBegin != null) return false;
-        if (dateEnd != null ? !dateEnd.equals(that.dateEnd) : that.dateEnd != null) return false;
-        if (dateBirth != null ? !dateBirth.equals(that.dateBirth) : that.dateBirth != null) return false;
-        if (dateRetirement != null ? !dateRetirement.equals(that.dateRetirement) : that.dateRetirement != null)
-            return false;
-        if (sex != null ? !sex.equals(that.sex) : that.sex != null) return false;
-        if (chipIdent != null ? !chipIdent.equals(that.chipIdent) : that.chipIdent != null) return false;
-        if (ident != null ? !ident.equals(that.ident) : that.ident != null) return false;
-        if (nick != null ? !nick.equals(that.nick) : that.nick != null) return false;
-        if (motherPath != null ? !motherPath.equals(that.motherPath) : that.motherPath != null) return false;
-        return fatherPath != null ? fatherPath.equals(that.fatherPath) : that.fatherPath == null;
-    }
-
-    @Override
-    public int hashCode() {
-        int result = (int) (idUserCreator ^ (idUserCreator >>> 32));
-        result = 31 * result + (dateCreate != null ? dateCreate.hashCode() : 0);
-        result = 31 * result + (dateBegin != null ? dateBegin.hashCode() : 0);
-        result = 31 * result + (dateEnd != null ? dateEnd.hashCode() : 0);
-        result = 31 * result + (int) (id ^ (id >>> 32));
-        result = 31 * result + (int) (idOrganization ^ (idOrganization >>> 32));
-        result = 31 * result + (int) (idPartner ^ (idPartner >>> 32));
-        result = 31 * result + (int) (idKindAnimal ^ (idKindAnimal >>> 32));
-        result = 31 * result + (int) (idBreed ^ (idBreed >>> 32));
-        result = 31 * result + (int) (idRegion ^ (idRegion >>> 32));
-        result = 31 * result + (int) (idDistrict ^ (idDistrict >>> 32));
-        result = 31 * result + (int) (idArea ^ (idArea >>> 32));
-        result = 31 * result + (int) (idMother ^ (idMother >>> 32));
-        result = 31 * result + (int) (idFather ^ (idFather >>> 32));
-        result = 31 * result + (int) (idGroupMother ^ (idGroupMother >>> 32));
-        result = 31 * result + (int) (idGroupFather ^ (idGroupFather >>> 32));
-        result = 31 * result + (int) (idExternalMother ^ (idExternalMother >>> 32));
-        result = 31 * result + (int) (idExternalFather ^ (idExternalFather >>> 32));
-        result = 31 * result + (dateBirth != null ? dateBirth.hashCode() : 0);
-        result = 31 * result + (dateRetirement != null ? dateRetirement.hashCode() : 0);
-        result = 31 * result + (sex != null ? sex.hashCode() : 0);
-        result = 31 * result + (chipIdent != null ? chipIdent.hashCode() : 0);
-        result = 31 * result + (ident != null ? ident.hashCode() : 0);
-        result = 31 * result + (nick != null ? nick.hashCode() : 0);
-        result = 31 * result + (motherPath != null ? motherPath.hashCode() : 0);
-        result = 31 * result + (fatherPath != null ? fatherPath.hashCode() : 0);
-        return result;
-    }
+//    @Override
+//    public boolean equals(Object o) {
+//        if (this == o) return true;
+//        if (o == null || getClass() != o.getClass()) return false;
+//
+//        RegAnimalEntity that = (RegAnimalEntity) o;
+//
+//        if (idUserCreator != that.idUserCreator) return false;
+//        if (id != that.id) return false;
+//        if (idOrganization != that.idOrganization) return false;
+//        if (idPartner != that.idPartner) return false;
+//        if (idKindAnimal != that.idKindAnimal) return false;
+//        if (idBreed != that.idBreed) return false;
+//        if (idRegion != that.idRegion) return false;
+//        if (idDistrict != that.idDistrict) return false;
+//        if (idArea != that.idArea) return false;
+//        if (idMother != that.idMother) return false;
+//        if (idFather != that.idFather) return false;
+//        if (idGroupMother != that.idGroupMother) return false;
+//        if (idGroupFather != that.idGroupFather) return false;
+//        if (idExternalMother != that.idExternalMother) return false;
+//        if (idExternalFather != that.idExternalFather) return false;
+//        if (dateCreate != null ? !dateCreate.equals(that.dateCreate) : that.dateCreate != null) return false;
+//        if (dateBegin != null ? !dateBegin.equals(that.dateBegin) : that.dateBegin != null) return false;
+//        if (dateEnd != null ? !dateEnd.equals(that.dateEnd) : that.dateEnd != null) return false;
+//        if (dateBirth != null ? !dateBirth.equals(that.dateBirth) : that.dateBirth != null) return false;
+//        if (dateRetirement != null ? !dateRetirement.equals(that.dateRetirement) : that.dateRetirement != null)
+//            return false;
+//        if (sex != null ? !sex.equals(that.sex) : that.sex != null) return false;
+//        if (chipIdent != null ? !chipIdent.equals(that.chipIdent) : that.chipIdent != null) return false;
+//        if (ident != null ? !ident.equals(that.ident) : that.ident != null) return false;
+//        if (nick != null ? !nick.equals(that.nick) : that.nick != null) return false;
+//        if (motherPath != null ? !motherPath.equals(that.motherPath) : that.motherPath != null) return false;
+//        return fatherPath != null ? fatherPath.equals(that.fatherPath) : that.fatherPath == null;
+//    }
+//
+//    @Override
+//    public int hashCode() {
+//        int result = (int) (idUserCreator ^ (idUserCreator >>> 32));
+//        result = 31 * result + (dateCreate != null ? dateCreate.hashCode() : 0);
+//        result = 31 * result + (dateBegin != null ? dateBegin.hashCode() : 0);
+//        result = 31 * result + (dateEnd != null ? dateEnd.hashCode() : 0);
+//        result = 31 * result + (int) (id ^ (id >>> 32));
+//        result = 31 * result + (int) (idOrganization ^ (idOrganization >>> 32));
+//        result = 31 * result + (int) (idPartner ^ (idPartner >>> 32));
+//        result = 31 * result + (int) (idKindAnimal ^ (idKindAnimal >>> 32));
+//        result = 31 * result + (int) (idBreed ^ (idBreed >>> 32));
+//        result = 31 * result + (int) (idRegion ^ (idRegion >>> 32));
+//        result = 31 * result + (int) (idDistrict ^ (idDistrict >>> 32));
+//        result = 31 * result + (int) (idArea ^ (idArea >>> 32));
+//        result = 31 * result + (int) (idMother ^ (idMother >>> 32));
+//        result = 31 * result + (int) (idFather ^ (idFather >>> 32));
+//        result = 31 * result + (int) (idGroupMother ^ (idGroupMother >>> 32));
+//        result = 31 * result + (int) (idGroupFather ^ (idGroupFather >>> 32));
+//        result = 31 * result + (int) (idExternalMother ^ (idExternalMother >>> 32));
+//        result = 31 * result + (int) (idExternalFather ^ (idExternalFather >>> 32));
+//        result = 31 * result + (dateBirth != null ? dateBirth.hashCode() : 0);
+//        result = 31 * result + (dateRetirement != null ? dateRetirement.hashCode() : 0);
+//        result = 31 * result + (sex != null ? sex.hashCode() : 0);
+//        result = 31 * result + (chipIdent != null ? chipIdent.hashCode() : 0);
+//        result = 31 * result + (ident != null ? ident.hashCode() : 0);
+//        result = 31 * result + (nick != null ? nick.hashCode() : 0);
+//        result = 31 * result + (motherPath != null ? motherPath.hashCode() : 0);
+//        result = 31 * result + (fatherPath != null ? fatherPath.hashCode() : 0);
+//        return result;
+//    }
 
     @ManyToOne
     @JoinColumn(name = "id_organization", referencedColumnName = "id", nullable = false)

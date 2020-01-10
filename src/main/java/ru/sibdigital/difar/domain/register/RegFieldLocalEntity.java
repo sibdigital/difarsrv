@@ -19,7 +19,7 @@ public class RegFieldLocalEntity {
     private long idDistrict;
     private long idArea;
     private long idDepart;
-    private Object bound;
+//    private Object bound;
     private BigDecimal area;
     private ClsFieldEntity clsFieldByIdField;
     private ClsRegionEntity clsRegionByIdRegion;
@@ -127,15 +127,15 @@ public class RegFieldLocalEntity {
         this.idDepart = idDepart;
     }
 
-    @Basic
-    @Column(name = "bound", nullable = true)
-    public Object getBound() {
-        return bound;
-    }
-
-    public void setBound(Object bound) {
-        this.bound = bound;
-    }
+//    @Basic
+//    @Column(name = "bound", nullable = true)
+//    public Object getBound() {
+//        return bound;
+//    }
+//
+//    public void setBound(Object bound) {
+//        this.bound = bound;
+//    }
 
     @Basic
     @Column(name = "area", nullable = true, precision = 5)
@@ -147,43 +147,43 @@ public class RegFieldLocalEntity {
         this.area = area;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        RegFieldLocalEntity that = (RegFieldLocalEntity) o;
-
-        if (idUserCreator != that.idUserCreator) return false;
-        if (id != that.id) return false;
-        if (idField != that.idField) return false;
-        if (idRegion != that.idRegion) return false;
-        if (idDistrict != that.idDistrict) return false;
-        if (idArea != that.idArea) return false;
-        if (idDepart != that.idDepart) return false;
-        if (dateCreate != null ? !dateCreate.equals(that.dateCreate) : that.dateCreate != null) return false;
-        if (dateBegin != null ? !dateBegin.equals(that.dateBegin) : that.dateBegin != null) return false;
-        if (dateEnd != null ? !dateEnd.equals(that.dateEnd) : that.dateEnd != null) return false;
-        if (bound != null ? !bound.equals(that.bound) : that.bound != null) return false;
-        return area != null ? area.equals(that.area) : that.area == null;
-    }
-
-    @Override
-    public int hashCode() {
-        int result = (int) (idUserCreator ^ (idUserCreator >>> 32));
-        result = 31 * result + (dateCreate != null ? dateCreate.hashCode() : 0);
-        result = 31 * result + (dateBegin != null ? dateBegin.hashCode() : 0);
-        result = 31 * result + (dateEnd != null ? dateEnd.hashCode() : 0);
-        result = 31 * result + (int) (id ^ (id >>> 32));
-        result = 31 * result + (int) (idField ^ (idField >>> 32));
-        result = 31 * result + (int) (idRegion ^ (idRegion >>> 32));
-        result = 31 * result + (int) (idDistrict ^ (idDistrict >>> 32));
-        result = 31 * result + (int) (idArea ^ (idArea >>> 32));
-        result = 31 * result + (int) (idDepart ^ (idDepart >>> 32));
-        result = 31 * result + (bound != null ? bound.hashCode() : 0);
-        result = 31 * result + (area != null ? area.hashCode() : 0);
-        return result;
-    }
+//    @Override
+//    public boolean equals(Object o) {
+//        if (this == o) return true;
+//        if (o == null || getClass() != o.getClass()) return false;
+//
+//        RegFieldLocalEntity that = (RegFieldLocalEntity) o;
+//
+//        if (idUserCreator != that.idUserCreator) return false;
+//        if (id != that.id) return false;
+//        if (idField != that.idField) return false;
+//        if (idRegion != that.idRegion) return false;
+//        if (idDistrict != that.idDistrict) return false;
+//        if (idArea != that.idArea) return false;
+//        if (idDepart != that.idDepart) return false;
+//        if (dateCreate != null ? !dateCreate.equals(that.dateCreate) : that.dateCreate != null) return false;
+//        if (dateBegin != null ? !dateBegin.equals(that.dateBegin) : that.dateBegin != null) return false;
+//        if (dateEnd != null ? !dateEnd.equals(that.dateEnd) : that.dateEnd != null) return false;
+//        if (bound != null ? !bound.equals(that.bound) : that.bound != null) return false;
+//        return area != null ? area.equals(that.area) : that.area == null;
+//    }
+//
+//    @Override
+//    public int hashCode() {
+//        int result = (int) (idUserCreator ^ (idUserCreator >>> 32));
+//        result = 31 * result + (dateCreate != null ? dateCreate.hashCode() : 0);
+//        result = 31 * result + (dateBegin != null ? dateBegin.hashCode() : 0);
+//        result = 31 * result + (dateEnd != null ? dateEnd.hashCode() : 0);
+//        result = 31 * result + (int) (id ^ (id >>> 32));
+//        result = 31 * result + (int) (idField ^ (idField >>> 32));
+//        result = 31 * result + (int) (idRegion ^ (idRegion >>> 32));
+//        result = 31 * result + (int) (idDistrict ^ (idDistrict >>> 32));
+//        result = 31 * result + (int) (idArea ^ (idArea >>> 32));
+//        result = 31 * result + (int) (idDepart ^ (idDepart >>> 32));
+//        result = 31 * result + (bound != null ? bound.hashCode() : 0);
+//        result = 31 * result + (area != null ? area.hashCode() : 0);
+//        return result;
+//    }
 
     @ManyToOne
     @JoinColumn(name = "id_field", referencedColumnName = "id", nullable = false)

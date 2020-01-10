@@ -1,5 +1,9 @@
 package ru.sibdigital.difar.domain.tableparts;
 
+import com.fasterxml.jackson.databind.JsonNode;
+import com.vladmihalcea.hibernate.type.json.JsonNodeBinaryType;
+import org.hibernate.annotations.Type;
+import org.hibernate.annotations.TypeDef;
 import ru.sibdigital.difar.domain.document.DocAnimalCalvingEntity;
 import ru.sibdigital.difar.domain.register.RegAnimalEntity;
 
@@ -8,6 +12,7 @@ import java.sql.Timestamp;
 
 @Entity
 @Table(name = "tp_animal_calving_animal", schema = "breed")
+@TypeDef(name = "jsonb-node", typeClass = JsonNodeBinaryType.class)
 public class TpAnimalCalvingAnimalEntity {
     private long idUserCreator;
     private Boolean isDeleted;
@@ -17,9 +22,9 @@ public class TpAnimalCalvingAnimalEntity {
     private long idAnimalMother;
     private long idAnimalFather;
     private long idAnimalChild;
-    private Object listValuesMother;
-    private Object listValuesFather;
-    private Object listValuesChild;
+    private JsonNode listValuesMother;
+    private JsonNode listValuesFather;
+    private JsonNode listValuesChild;
     private Timestamp dateBirth;
     private DocAnimalCalvingEntity docAnimalCalvingByIdAnimalCalving;
     private RegAnimalEntity regAnimalByIdAnimalMother;
@@ -67,7 +72,7 @@ public class TpAnimalCalvingAnimalEntity {
     }
 
     @Basic
-    @Column(name = "id_animal_calving", nullable = false)
+    @Column(name = "id_animal_calving", nullable = false, insertable = false, updatable = false)
     public long getIdAnimalCalving() {
         return idAnimalCalving;
     }
@@ -77,7 +82,7 @@ public class TpAnimalCalvingAnimalEntity {
     }
 
     @Basic
-    @Column(name = "id_animal_mother", nullable = false)
+    @Column(name = "id_animal_mother", nullable = false, insertable = false, updatable = false)
     public long getIdAnimalMother() {
         return idAnimalMother;
     }
@@ -87,7 +92,7 @@ public class TpAnimalCalvingAnimalEntity {
     }
 
     @Basic
-    @Column(name = "id_animal_father", nullable = false)
+    @Column(name = "id_animal_father", nullable = false, insertable = false, updatable = false)
     public long getIdAnimalFather() {
         return idAnimalFather;
     }
@@ -97,7 +102,7 @@ public class TpAnimalCalvingAnimalEntity {
     }
 
     @Basic
-    @Column(name = "id_animal_child", nullable = false)
+    @Column(name = "id_animal_child", nullable = false, insertable = false, updatable = false)
     public long getIdAnimalChild() {
         return idAnimalChild;
     }
@@ -106,33 +111,33 @@ public class TpAnimalCalvingAnimalEntity {
         this.idAnimalChild = idAnimalChild;
     }
 
-    @Basic
+    @Type(type = "jsonb-node")
     @Column(name = "list_values_mother", nullable = true)
-    public Object getListValuesMother() {
+    public JsonNode getListValuesMother() {
         return listValuesMother;
     }
 
-    public void setListValuesMother(Object listValuesMother) {
+    public void setListValuesMother(JsonNode listValuesMother) {
         this.listValuesMother = listValuesMother;
     }
 
-    @Basic
+    @Type(type = "jsonb-node")
     @Column(name = "list_values_father", nullable = true)
-    public Object getListValuesFather() {
+    public JsonNode getListValuesFather() {
         return listValuesFather;
     }
 
-    public void setListValuesFather(Object listValuesFather) {
+    public void setListValuesFather(JsonNode listValuesFather) {
         this.listValuesFather = listValuesFather;
     }
 
-    @Basic
+    @Type(type = "jsonb-node")
     @Column(name = "list_values_child", nullable = true)
-    public Object getListValuesChild() {
+    public JsonNode getListValuesChild() {
         return listValuesChild;
     }
 
-    public void setListValuesChild(Object listValuesChild) {
+    public void setListValuesChild(JsonNode listValuesChild) {
         this.listValuesChild = listValuesChild;
     }
 

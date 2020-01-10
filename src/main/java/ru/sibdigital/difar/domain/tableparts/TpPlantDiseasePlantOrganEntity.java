@@ -1,5 +1,9 @@
 package ru.sibdigital.difar.domain.tableparts;
 
+import com.fasterxml.jackson.databind.JsonNode;
+import com.vladmihalcea.hibernate.type.json.JsonNodeBinaryType;
+import org.hibernate.annotations.Type;
+import org.hibernate.annotations.TypeDef;
 import ru.sibdigital.difar.domain.catalog.ClsCropEntity;
 import ru.sibdigital.difar.domain.catalog.ClsPlantDiseaseEntity;
 import ru.sibdigital.difar.domain.catalog.ClsPlantOrganEntity;
@@ -8,6 +12,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "tp_plant_disease_plant_organ", schema = "agrc")
+@TypeDef(name = "jsonb-node", typeClass = JsonNodeBinaryType.class)
 public class TpPlantDiseasePlantOrganEntity {
     private long idUserCreator;
     private Boolean isDeleted;
@@ -16,7 +21,7 @@ public class TpPlantDiseasePlantOrganEntity {
     private long idCrop;
     private long idPlantDisease;
     private long idPlantOrgan;
-    private Object description;
+    private JsonNode description;
     private ClsCropEntity clsCropByIdCrop;
     private ClsPlantDiseaseEntity clsPlantDiseaseByIdPlantDisease;
     private ClsPlantOrganEntity clsPlantOrganByIdPlantOrgan;
@@ -91,13 +96,13 @@ public class TpPlantDiseasePlantOrganEntity {
         this.idPlantOrgan = idPlantOrgan;
     }
 
-    @Basic
+    @Type(type = "jsonb-node")
     @Column(name = "description", nullable = true)
-    public Object getDescription() {
+    public JsonNode getDescription() {
         return description;
     }
 
-    public void setDescription(Object description) {
+    public void setDescription(JsonNode description) {
         this.description = description;
     }
 

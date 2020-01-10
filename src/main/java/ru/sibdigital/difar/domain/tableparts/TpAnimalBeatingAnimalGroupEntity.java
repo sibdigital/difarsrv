@@ -1,5 +1,9 @@
 package ru.sibdigital.difar.domain.tableparts;
 
+import com.fasterxml.jackson.databind.JsonNode;
+import com.vladmihalcea.hibernate.type.json.JsonNodeBinaryType;
+import org.hibernate.annotations.Type;
+import org.hibernate.annotations.TypeDef;
 import ru.sibdigital.difar.domain.document.DocAnimalBeatingEntity;
 import ru.sibdigital.difar.domain.register.RegAnimalEntity;
 import ru.sibdigital.difar.domain.register.RegAnimalGroupEntity;
@@ -9,6 +13,7 @@ import java.sql.Timestamp;
 
 @Entity
 @Table(name = "tp_animal_beating_animal_group", schema = "breed")
+@TypeDef(name = "jsonb-node", typeClass = JsonNodeBinaryType.class)
 public class TpAnimalBeatingAnimalGroupEntity {
     private long idUserCreator;
     private Boolean isDeleted;
@@ -17,8 +22,8 @@ public class TpAnimalBeatingAnimalGroupEntity {
     private long idAnimalBeating;
     private long idAnimalMotherGroup;
     private long idAnimalChild;
-    private Object listValuesMotherGroup;
-    private Object listValuesChild;
+    private JsonNode listValuesMotherGroup;
+    private JsonNode listValuesChild;
     private Timestamp dateBeating;
     private DocAnimalBeatingEntity docAnimalBeatingByIdAnimalBeating;
     private RegAnimalGroupEntity regAnimalGroupByIdAnimalMotherGroup;
@@ -94,23 +99,23 @@ public class TpAnimalBeatingAnimalGroupEntity {
         this.idAnimalChild = idAnimalChild;
     }
 
-    @Basic
+    @Type(type = "jsonb-node")
     @Column(name = "list_values_mother_group", nullable = true)
-    public Object getListValuesMotherGroup() {
+    public JsonNode getListValuesMotherGroup() {
         return listValuesMotherGroup;
     }
 
-    public void setListValuesMotherGroup(Object listValuesMotherGroup) {
+    public void setListValuesMotherGroup(JsonNode listValuesMotherGroup) {
         this.listValuesMotherGroup = listValuesMotherGroup;
     }
 
-    @Basic
+    @Type(type = "jsonb-node")
     @Column(name = "list_values_child", nullable = true)
-    public Object getListValuesChild() {
+    public JsonNode getListValuesChild() {
         return listValuesChild;
     }
 
-    public void setListValuesChild(Object listValuesChild) {
+    public void setListValuesChild(JsonNode listValuesChild) {
         this.listValuesChild = listValuesChild;
     }
 

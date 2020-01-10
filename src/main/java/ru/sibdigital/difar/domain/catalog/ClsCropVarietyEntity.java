@@ -3,7 +3,7 @@ package ru.sibdigital.difar.domain.catalog;
 import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
-import java.sql.Date;
+import java.util.Date;
 
 @Entity
 @Table(name = "cls_crop_variety", schema = "agrc")

@@ -1,5 +1,9 @@
 package ru.sibdigital.difar.domain.tableparts;
 
+import com.fasterxml.jackson.databind.JsonNode;
+import com.vladmihalcea.hibernate.type.json.JsonNodeBinaryType;
+import org.hibernate.annotations.Type;
+import org.hibernate.annotations.TypeDef;
 import ru.sibdigital.difar.domain.document.DocAnimalCopulationEntity;
 import ru.sibdigital.difar.domain.register.RegAnimalEntity;
 
@@ -7,6 +11,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "tp_animal_copulation_animal", schema = "breed")
+@TypeDef(name = "jsonb-node", typeClass = JsonNodeBinaryType.class)
 public class TpAnimalCopulationAnimalEntity {
     private long idUserCreator;
     private Boolean isDeleted;
@@ -15,8 +20,8 @@ public class TpAnimalCopulationAnimalEntity {
     private long idAnimalCopulation;
     private long idAnimalFemale;
     private long idAnimalMale;
-    private Object listValuesFemale;
-    private Object listValuesMale;
+    private JsonNode listValuesFemale;
+    private JsonNode listValuesMale;
     private DocAnimalCopulationEntity docAnimalCopulationByIdAnimalCopulation;
     private RegAnimalEntity regAnimalByIdAnimalFemale;
     private RegAnimalEntity regAnimalByIdAnimalMale;
@@ -91,23 +96,23 @@ public class TpAnimalCopulationAnimalEntity {
         this.idAnimalMale = idAnimalMale;
     }
 
-    @Basic
+    @Type(type = "jsonb-node")
     @Column(name = "list_values_female", nullable = true)
-    public Object getListValuesFemale() {
+    public JsonNode getListValuesFemale() {
         return listValuesFemale;
     }
 
-    public void setListValuesFemale(Object listValuesFemale) {
+    public void setListValuesFemale(JsonNode listValuesFemale) {
         this.listValuesFemale = listValuesFemale;
     }
 
-    @Basic
+    @Type(type = "jsonb-node")
     @Column(name = "list_values_male", nullable = true)
-    public Object getListValuesMale() {
+    public JsonNode getListValuesMale() {
         return listValuesMale;
     }
 
-    public void setListValuesMale(Object listValuesMale) {
+    public void setListValuesMale(JsonNode listValuesMale) {
         this.listValuesMale = listValuesMale;
     }
 

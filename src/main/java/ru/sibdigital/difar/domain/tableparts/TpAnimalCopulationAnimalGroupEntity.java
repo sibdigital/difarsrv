@@ -1,5 +1,9 @@
 package ru.sibdigital.difar.domain.tableparts;
 
+import com.fasterxml.jackson.databind.JsonNode;
+import com.vladmihalcea.hibernate.type.json.JsonNodeBinaryType;
+import org.hibernate.annotations.Type;
+import org.hibernate.annotations.TypeDef;
 import ru.sibdigital.difar.domain.document.DocAnimalCopulationEntity;
 import ru.sibdigital.difar.domain.register.RegAnimalGroupEntity;
 
@@ -7,6 +11,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "tp_animal_copulation_animal_group", schema = "breed")
+@TypeDef(name = "jsonb-node", typeClass = JsonNodeBinaryType.class)
 public class TpAnimalCopulationAnimalGroupEntity {
     private long idUserCreator;
     private Boolean isDeleted;
@@ -15,8 +20,8 @@ public class TpAnimalCopulationAnimalGroupEntity {
     private long idAnimalCopulation;
     private long idAnimalFemaleGroup;
     private long idAnimalMaleGroup;
-    private Object listValuesFemaleGroup;
-    private Object listValuesMaleGroup;
+    private JsonNode listValuesFemaleGroup;
+    private JsonNode listValuesMaleGroup;
     private DocAnimalCopulationEntity docAnimalCopulationByIdAnimalCopulation;
     private RegAnimalGroupEntity regAnimalGroupByIdAnimalFemaleGroup;
     private RegAnimalGroupEntity regAnimalGroupByIdAnimalMaleGroup;
@@ -91,23 +96,23 @@ public class TpAnimalCopulationAnimalGroupEntity {
         this.idAnimalMaleGroup = idAnimalMaleGroup;
     }
 
-    @Basic
+    @Type(type = "jsonb-node")
     @Column(name = "list_values_female_group", nullable = true)
-    public Object getListValuesFemaleGroup() {
+    public JsonNode getListValuesFemaleGroup() {
         return listValuesFemaleGroup;
     }
 
-    public void setListValuesFemaleGroup(Object listValuesFemaleGroup) {
+    public void setListValuesFemaleGroup(JsonNode listValuesFemaleGroup) {
         this.listValuesFemaleGroup = listValuesFemaleGroup;
     }
 
-    @Basic
+    @Type(type = "jsonb-node")
     @Column(name = "list_values_male_group", nullable = true)
-    public Object getListValuesMaleGroup() {
+    public JsonNode getListValuesMaleGroup() {
         return listValuesMaleGroup;
     }
 
-    public void setListValuesMaleGroup(Object listValuesMaleGroup) {
+    public void setListValuesMaleGroup(JsonNode listValuesMaleGroup) {
         this.listValuesMaleGroup = listValuesMaleGroup;
     }
 

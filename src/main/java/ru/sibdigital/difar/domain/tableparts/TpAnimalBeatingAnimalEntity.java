@@ -1,5 +1,9 @@
 package ru.sibdigital.difar.domain.tableparts;
 
+import com.fasterxml.jackson.databind.JsonNode;
+import com.vladmihalcea.hibernate.type.json.JsonNodeBinaryType;
+import org.hibernate.annotations.Type;
+import org.hibernate.annotations.TypeDef;
 import ru.sibdigital.difar.domain.document.DocAnimalBeatingEntity;
 import ru.sibdigital.difar.domain.register.RegAnimalEntity;
 
@@ -8,6 +12,7 @@ import java.sql.Timestamp;
 
 @Entity
 @Table(name = "tp_animal_beating_animal", schema = "breed")
+@TypeDef(name = "jsonb-node", typeClass = JsonNodeBinaryType.class)
 public class TpAnimalBeatingAnimalEntity {
     private long idUserCreator;
     private Boolean isDeleted;
@@ -16,8 +21,8 @@ public class TpAnimalBeatingAnimalEntity {
     private long idAnimalBeating;
     private long idAnimalMother;
     private long idAnimalChild;
-    private Object listValuesMother;
-    private Object listValuesChild;
+    private JsonNode listValuesMother;
+    private JsonNode listValuesChild;
     private Timestamp dateBeating;
     private DocAnimalBeatingEntity docAnimalBeatingByIdAnimalBeating;
     private RegAnimalEntity regAnimalByIdAnimalMother;
@@ -93,23 +98,23 @@ public class TpAnimalBeatingAnimalEntity {
         this.idAnimalChild = idAnimalChild;
     }
 
-    @Basic
+    @Type(type = "jsonb-node")
     @Column(name = "list_values_mother", nullable = true)
-    public Object getListValuesMother() {
+    public JsonNode getListValuesMother() {
         return listValuesMother;
     }
 
-    public void setListValuesMother(Object listValuesMother) {
+    public void setListValuesMother(JsonNode listValuesMother) {
         this.listValuesMother = listValuesMother;
     }
 
-    @Basic
+    @Type(type = "jsonb-node")
     @Column(name = "list_values_child", nullable = true)
-    public Object getListValuesChild() {
+    public JsonNode getListValuesChild() {
         return listValuesChild;
     }
 
-    public void setListValuesChild(Object listValuesChild) {
+    public void setListValuesChild(JsonNode listValuesChild) {
         this.listValuesChild = listValuesChild;
     }
 

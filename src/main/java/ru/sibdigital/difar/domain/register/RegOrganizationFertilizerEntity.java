@@ -1,5 +1,9 @@
 package ru.sibdigital.difar.domain.register;
 
+import com.fasterxml.jackson.databind.JsonNode;
+import com.vladmihalcea.hibernate.type.json.JsonNodeBinaryType;
+import org.hibernate.annotations.Type;
+import org.hibernate.annotations.TypeDef;
 import ru.sibdigital.difar.domain.catalog.ClsFertilizerEntity;
 import ru.sibdigital.difar.domain.catalog.ClsOrganizationEntity;
 import ru.sibdigital.difar.domain.tableparts.TpRoutingFertilizerEntity;
@@ -10,6 +14,7 @@ import java.util.Collection;
 
 @Entity
 @Table(name = "reg_organization_fertilizer", schema = "agrc")
+@TypeDef(name = "jsonb-node", typeClass = JsonNodeBinaryType.class)
 public class RegOrganizationFertilizerEntity {
     private long idUserCreator;
     private Timestamp dateCreate;
@@ -20,7 +25,7 @@ public class RegOrganizationFertilizerEntity {
     private long idFertilizer;
     private String number;
     private String name;
-    private Object description;
+    private JsonNode description;
     private Collection<RegExecRoutingFertilizerEntity> regExecRoutingFertilizersById;
     private Collection<RegExecRoutingFertilizerEntity> regExecRoutingFertilizersById_0;
     private ClsOrganizationEntity clsOrganizationByIdOrganization;
@@ -117,13 +122,13 @@ public class RegOrganizationFertilizerEntity {
         this.name = name;
     }
 
-    @Basic
+    @Type(type = "jsonb-node")
     @Column(name = "description", nullable = true)
-    public Object getDescription() {
+    public JsonNode getDescription() {
         return description;
     }
 
-    public void setDescription(Object description) {
+    public void setDescription(JsonNode description) {
         this.description = description;
     }
 

@@ -1,5 +1,9 @@
 package ru.sibdigital.difar.domain.document;
 
+import com.fasterxml.jackson.databind.JsonNode;
+import com.vladmihalcea.hibernate.type.json.JsonNodeBinaryType;
+import org.hibernate.annotations.Type;
+import org.hibernate.annotations.TypeDef;
 import ru.sibdigital.difar.domain.catalog.ClsOrganizationEntity;
 import ru.sibdigital.difar.domain.catalog.ClsTypeAnimalEventEntity;
 import ru.sibdigital.difar.domain.tableparts.TpAnimalEventAnimalEntity;
@@ -11,6 +15,7 @@ import java.util.Collection;
 
 @Entity
 @Table(name = "doc_animal_event", schema = "breed")
+@TypeDef(name = "jsonb-node", typeClass = JsonNodeBinaryType.class)
 public class DocAnimalEventEntity {
     private long idUserCreator;
     private Timestamp dateCreate;
@@ -20,7 +25,7 @@ public class DocAnimalEventEntity {
     private long id;
     private long idOrganization;
     private long idTypeAnimalEvent;
-    private Object listValues;
+    private JsonNode listValues;
     private Boolean isPair;
     private Integer multiplicity;
     private ClsOrganizationEntity clsOrganizationByIdOrganization;
@@ -108,13 +113,13 @@ public class DocAnimalEventEntity {
         this.idTypeAnimalEvent = idTypeAnimalEvent;
     }
 
-    @Basic
+    @Type(type = "jsonb-node")
     @Column(name = "list_values", nullable = true)
-    public Object getListValues() {
+    public JsonNode getListValues() {
         return listValues;
     }
 
-    public void setListValues(Object listValues) {
+    public void setListValues(JsonNode listValues) {
         this.listValues = listValues;
     }
 

@@ -92,7 +92,7 @@ public class DocAnimalTransferEntity {
     }
 
     @Basic
-    @Column(name = "id_organization", nullable = false)
+    @Column(name = "id_organization", nullable = false, insertable = false, updatable = false)
     public long getIdOrganization() {
         return idOrganization;
     }
@@ -102,7 +102,7 @@ public class DocAnimalTransferEntity {
     }
 
     @Basic
-    @Column(name = "id_type_animal_event", nullable = false)
+    @Column(name = "id_type_animal_event", nullable = false, insertable = false, updatable = false)
     public long getIdTypeAnimalEvent() {
         return idTypeAnimalEvent;
     }
@@ -112,7 +112,7 @@ public class DocAnimalTransferEntity {
     }
 
     @Basic
-    @Column(name = "id_ranch", nullable = false)
+    @Column(name = "id_ranch", nullable = false, insertable = false, updatable = false)
     public long getIdRanch() {
         return idRanch;
     }
@@ -122,7 +122,7 @@ public class DocAnimalTransferEntity {
     }
 
     @Basic
-    @Column(name = "id_ranch_current", nullable = false)
+    @Column(name = "id_ranch_current", nullable = false, insertable = false, updatable = false)
     public long getIdRanchCurrent() {
         return idRanchCurrent;
     }

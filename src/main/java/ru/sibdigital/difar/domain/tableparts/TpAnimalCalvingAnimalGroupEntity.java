@@ -1,5 +1,9 @@
 package ru.sibdigital.difar.domain.tableparts;
 
+import com.fasterxml.jackson.databind.JsonNode;
+import com.vladmihalcea.hibernate.type.json.JsonNodeBinaryType;
+import org.hibernate.annotations.Type;
+import org.hibernate.annotations.TypeDef;
 import ru.sibdigital.difar.domain.document.DocAnimalCalvingEntity;
 import ru.sibdigital.difar.domain.register.RegAnimalEntity;
 import ru.sibdigital.difar.domain.register.RegAnimalGroupEntity;
@@ -9,6 +13,7 @@ import java.sql.Timestamp;
 
 @Entity
 @Table(name = "tp_animal_calving_animal_group", schema = "breed")
+@TypeDef(name = "jsonb-node", typeClass = JsonNodeBinaryType.class)
 public class TpAnimalCalvingAnimalGroupEntity {
     private long idUserCreator;
     private Boolean isDeleted;
@@ -18,9 +23,9 @@ public class TpAnimalCalvingAnimalGroupEntity {
     private long idAnimalMotherGroup;
     private long idAnimalFatherGroup;
     private long idAnimalChild;
-    private Object listValuesMotherGroup;
-    private Object listValuesFatherGroup;
-    private Object listValuesChild;
+    private JsonNode listValuesMotherGroup;
+    private JsonNode listValuesFatherGroup;
+    private JsonNode listValuesChild;
     private Timestamp dateBirth;
     private DocAnimalCalvingEntity docAnimalCalvingByIdAnimalCalving;
     private RegAnimalGroupEntity regAnimalGroupByIdAnimalMotherGroup;
@@ -107,33 +112,33 @@ public class TpAnimalCalvingAnimalGroupEntity {
         this.idAnimalChild = idAnimalChild;
     }
 
-    @Basic
+    @Type(type = "jsonb-node")
     @Column(name = "list_values_mother_group", nullable = true)
-    public Object getListValuesMotherGroup() {
+    public JsonNode getListValuesMotherGroup() {
         return listValuesMotherGroup;
     }
 
-    public void setListValuesMotherGroup(Object listValuesMotherGroup) {
+    public void setListValuesMotherGroup(JsonNode listValuesMotherGroup) {
         this.listValuesMotherGroup = listValuesMotherGroup;
     }
 
-    @Basic
+    @Type(type = "jsonb-node")
     @Column(name = "list_values_father_group", nullable = true)
-    public Object getListValuesFatherGroup() {
+    public JsonNode getListValuesFatherGroup() {
         return listValuesFatherGroup;
     }
 
-    public void setListValuesFatherGroup(Object listValuesFatherGroup) {
+    public void setListValuesFatherGroup(JsonNode listValuesFatherGroup) {
         this.listValuesFatherGroup = listValuesFatherGroup;
     }
 
-    @Basic
+    @Type(type = "jsonb-node")
     @Column(name = "list_values_child", nullable = true)
-    public Object getListValuesChild() {
+    public JsonNode getListValuesChild() {
         return listValuesChild;
     }
 
-    public void setListValuesChild(Object listValuesChild) {
+    public void setListValuesChild(JsonNode listValuesChild) {
         this.listValuesChild = listValuesChild;
     }
 

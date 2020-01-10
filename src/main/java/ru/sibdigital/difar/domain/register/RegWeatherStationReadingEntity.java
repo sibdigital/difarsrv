@@ -1,5 +1,9 @@
 package ru.sibdigital.difar.domain.register;
 
+import com.fasterxml.jackson.databind.JsonNode;
+import com.vladmihalcea.hibernate.type.json.JsonNodeBinaryType;
+import org.hibernate.annotations.Type;
+import org.hibernate.annotations.TypeDef;
 import ru.sibdigital.difar.domain.catalog.ClsOrganizationEntity;
 import ru.sibdigital.difar.domain.catalog.ClsWeatherStationEntity;
 
@@ -9,6 +13,7 @@ import java.sql.Timestamp;
 
 @Entity
 @Table(name = "reg_weather_station_reading", schema = "agrc")
+@TypeDef(name = "jsonb-node", typeClass = JsonNodeBinaryType.class)
 public class RegWeatherStationReadingEntity {
     private long idUserCreator;
     private Timestamp dateCreate;
@@ -18,7 +23,7 @@ public class RegWeatherStationReadingEntity {
     private long idWeatherStation;
     private long idOrganization;
     private Timestamp dateReg;
-    private Object composition;
+    private JsonNode composition;
     private BigDecimal temperature;
     private BigDecimal humidity;
     private ClsWeatherStationEntity clsWeatherStationByIdWeatherStation;
@@ -104,13 +109,13 @@ public class RegWeatherStationReadingEntity {
         this.dateReg = dateReg;
     }
 
-    @Basic
+    @Type(type = "jsonb-node")
     @Column(name = "composition", nullable = true)
-    public Object getComposition() {
+    public JsonNode getComposition() {
         return composition;
     }
 
-    public void setComposition(Object composition) {
+    public void setComposition(JsonNode composition) {
         this.composition = composition;
     }
 

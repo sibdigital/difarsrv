@@ -1,5 +1,9 @@
 package ru.sibdigital.difar.domain.tableparts;
 
+import com.fasterxml.jackson.databind.JsonNode;
+import com.vladmihalcea.hibernate.type.json.JsonNodeBinaryType;
+import org.hibernate.annotations.Type;
+import org.hibernate.annotations.TypeDef;
 import ru.sibdigital.difar.domain.document.DocAnimalEventEntity;
 import ru.sibdigital.difar.domain.register.RegAnimalEntity;
 
@@ -7,6 +11,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "tp_animal_event_animal", schema = "breed")
+@TypeDef(name = "jsonb-node", typeClass = JsonNodeBinaryType.class)
 public class TpAnimalEventAnimalEntity {
     private long idUserCreator;
     private Boolean isDeleted;
@@ -15,8 +20,8 @@ public class TpAnimalEventAnimalEntity {
     private long idAnimalEvent;
     private long idAnimal1;
     private long idAnimal2;
-    private Object listValues1;
-    private Object listValues2;
+    private JsonNode listValues1;
+    private JsonNode listValues2;
     private DocAnimalEventEntity docAnimalEventByIdAnimalEvent;
     private RegAnimalEntity regAnimalByIdAnimal1;
     private RegAnimalEntity regAnimalByIdAnimal2;
@@ -91,23 +96,23 @@ public class TpAnimalEventAnimalEntity {
         this.idAnimal2 = idAnimal2;
     }
 
-    @Basic
+    @Type(type = "jsonb-node")
     @Column(name = "list_values1", nullable = true)
-    public Object getListValues1() {
+    public JsonNode getListValues1() {
         return listValues1;
     }
 
-    public void setListValues1(Object listValues1) {
+    public void setListValues1(JsonNode listValues1) {
         this.listValues1 = listValues1;
     }
 
-    @Basic
+    @Type(type = "jsonb-node")
     @Column(name = "list_values2", nullable = true)
-    public Object getListValues2() {
+    public JsonNode getListValues2() {
         return listValues2;
     }
 
-    public void setListValues2(Object listValues2) {
+    public void setListValues2(JsonNode listValues2) {
         this.listValues2 = listValues2;
     }
 

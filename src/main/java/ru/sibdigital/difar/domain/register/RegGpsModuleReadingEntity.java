@@ -1,5 +1,9 @@
 package ru.sibdigital.difar.domain.register;
 
+import com.fasterxml.jackson.databind.JsonNode;
+import com.vladmihalcea.hibernate.type.json.JsonNodeBinaryType;
+import org.hibernate.annotations.Type;
+import org.hibernate.annotations.TypeDef;
 import ru.sibdigital.difar.domain.catalog.ClsGpsModuleEntity;
 import ru.sibdigital.difar.domain.catalog.ClsOrganizationEntity;
 
@@ -8,6 +12,7 @@ import java.sql.Timestamp;
 
 @Entity
 @Table(name = "reg_gps_module_reading", schema = "agrc")
+@TypeDef(name = "jsonb-node", typeClass = JsonNodeBinaryType.class)
 public class RegGpsModuleReadingEntity {
     private long idUserCreator;
     private Timestamp dateCreate;
@@ -17,7 +22,7 @@ public class RegGpsModuleReadingEntity {
     private long idGpsModule;
     private long idOrganization;
     private Timestamp dateReg;
-    private Object composition;
+    private JsonNode composition;
     private ClsGpsModuleEntity clsGpsModuleByIdGpsModule;
     private ClsOrganizationEntity clsOrganizationByIdOrganization;
 
@@ -101,13 +106,13 @@ public class RegGpsModuleReadingEntity {
         this.dateReg = dateReg;
     }
 
-    @Basic
+    @Type(type = "jsonb-node")
     @Column(name = "composition", nullable = true)
-    public Object getComposition() {
+    public JsonNode getComposition() {
         return composition;
     }
 
-    public void setComposition(Object composition) {
+    public void setComposition(JsonNode composition) {
         this.composition = composition;
     }
 

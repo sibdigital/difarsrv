@@ -24,7 +24,7 @@ public class ClsWeatherStationEntity {
     private long id;
     private long idOrganization;
     private JsonNode description;
-    private Point point;
+//    private Point point;
     private ClsOrganizationEntity clsOrganizationByIdOrganization;
     private Collection<RegWeatherStationReadingEntity> regWeatherStationReadingsById;
 
@@ -110,47 +110,47 @@ public class ClsWeatherStationEntity {
         this.description = description;
     }
 
-    @Type(type="org.hibernate.spatial.GeometryType")
-    @Column(name = "point", nullable = true)
-    public Point getPoint() {
-        return point;
-    }
-
-    public void setPoint(Point point) {
-        this.point = point;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        ClsWeatherStationEntity that = (ClsWeatherStationEntity) o;
-
-        if (idUserCreator != that.idUserCreator) return false;
-        if (id != that.id) return false;
-        if (idOrganization != that.idOrganization) return false;
-        if (name != null ? !name.equals(that.name) : that.name != null) return false;
-        if (dateCreate != null ? !dateCreate.equals(that.dateCreate) : that.dateCreate != null) return false;
-        if (isDeleted != null ? !isDeleted.equals(that.isDeleted) : that.isDeleted != null) return false;
-        if (number != null ? !number.equals(that.number) : that.number != null) return false;
-        if (description != null ? !description.equals(that.description) : that.description != null) return false;
-        return point != null ? point.equals(that.point) : that.point == null;
-    }
-
-    @Override
-    public int hashCode() {
-        int result = (int) (idUserCreator ^ (idUserCreator >>> 32));
-        result = 31 * result + (name != null ? name.hashCode() : 0);
-        result = 31 * result + (dateCreate != null ? dateCreate.hashCode() : 0);
-        result = 31 * result + (isDeleted != null ? isDeleted.hashCode() : 0);
-        result = 31 * result + (number != null ? number.hashCode() : 0);
-        result = 31 * result + (int) (id ^ (id >>> 32));
-        result = 31 * result + (int) (idOrganization ^ (idOrganization >>> 32));
-        result = 31 * result + (description != null ? description.hashCode() : 0);
-        result = 31 * result + (point != null ? point.hashCode() : 0);
-        return result;
-    }
+//    @Type(type="org.hibernate.spatial.GeometryType")
+//    @Column(name = "point", nullable = true)
+//    public Point getPoint() {
+//        return point;
+//    }
+//
+//    public void setPoint(Point point) {
+//        this.point = point;
+//    }
+//
+//    @Override
+//    public boolean equals(Object o) {
+//        if (this == o) return true;
+//        if (o == null || getClass() != o.getClass()) return false;
+//
+//        ClsWeatherStationEntity that = (ClsWeatherStationEntity) o;
+//
+//        if (idUserCreator != that.idUserCreator) return false;
+//        if (id != that.id) return false;
+//        if (idOrganization != that.idOrganization) return false;
+//        if (name != null ? !name.equals(that.name) : that.name != null) return false;
+//        if (dateCreate != null ? !dateCreate.equals(that.dateCreate) : that.dateCreate != null) return false;
+//        if (isDeleted != null ? !isDeleted.equals(that.isDeleted) : that.isDeleted != null) return false;
+//        if (number != null ? !number.equals(that.number) : that.number != null) return false;
+//        if (description != null ? !description.equals(that.description) : that.description != null) return false;
+//        return point != null ? point.equals(that.point) : that.point == null;
+//    }
+//
+//    @Override
+//    public int hashCode() {
+//        int result = (int) (idUserCreator ^ (idUserCreator >>> 32));
+//        result = 31 * result + (name != null ? name.hashCode() : 0);
+//        result = 31 * result + (dateCreate != null ? dateCreate.hashCode() : 0);
+//        result = 31 * result + (isDeleted != null ? isDeleted.hashCode() : 0);
+//        result = 31 * result + (number != null ? number.hashCode() : 0);
+//        result = 31 * result + (int) (id ^ (id >>> 32));
+//        result = 31 * result + (int) (idOrganization ^ (idOrganization >>> 32));
+//        result = 31 * result + (description != null ? description.hashCode() : 0);
+//        result = 31 * result + (point != null ? point.hashCode() : 0);
+//        return result;
+//    }
 
     @ManyToOne
     @JoinColumn(name = "id_organization", referencedColumnName = "id", nullable = false)
