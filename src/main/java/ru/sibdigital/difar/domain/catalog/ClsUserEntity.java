@@ -1,17 +1,18 @@
 package ru.sibdigital.difar.domain.catalog;
 
+import org.hibernate.annotations.CreationTimestamp;
 import ru.sibdigital.difar.domain.register.RegUserRoleEntity;
 
 import javax.persistence.*;
-import java.sql.Timestamp;
 import java.util.Collection;
+import java.util.Date;
 
 @Entity
 @Table(name = "cls_user", schema = "accs")
 public class ClsUserEntity {
     private long idUserCreator;
     private String name;
-    private Timestamp dateCreate;
+    private Date dateCreate;
     private Boolean isDeleted;
     private String number;
     private long id;
@@ -42,13 +43,14 @@ public class ClsUserEntity {
         this.name = name;
     }
 
-    @Basic
+    @CreationTimestamp
+    @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "date_create", nullable = true)
-    public Timestamp getDateCreate() {
+    public Date getDateCreate() {
         return dateCreate;
     }
 
-    public void setDateCreate(Timestamp dateCreate) {
+    public void setDateCreate(Date dateCreate) {
         this.dateCreate = dateCreate;
     }
 
@@ -74,6 +76,7 @@ public class ClsUserEntity {
 
     @Id
     @Column(name = "id", nullable = false)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     public long getId() {
         return id;
     }

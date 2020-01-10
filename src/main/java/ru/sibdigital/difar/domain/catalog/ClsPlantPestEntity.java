@@ -2,6 +2,7 @@ package ru.sibdigital.difar.domain.catalog;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.vladmihalcea.hibernate.type.json.JsonNodeBinaryType;
+import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.Type;
 import org.hibernate.annotations.TypeDef;
 import ru.sibdigital.difar.domain.tableparts.TpPlantPestAffectedCropEntity;
@@ -10,8 +11,8 @@ import ru.sibdigital.difar.domain.tableparts.TpPlantPestPlantOrganEntity;
 import ru.sibdigital.difar.domain.tableparts.TpPlantPestTypicalAreaEntity;
 
 import javax.persistence.*;
-import java.sql.Timestamp;
 import java.util.Collection;
+import java.util.Date;
 
 @Entity
 @Table(name = "cls_plant_pest", schema = "agrc")
@@ -19,7 +20,7 @@ import java.util.Collection;
 public class ClsPlantPestEntity {
     private long idUserCreator;
     private String name;
-    private Timestamp dateCreate;
+    private Date dateCreate;
     private Boolean isDeleted;
     private String number;
     private String code;
@@ -57,13 +58,14 @@ public class ClsPlantPestEntity {
         this.name = name;
     }
 
-    @Basic
+    @CreationTimestamp
+    @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "date_create", nullable = true)
-    public Timestamp getDateCreate() {
+    public Date getDateCreate() {
         return dateCreate;
     }
 
-    public void setDateCreate(Timestamp dateCreate) {
+    public void setDateCreate(Date dateCreate) {
         this.dateCreate = dateCreate;
     }
 
@@ -99,6 +101,7 @@ public class ClsPlantPestEntity {
 
     @Id
     @Column(name = "id", nullable = false)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     public long getId() {
         return id;
     }

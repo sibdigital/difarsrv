@@ -1,20 +1,21 @@
 package ru.sibdigital.difar.domain.catalog;
 
+import org.hibernate.annotations.CreationTimestamp;
 import ru.sibdigital.difar.domain.register.RegOrganizationProtectionEquipmentEntity;
 import ru.sibdigital.difar.domain.tableparts.TpPlantDiseaseAffectedCropEntity;
 import ru.sibdigital.difar.domain.tableparts.TpPlantPestAffectedCropEntity;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
-import java.sql.Timestamp;
 import java.util.Collection;
+import java.util.Date;
 
 @Entity
 @Table(name = "cls_protection_equipment", schema = "agrc")
 public class ClsProtectionEquipmentEntity {
     private long idUserCreator;
     private String name;
-    private Timestamp dateCreate;
+    private Date dateCreate;
     private Boolean isDeleted;
     private String number;
     private String code;
@@ -47,13 +48,14 @@ public class ClsProtectionEquipmentEntity {
         this.name = name;
     }
 
-    @Basic
+    @CreationTimestamp
+    @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "date_create", nullable = true)
-    public Timestamp getDateCreate() {
+    public Date getDateCreate() {
         return dateCreate;
     }
 
-    public void setDateCreate(Timestamp dateCreate) {
+    public void setDateCreate(Date dateCreate) {
         this.dateCreate = dateCreate;
     }
 
@@ -89,6 +91,7 @@ public class ClsProtectionEquipmentEntity {
 
     @Id
     @Column(name = "id", nullable = false)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     public long getId() {
         return id;
     }

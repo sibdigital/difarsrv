@@ -2,11 +2,12 @@ package ru.sibdigital.difar.domain.catalog;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.vladmihalcea.hibernate.type.json.JsonNodeBinaryType;
+import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.Type;
 import org.hibernate.annotations.TypeDef;
 
 import javax.persistence.*;
-import java.sql.Timestamp;
+import java.util.Date;
 
 @Entity
 @Table(name = "cls_animal_param_kind", schema = "breed")
@@ -14,7 +15,7 @@ import java.sql.Timestamp;
 public class ClsAnimalParamKindEntity {
     private long idUserCreator;
     private String name;
-    private Timestamp dateCreate;
+    private Date dateCreate;
     private Boolean isDeleted;
     private String number;
     private long id;
@@ -41,13 +42,14 @@ public class ClsAnimalParamKindEntity {
         this.name = name;
     }
 
-    @Basic
+    @CreationTimestamp
+    @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "date_create", nullable = true)
-    public Timestamp getDateCreate() {
+    public Date getDateCreate() {
         return dateCreate;
     }
 
-    public void setDateCreate(Timestamp dateCreate) {
+    public void setDateCreate(Date dateCreate) {
         this.dateCreate = dateCreate;
     }
 
@@ -73,6 +75,7 @@ public class ClsAnimalParamKindEntity {
 
     @Id
     @Column(name = "id", nullable = false)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     public long getId() {
         return id;
     }

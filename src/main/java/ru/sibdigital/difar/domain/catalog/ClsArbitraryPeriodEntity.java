@@ -1,14 +1,16 @@
 package ru.sibdigital.difar.domain.catalog;
 
+import org.hibernate.annotations.CreationTimestamp;
+
 import javax.persistence.*;
-import java.sql.Timestamp;
+import java.util.Date;
 
 @Entity
 @Table(name = "cls_arbitrary_period", schema = "dict")
 public class ClsArbitraryPeriodEntity {
     private long idUserCreator;
     private String name;
-    private Timestamp dateCreate;
+    private Date dateCreate;
     private Boolean isDeleted;
     private String number;
     private long id;
@@ -16,8 +18,8 @@ public class ClsArbitraryPeriodEntity {
     private long idRegion;
     private long idDistrict;
     private long idOrganization;
-    private Timestamp dateBegin;
-    private Timestamp dateEnd;
+    private Date dateBegin;
+    private Date dateEnd;
     private ClsStandardPeriodEntity clsStandardPeriodByIdStandardPeriod;
     private ClsRegionEntity clsRegionByIdRegion;
     private ClsDistrictEntity clsDistrictByIdDistrict;
@@ -43,13 +45,14 @@ public class ClsArbitraryPeriodEntity {
         this.name = name;
     }
 
-    @Basic
+    @CreationTimestamp
+    @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "date_create", nullable = true)
-    public Timestamp getDateCreate() {
+    public Date getDateCreate() {
         return dateCreate;
     }
 
-    public void setDateCreate(Timestamp dateCreate) {
+    public void setDateCreate(Date dateCreate) {
         this.dateCreate = dateCreate;
     }
 
@@ -75,6 +78,7 @@ public class ClsArbitraryPeriodEntity {
 
     @Id
     @Column(name = "id", nullable = false)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     public long getId() {
         return id;
     }
@@ -125,21 +129,21 @@ public class ClsArbitraryPeriodEntity {
 
     @Basic
     @Column(name = "date_begin", nullable = true)
-    public Timestamp getDateBegin() {
+    public Date getDateBegin() {
         return dateBegin;
     }
 
-    public void setDateBegin(Timestamp dateBegin) {
+    public void setDateBegin(Date dateBegin) {
         this.dateBegin = dateBegin;
     }
 
     @Basic
     @Column(name = "date_end", nullable = true)
-    public Timestamp getDateEnd() {
+    public Date getDateEnd() {
         return dateEnd;
     }
 
-    public void setDateEnd(Timestamp dateEnd) {
+    public void setDateEnd(Date dateEnd) {
         this.dateEnd = dateEnd;
     }
 
