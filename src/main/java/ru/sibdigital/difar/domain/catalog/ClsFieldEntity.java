@@ -1,5 +1,6 @@
 package ru.sibdigital.difar.domain.catalog;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.CreationTimestamp;
 import ru.sibdigital.difar.domain.document.DocActualYieldEntity;
 import ru.sibdigital.difar.domain.document.DocRoutingEntity;
@@ -135,7 +136,8 @@ public class ClsFieldEntity {
     }
 
     @OneToMany(mappedBy = "clsFieldByIdField")
-    public Collection<DocActualYieldEntity> getDocActualYieldsById() {
+    @JsonIgnore
+public Collection<DocActualYieldEntity> getDocActualYieldsById() {
         return docActualYieldsById;
     }
 
@@ -144,7 +146,8 @@ public class ClsFieldEntity {
     }
 
     @OneToMany(mappedBy = "clsFieldByIdField")
-    public Collection<DocRoutingEntity> getDocRoutingsById() {
+    @JsonIgnore
+public Collection<DocRoutingEntity> getDocRoutingsById() {
         return docRoutingsById;
     }
 
@@ -153,7 +156,8 @@ public class ClsFieldEntity {
     }
 
     @OneToMany(mappedBy = "clsFieldByIdField")
-    public Collection<RegFieldLocalEntity> getRegFieldLocalsById() {
+    @JsonIgnore
+public Collection<RegFieldLocalEntity> getRegFieldLocalsById() {
         return regFieldLocalsById;
     }
 

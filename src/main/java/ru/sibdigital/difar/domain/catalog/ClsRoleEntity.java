@@ -1,5 +1,6 @@
 package ru.sibdigital.difar.domain.catalog;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.CreationTimestamp;
 import ru.sibdigital.difar.domain.register.RegCvitantionEntity;
 import ru.sibdigital.difar.domain.register.RegUserRoleEntity;
@@ -122,7 +123,8 @@ public class ClsRoleEntity {
     }
 
     @OneToMany(mappedBy = "clsRoleByIdRole")
-    public Collection<RegCvitantionEntity> getRegCvitantionsById() {
+    @JsonIgnore
+public Collection<RegCvitantionEntity> getRegCvitantionsById() {
         return regCvitantionsById;
     }
 
@@ -131,7 +133,8 @@ public class ClsRoleEntity {
     }
 
     @OneToMany(mappedBy = "clsRoleByIdRole")
-    public Collection<RegUserRoleEntity> getRegUserRolesById() {
+    @JsonIgnore
+public Collection<RegUserRoleEntity> getRegUserRolesById() {
         return regUserRolesById;
     }
 

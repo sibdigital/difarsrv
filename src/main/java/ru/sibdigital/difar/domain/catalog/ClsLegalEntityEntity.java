@@ -1,5 +1,6 @@
 package ru.sibdigital.difar.domain.catalog;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.vladmihalcea.hibernate.type.json.JsonNodeBinaryType;
 import org.hibernate.annotations.CreationTimestamp;
@@ -139,7 +140,8 @@ public class ClsLegalEntityEntity {
     }
 
     @OneToMany(mappedBy = "clsLegalEntityByIdLegalEntity")
-    public Collection<ClsOrganizationEntity> getClsOrganizationsById() {
+    @JsonIgnore
+public Collection<ClsOrganizationEntity> getClsOrganizationsById() {
         return clsOrganizationsById;
     }
 
@@ -148,7 +150,8 @@ public class ClsLegalEntityEntity {
     }
 
     @OneToMany(mappedBy = "clsLegalEntityByIdLegalEntity")
-    public Collection<ClsPartnerEntity> getClsPartnersById() {
+    @JsonIgnore
+public Collection<ClsPartnerEntity> getClsPartnersById() {
         return clsPartnersById;
     }
 
@@ -157,7 +160,8 @@ public class ClsLegalEntityEntity {
     }
 
     @OneToMany(mappedBy = "clsLegalEntityByIdLegalEntity")
-    public Collection<ClsDepartEntity> getClsDepartsById() {
+    @JsonIgnore
+public Collection<ClsDepartEntity> getClsDepartsById() {
         return clsDepartsById;
     }
 

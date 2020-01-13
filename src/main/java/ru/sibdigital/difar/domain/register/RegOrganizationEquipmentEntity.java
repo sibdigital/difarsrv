@@ -1,5 +1,6 @@
 package ru.sibdigital.difar.domain.register;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import ru.sibdigital.difar.domain.catalog.ClsEquipmentKindEntity;
 import ru.sibdigital.difar.domain.catalog.ClsOrganizationEntity;
 import ru.sibdigital.difar.domain.tableparts.TpRoutingEquipmentEntity;
@@ -163,7 +164,8 @@ public class RegOrganizationEquipmentEntity {
     }
 
     @OneToMany(mappedBy = "regOrganizationEquipmentByIdOrganizationEquipment")
-    public Collection<RegExecRoutingEquipmentEntity> getRegExecRoutingEquipmentsById() {
+    @JsonIgnore
+public Collection<RegExecRoutingEquipmentEntity> getRegExecRoutingEquipmentsById() {
         return regExecRoutingEquipmentsById;
     }
 
@@ -172,7 +174,8 @@ public class RegOrganizationEquipmentEntity {
     }
 
     @OneToMany(mappedBy = "regOrganizationEquipmentByIdRoutingEquipment")
-    public Collection<RegExecRoutingEquipmentEntity> getRegExecRoutingEquipmentsById_0() {
+    @JsonIgnore
+public Collection<RegExecRoutingEquipmentEntity> getRegExecRoutingEquipmentsById_0() {
         return regExecRoutingEquipmentsById_0;
     }
 
@@ -181,7 +184,8 @@ public class RegOrganizationEquipmentEntity {
     }
 
     @OneToMany(mappedBy = "regOrganizationEquipmentByIdOrganizationEquipment")
-    public Collection<TpRoutingEquipmentEntity> getTpRoutingEquipmentsById() {
+    @JsonIgnore
+public Collection<TpRoutingEquipmentEntity> getTpRoutingEquipmentsById() {
         return tpRoutingEquipmentsById;
     }
 
@@ -190,7 +194,8 @@ public class RegOrganizationEquipmentEntity {
     }
 
     @OneToMany(mappedBy = "regOrganizationEquipmentByIdOrganizationEquipment")
-    public Collection<RegEquipmentBaseLocalEntity> getRegEquipmentBaseLocalsById() {
+    @JsonIgnore
+public Collection<RegEquipmentBaseLocalEntity> getRegEquipmentBaseLocalsById() {
         return regEquipmentBaseLocalsById;
     }
 

@@ -1,5 +1,6 @@
 package ru.sibdigital.difar.domain.catalog;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.vladmihalcea.hibernate.type.json.JsonNodeBinaryType;
 import org.hibernate.annotations.CreationTimestamp;
@@ -161,7 +162,8 @@ public class ClsTypeAnimalEventEntity {
     }
 
     @OneToMany(mappedBy = "clsTypeAnimalEventByIdTypeAnimalEvent")
-    public Collection<DocAnimalAppraisalEntity> getDocAnimalAppraisalsById() {
+    @JsonIgnore
+public Collection<DocAnimalAppraisalEntity> getDocAnimalAppraisalsById() {
         return docAnimalAppraisalsById;
     }
 
@@ -170,7 +172,8 @@ public class ClsTypeAnimalEventEntity {
     }
 
     @OneToMany(mappedBy = "clsTypeAnimalEventByIdTypeAnimalEvent")
-    public Collection<DocAnimalBeatingEntity> getDocAnimalBeatingsById() {
+    @JsonIgnore
+public Collection<DocAnimalBeatingEntity> getDocAnimalBeatingsById() {
         return docAnimalBeatingsById;
     }
 
@@ -179,7 +182,8 @@ public class ClsTypeAnimalEventEntity {
     }
 
     @OneToMany(mappedBy = "clsTypeAnimalEventByIdTypeAnimalEvent")
-    public Collection<DocAnimalCalvingEntity> getDocAnimalCalvingsById() {
+    @JsonIgnore
+public Collection<DocAnimalCalvingEntity> getDocAnimalCalvingsById() {
         return docAnimalCalvingsById;
     }
 
@@ -188,7 +192,8 @@ public class ClsTypeAnimalEventEntity {
     }
 
     @OneToMany(mappedBy = "clsTypeAnimalEventByIdTypeAnimalEvent")
-    public Collection<DocAnimalCopulationEntity> getDocAnimalCopulationsById() {
+    @JsonIgnore
+public Collection<DocAnimalCopulationEntity> getDocAnimalCopulationsById() {
         return docAnimalCopulationsById;
     }
 
@@ -197,7 +202,8 @@ public class ClsTypeAnimalEventEntity {
     }
 
     @OneToMany(mappedBy = "clsTypeAnimalEventByIdTypeAnimalEvent")
-    public Collection<DocAnimalEventEntity> getDocAnimalEventsById() {
+    @JsonIgnore
+public Collection<DocAnimalEventEntity> getDocAnimalEventsById() {
         return docAnimalEventsById;
     }
 
@@ -206,7 +212,8 @@ public class ClsTypeAnimalEventEntity {
     }
 
     @OneToMany(mappedBy = "clsTypeAnimalEventByIdTypeAnimalEvent")
-    public Collection<DocAnimalRetirementEntity> getDocAnimalRetirementsById() {
+    @JsonIgnore
+public Collection<DocAnimalRetirementEntity> getDocAnimalRetirementsById() {
         return docAnimalRetirementsById;
     }
 
@@ -215,7 +222,8 @@ public class ClsTypeAnimalEventEntity {
     }
 
     @OneToMany(mappedBy = "clsTypeAnimalEventByIdTypeAnimalEvent")
-    public Collection<DocAnimalSaleEntity> getDocAnimalSalesById() {
+    @JsonIgnore
+public Collection<DocAnimalSaleEntity> getDocAnimalSalesById() {
         return docAnimalSalesById;
     }
 
@@ -224,7 +232,8 @@ public class ClsTypeAnimalEventEntity {
     }
 
     @OneToMany(mappedBy = "clsTypeAnimalEventByIdTypeAnimalEvent")
-    public Collection<DocAnimalTransferEntity> getDocAnimalTransfersById() {
+    @JsonIgnore
+public Collection<DocAnimalTransferEntity> getDocAnimalTransfersById() {
         return docAnimalTransfersById;
     }
 
@@ -233,7 +242,8 @@ public class ClsTypeAnimalEventEntity {
     }
 
     @OneToMany(mappedBy = "clsTypeAnimalEventByIdTypeAnimalEvent")
-    public Collection<RegAnimalStateEntity> getRegAnimalStatesById() {
+    @JsonIgnore
+public Collection<RegAnimalStateEntity> getRegAnimalStatesById() {
         return regAnimalStatesById;
     }
 

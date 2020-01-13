@@ -1,5 +1,6 @@
 package ru.sibdigital.difar.domain.catalog;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.CreationTimestamp;
 import ru.sibdigital.difar.domain.register.RegOrganizationConsumableEntity;
 
@@ -182,7 +183,8 @@ public class ClsConsumableEntity {
     }
 
     @OneToMany(mappedBy = "clsConsumableByIdConsumable")
-    public Collection<RegOrganizationConsumableEntity> getRegOrganizationConsumablesById() {
+    @JsonIgnore
+public Collection<RegOrganizationConsumableEntity> getRegOrganizationConsumablesById() {
         return regOrganizationConsumablesById;
     }
 

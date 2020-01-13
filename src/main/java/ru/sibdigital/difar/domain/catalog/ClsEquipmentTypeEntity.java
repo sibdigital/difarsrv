@@ -1,5 +1,6 @@
 package ru.sibdigital.difar.domain.catalog;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
@@ -119,7 +120,8 @@ public class ClsEquipmentTypeEntity {
     }
 
     @OneToMany(mappedBy = "clsEquipmentTypeByIdEquipmentType")
-    public Collection<ClsEquipmentKindEntity> getClsEquipmentKindsById() {
+    @JsonIgnore
+public Collection<ClsEquipmentKindEntity> getClsEquipmentKindsById() {
         return clsEquipmentKindsById;
     }
 

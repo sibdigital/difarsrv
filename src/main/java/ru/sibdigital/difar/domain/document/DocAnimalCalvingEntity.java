@@ -1,5 +1,6 @@
 package ru.sibdigital.difar.domain.document;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import ru.sibdigital.difar.domain.catalog.ClsOrganizationEntity;
 import ru.sibdigital.difar.domain.catalog.ClsTypeAnimalEventEntity;
 import ru.sibdigital.difar.domain.tableparts.TpAnimalCalvingAnimalEntity;
@@ -169,7 +170,8 @@ public class DocAnimalCalvingEntity {
     }
 
     @OneToMany(mappedBy = "docAnimalCalvingByIdAnimalCalving")
-    public Collection<TpAnimalCalvingAnimalEntity> getTpAnimalCalvingAnimalsById() {
+    @JsonIgnore
+public Collection<TpAnimalCalvingAnimalEntity> getTpAnimalCalvingAnimalsById() {
         return tpAnimalCalvingAnimalsById;
     }
 
@@ -178,7 +180,8 @@ public class DocAnimalCalvingEntity {
     }
 
     @OneToMany(mappedBy = "docAnimalCalvingByIdAnimalCalving")
-    public Collection<TpAnimalCalvingAnimalGroupEntity> getTpAnimalCalvingAnimalGroupsById() {
+    @JsonIgnore
+public Collection<TpAnimalCalvingAnimalGroupEntity> getTpAnimalCalvingAnimalGroupsById() {
         return tpAnimalCalvingAnimalGroupsById;
     }
 

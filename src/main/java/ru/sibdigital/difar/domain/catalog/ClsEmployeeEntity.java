@@ -1,5 +1,6 @@
 package ru.sibdigital.difar.domain.catalog;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.CreationTimestamp;
 import ru.sibdigital.difar.domain.register.*;
 
@@ -184,7 +185,8 @@ public class ClsEmployeeEntity {
     }
 
     @OneToMany(mappedBy = "clsEmployeeByIdEmployee")
-    public Collection<ClsUserEntity> getClsUsersById() {
+    @JsonIgnore
+public Collection<ClsUserEntity> getClsUsersById() {
         return clsUsersById;
     }
 
@@ -193,7 +195,8 @@ public class ClsEmployeeEntity {
     }
 
     @OneToMany(mappedBy = "clsEmployeeByIdMaker")
-    public Collection<RegExecRoutingConsumEntity> getRegExecRoutingConsumsById() {
+    @JsonIgnore
+public Collection<RegExecRoutingConsumEntity> getRegExecRoutingConsumsById() {
         return regExecRoutingConsumsById;
     }
 
@@ -202,7 +205,8 @@ public class ClsEmployeeEntity {
     }
 
     @OneToMany(mappedBy = "clsEmployeeByIdEmployee")
-    public Collection<RegExecRoutingConsumEntity> getRegExecRoutingConsumsById_0() {
+    @JsonIgnore
+public Collection<RegExecRoutingConsumEntity> getRegExecRoutingConsumsById_0() {
         return regExecRoutingConsumsById_0;
     }
 
@@ -211,7 +215,8 @@ public class ClsEmployeeEntity {
     }
 
     @OneToMany(mappedBy = "clsEmployeeByIdMaker")
-    public Collection<RegExecRoutingEquipmentEntity> getRegExecRoutingEquipmentsById() {
+    @JsonIgnore
+public Collection<RegExecRoutingEquipmentEntity> getRegExecRoutingEquipmentsById() {
         return regExecRoutingEquipmentsById;
     }
 
@@ -220,7 +225,8 @@ public class ClsEmployeeEntity {
     }
 
     @OneToMany(mappedBy = "clsEmployeeByIdEmployee")
-    public Collection<RegExecRoutingEquipmentEntity> getRegExecRoutingEquipmentsById_0() {
+    @JsonIgnore
+public Collection<RegExecRoutingEquipmentEntity> getRegExecRoutingEquipmentsById_0() {
         return regExecRoutingEquipmentsById_0;
     }
 
@@ -229,7 +235,8 @@ public class ClsEmployeeEntity {
     }
 
     @OneToMany(mappedBy = "clsEmployeeByIdMaker")
-    public Collection<RegExecRoutingFertilizerEntity> getRegExecRoutingFertilizersById() {
+    @JsonIgnore
+public Collection<RegExecRoutingFertilizerEntity> getRegExecRoutingFertilizersById() {
         return regExecRoutingFertilizersById;
     }
 
@@ -238,7 +245,8 @@ public class ClsEmployeeEntity {
     }
 
     @OneToMany(mappedBy = "clsEmployeeByIdEmployee")
-    public Collection<RegExecRoutingFertilizerEntity> getRegExecRoutingFertilizersById_0() {
+    @JsonIgnore
+public Collection<RegExecRoutingFertilizerEntity> getRegExecRoutingFertilizersById_0() {
         return regExecRoutingFertilizersById_0;
     }
 
@@ -247,7 +255,8 @@ public class ClsEmployeeEntity {
     }
 
     @OneToMany(mappedBy = "clsEmployeeByIdMaker")
-    public Collection<RegExecRoutingProtectionEquipmentEntity> getRegExecRoutingProtectionEquipmentsById() {
+    @JsonIgnore
+public Collection<RegExecRoutingProtectionEquipmentEntity> getRegExecRoutingProtectionEquipmentsById() {
         return regExecRoutingProtectionEquipmentsById;
     }
 
@@ -256,7 +265,8 @@ public class ClsEmployeeEntity {
     }
 
     @OneToMany(mappedBy = "clsEmployeeByIdEmployee")
-    public Collection<RegExecRoutingProtectionEquipmentEntity> getRegExecRoutingProtectionEquipmentsById_0() {
+    @JsonIgnore
+public Collection<RegExecRoutingProtectionEquipmentEntity> getRegExecRoutingProtectionEquipmentsById_0() {
         return regExecRoutingProtectionEquipmentsById_0;
     }
 
@@ -265,7 +275,8 @@ public class ClsEmployeeEntity {
     }
 
     @OneToMany(mappedBy = "clsEmployeeByIdMaker")
-    public Collection<RegExecRoutingWorkEntity> getRegExecRoutingWorksById() {
+    @JsonIgnore
+public Collection<RegExecRoutingWorkEntity> getRegExecRoutingWorksById() {
         return regExecRoutingWorksById;
     }
 
@@ -274,7 +285,8 @@ public class ClsEmployeeEntity {
     }
 
     @OneToMany(mappedBy = "clsEmployeeByIdEmployee")
-    public Collection<RegExecRoutingWorkEntity> getRegExecRoutingWorksById_0() {
+    @JsonIgnore
+public Collection<RegExecRoutingWorkEntity> getRegExecRoutingWorksById_0() {
         return regExecRoutingWorksById_0;
     }
 

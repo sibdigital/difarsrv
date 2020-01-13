@@ -1,5 +1,6 @@
 package ru.sibdigital.difar.domain.catalog;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.vladmihalcea.hibernate.type.json.JsonNodeBinaryType;
 import org.hibernate.annotations.CreationTimestamp;
@@ -162,7 +163,8 @@ public class ClsWeatherStationEntity {
     }
 
     @OneToMany(mappedBy = "clsWeatherStationByIdWeatherStation")
-    public Collection<RegWeatherStationReadingEntity> getRegWeatherStationReadingsById() {
+    @JsonIgnore
+public Collection<RegWeatherStationReadingEntity> getRegWeatherStationReadingsById() {
         return regWeatherStationReadingsById;
     }
 

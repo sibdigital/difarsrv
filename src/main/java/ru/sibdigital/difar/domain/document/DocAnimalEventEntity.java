@@ -1,5 +1,6 @@
 package ru.sibdigital.difar.domain.document;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.vladmihalcea.hibernate.type.json.JsonNodeBinaryType;
 import org.hibernate.annotations.Type;
@@ -200,7 +201,8 @@ public class DocAnimalEventEntity {
     }
 
     @OneToMany(mappedBy = "docAnimalEventByIdAnimalEvent")
-    public Collection<TpAnimalEventAnimalEntity> getTpAnimalEventAnimalsById() {
+    @JsonIgnore
+public Collection<TpAnimalEventAnimalEntity> getTpAnimalEventAnimalsById() {
         return tpAnimalEventAnimalsById;
     }
 
@@ -209,7 +211,8 @@ public class DocAnimalEventEntity {
     }
 
     @OneToMany(mappedBy = "docAnimalEventByIdAnimalEvent")
-    public Collection<TpAnimalEventAnimalGroupEntity> getTpAnimalEventAnimalGroupsById() {
+    @JsonIgnore
+public Collection<TpAnimalEventAnimalGroupEntity> getTpAnimalEventAnimalGroupsById() {
         return tpAnimalEventAnimalGroupsById;
     }
 

@@ -1,5 +1,7 @@
 package ru.sibdigital.difar.domain.catalog;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import org.hibernate.annotations.CreationTimestamp;
 import ru.sibdigital.difar.domain.register.RegFieldLocalEntity;
 
@@ -151,7 +153,8 @@ public class ClsDepartEntity {
     }
 
     @OneToMany(mappedBy = "clsDepartByIdDepart")
-    public Collection<RegFieldLocalEntity> getRegFieldLocalsById() {
+    @JsonIgnore
+public Collection<RegFieldLocalEntity> getRegFieldLocalsById() {
         return regFieldLocalsById;
     }
 
@@ -180,7 +183,8 @@ public class ClsDepartEntity {
     }
 
     @OneToMany(mappedBy = "clsDepartByIdDepart")
-    public Collection<ClsEmployeeEntity> getClsEmployeesById() {
+    @JsonIgnore
+public Collection<ClsEmployeeEntity> getClsEmployeesById() {
         return clsEmployeesById;
     }
 
@@ -189,7 +193,8 @@ public class ClsDepartEntity {
     }
 
     @OneToMany(mappedBy = "clsDepartByIdDepart")
-    public Collection<ClsEquipmentBaseEntity> getClsEquipmentBasesById() {
+    @JsonIgnore
+public Collection<ClsEquipmentBaseEntity> getClsEquipmentBasesById() {
         return clsEquipmentBasesById;
     }
 
@@ -198,7 +203,8 @@ public class ClsDepartEntity {
     }
 
     @OneToMany(mappedBy = "clsDepartByIdDepart")
-    public Collection<ClsRanchEntity> getClsRanchesById() {
+    @JsonIgnore
+public Collection<ClsRanchEntity> getClsRanchesById() {
         return clsRanchesById;
     }
 

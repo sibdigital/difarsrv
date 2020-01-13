@@ -1,5 +1,6 @@
 package ru.sibdigital.difar.domain.catalog;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.CreationTimestamp;
 import ru.sibdigital.difar.domain.register.RegAnimalEntity;
 import ru.sibdigital.difar.domain.register.RegExternalAnimalEntity;
@@ -130,7 +131,8 @@ public class ClsRegionEntity {
     }
 
     @OneToMany(mappedBy = "clsRegionByIdRegion")
-    public Collection<RegFieldLocalEntity> getRegFieldLocalsById() {
+    @JsonIgnore
+public Collection<RegFieldLocalEntity> getRegFieldLocalsById() {
         return regFieldLocalsById;
     }
 
@@ -139,7 +141,8 @@ public class ClsRegionEntity {
     }
 
     @OneToMany(mappedBy = "clsRegionByIdRegion")
-    public Collection<TpPlantDiseaseTypicalAreaEntity> getTpPlantDiseaseTypicalAreasById() {
+    @JsonIgnore
+public Collection<TpPlantDiseaseTypicalAreaEntity> getTpPlantDiseaseTypicalAreasById() {
         return tpPlantDiseaseTypicalAreasById;
     }
 
@@ -148,7 +151,8 @@ public class ClsRegionEntity {
     }
 
     @OneToMany(mappedBy = "clsRegionByIdRegion")
-    public Collection<TpPlantPestTypicalAreaEntity> getTpPlantPestTypicalAreasById() {
+    @JsonIgnore
+public Collection<TpPlantPestTypicalAreaEntity> getTpPlantPestTypicalAreasById() {
         return tpPlantPestTypicalAreasById;
     }
 
@@ -157,7 +161,8 @@ public class ClsRegionEntity {
     }
 
     @OneToMany(mappedBy = "clsRegionByIdRegion")
-    public Collection<RegAnimalEntity> getRegAnimalsById() {
+    @JsonIgnore
+public Collection<RegAnimalEntity> getRegAnimalsById() {
         return regAnimalsById;
     }
 
@@ -166,7 +171,8 @@ public class ClsRegionEntity {
     }
 
     @OneToMany(mappedBy = "clsRegionByIdRegion")
-    public Collection<RegExternalAnimalEntity> getRegExternalAnimalsById() {
+    @JsonIgnore
+public Collection<RegExternalAnimalEntity> getRegExternalAnimalsById() {
         return regExternalAnimalsById;
     }
 
@@ -175,7 +181,8 @@ public class ClsRegionEntity {
     }
 
     @OneToMany(mappedBy = "clsRegionByIdRegion")
-    public Collection<ClsArbitraryPeriodEntity> getClsArbitraryPeriodsById() {
+    @JsonIgnore
+public Collection<ClsArbitraryPeriodEntity> getClsArbitraryPeriodsById() {
         return ClsArbitraryPeriodsById;
     }
 
@@ -184,7 +191,8 @@ public class ClsRegionEntity {
     }
 
     @OneToMany(mappedBy = "clsRegionByIdRegion")
-    public Collection<ClsDistrictEntity> getClsDistrictsById() {
+    @JsonIgnore
+public Collection<ClsDistrictEntity> getClsDistrictsById() {
         return clsDistrictsById;
     }
 

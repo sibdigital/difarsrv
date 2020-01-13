@@ -1,5 +1,6 @@
 package ru.sibdigital.difar.domain.document;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import ru.sibdigital.difar.domain.catalog.ClsOrganizationEntity;
 import ru.sibdigital.difar.domain.catalog.ClsTypeAnimalEventEntity;
 import ru.sibdigital.difar.domain.tableparts.TpAnimalCopulationAnimalEntity;
@@ -184,7 +185,8 @@ public class DocAnimalCopulationEntity {
     }
 
     @OneToMany(mappedBy = "docAnimalCopulationByIdAnimalCopulation")
-    public Collection<TpAnimalCopulationAnimalEntity> getTpAnimalCopulationAnimalsById() {
+    @JsonIgnore
+public Collection<TpAnimalCopulationAnimalEntity> getTpAnimalCopulationAnimalsById() {
         return tpAnimalCopulationAnimalsById;
     }
 
@@ -193,7 +195,8 @@ public class DocAnimalCopulationEntity {
     }
 
     @OneToMany(mappedBy = "docAnimalCopulationByIdAnimalCopulation")
-    public Collection<TpAnimalCopulationAnimalGroupEntity> getTpAnimalCopulationAnimalGroupsById() {
+    @JsonIgnore
+public Collection<TpAnimalCopulationAnimalGroupEntity> getTpAnimalCopulationAnimalGroupsById() {
         return tpAnimalCopulationAnimalGroupsById;
     }
 
@@ -202,7 +205,8 @@ public class DocAnimalCopulationEntity {
     }
 
     @OneToMany(mappedBy = "docAnimalCopulationByIdAnimalCopulation")
-    public Collection<TpAnimalCopulationAnimalGroupFemaleEntity> getTpAnimalCopulationAnimalGroupFemalesById() {
+    @JsonIgnore
+public Collection<TpAnimalCopulationAnimalGroupFemaleEntity> getTpAnimalCopulationAnimalGroupFemalesById() {
         return tpAnimalCopulationAnimalGroupFemalesById;
     }
 

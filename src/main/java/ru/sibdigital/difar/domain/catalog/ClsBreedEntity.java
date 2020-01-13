@@ -1,5 +1,6 @@
 package ru.sibdigital.difar.domain.catalog;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.CreationTimestamp;
 import ru.sibdigital.difar.domain.register.RegAnimalEntity;
 import ru.sibdigital.difar.domain.register.RegExternalAnimalEntity;
@@ -133,7 +134,8 @@ public class ClsBreedEntity {
     }
 
     @OneToMany(mappedBy = "clsBreedByIdBreed")
-    public Collection<RegAnimalEntity> getRegAnimalsById() {
+    @JsonIgnore
+public Collection<RegAnimalEntity> getRegAnimalsById() {
         return regAnimalsById;
     }
 
@@ -142,7 +144,8 @@ public class ClsBreedEntity {
     }
 
     @OneToMany(mappedBy = "clsBreedByIdBreed")
-    public Collection<RegExternalAnimalEntity> getRegExternalAnimalsById() {
+    @JsonIgnore
+public Collection<RegExternalAnimalEntity> getRegExternalAnimalsById() {
         return regExternalAnimalsById;
     }
 

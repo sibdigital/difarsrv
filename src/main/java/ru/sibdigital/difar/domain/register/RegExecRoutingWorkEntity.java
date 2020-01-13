@@ -1,5 +1,6 @@
 package ru.sibdigital.difar.domain.register;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import ru.sibdigital.difar.domain.catalog.ClsEmployeeEntity;
 import ru.sibdigital.difar.domain.document.DocRoutingEntity;
 import ru.sibdigital.difar.domain.tableparts.TpRoutingWorkEntity;
@@ -191,7 +192,8 @@ public class RegExecRoutingWorkEntity {
     }
 
     @OneToMany(mappedBy = "regExecRoutingWorkByIdExecRoutingWork")
-    public Collection<RegExecRoutingConsumEntity> getRegExecRoutingConsumsById() {
+    @JsonIgnore
+public Collection<RegExecRoutingConsumEntity> getRegExecRoutingConsumsById() {
         return regExecRoutingConsumsById;
     }
 
@@ -200,7 +202,8 @@ public class RegExecRoutingWorkEntity {
     }
 
     @OneToMany(mappedBy = "regExecRoutingWorkByIdExecRoutingWork")
-    public Collection<RegExecRoutingEquipmentEntity> getRegExecRoutingEquipmentsById() {
+    @JsonIgnore
+public Collection<RegExecRoutingEquipmentEntity> getRegExecRoutingEquipmentsById() {
         return regExecRoutingEquipmentsById;
     }
 
@@ -209,7 +212,8 @@ public class RegExecRoutingWorkEntity {
     }
 
     @OneToMany(mappedBy = "regExecRoutingWorkByIdExecRoutingWork")
-    public Collection<RegExecRoutingFertilizerEntity> getRegExecRoutingFertilizersById() {
+    @JsonIgnore
+public Collection<RegExecRoutingFertilizerEntity> getRegExecRoutingFertilizersById() {
         return regExecRoutingFertilizersById;
     }
 
@@ -218,7 +222,8 @@ public class RegExecRoutingWorkEntity {
     }
 
     @OneToMany(mappedBy = "regExecRoutingWorkByIdExecRoutingWork")
-    public Collection<RegExecRoutingProtectionEquipmentEntity> getRegExecRoutingProtectionEquipmentsById() {
+    @JsonIgnore
+public Collection<RegExecRoutingProtectionEquipmentEntity> getRegExecRoutingProtectionEquipmentsById() {
         return regExecRoutingProtectionEquipmentsById;
     }
 

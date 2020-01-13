@@ -1,5 +1,6 @@
 package ru.sibdigital.difar.domain.catalog;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.CreationTimestamp;
 import ru.sibdigital.difar.domain.document.DocRoutingEntity;
 
@@ -147,7 +148,8 @@ public class ClsStandardPeriodEntity {
     }
 
     @OneToMany(mappedBy = "clsStandardPeriodByIdStandardPeriod")
-    public Collection<DocRoutingEntity> getDocRoutingsById() {
+    @JsonIgnore
+public Collection<DocRoutingEntity> getDocRoutingsById() {
         return docRoutingsById;
     }
 
@@ -156,7 +158,8 @@ public class ClsStandardPeriodEntity {
     }
 
     @OneToMany(mappedBy = "clsStandardPeriodByIdStandardPeriod")
-    public Collection<ClsArbitraryPeriodEntity> getClsArbitraryPeriodsById() {
+    @JsonIgnore
+public Collection<ClsArbitraryPeriodEntity> getClsArbitraryPeriodsById() {
         return ClsArbitraryPeriodsById;
     }
 

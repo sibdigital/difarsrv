@@ -1,5 +1,6 @@
 package ru.sibdigital.difar.domain.catalog;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.CreationTimestamp;
 import ru.sibdigital.difar.domain.register.RegCvitantionEntity;
 
@@ -120,7 +121,8 @@ public class ClsResourceEntity {
     }
 
     @OneToMany(mappedBy = "clsResourceByIdResource")
-    public Collection<RegCvitantionEntity> getRegCvitantionsById() {
+    @JsonIgnore
+public Collection<RegCvitantionEntity> getRegCvitantionsById() {
         return regCvitantionsById;
     }
 

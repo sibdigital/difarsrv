@@ -1,5 +1,6 @@
 package ru.sibdigital.difar.domain.catalog;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.CreationTimestamp;
 import ru.sibdigital.difar.domain.register.RegOrganizationProtectionEquipmentEntity;
 import ru.sibdigital.difar.domain.tableparts.TpPlantDiseaseAffectedCropEntity;
@@ -175,7 +176,8 @@ public class ClsProtectionEquipmentEntity {
     }
 
     @OneToMany(mappedBy = "clsProtectionEquipmentByIdProtectionEquipment")
-    public Collection<RegOrganizationProtectionEquipmentEntity> getRegOrganizationProtectionEquipmentsById() {
+    @JsonIgnore
+public Collection<RegOrganizationProtectionEquipmentEntity> getRegOrganizationProtectionEquipmentsById() {
         return regOrganizationProtectionEquipmentsById;
     }
 
@@ -184,7 +186,8 @@ public class ClsProtectionEquipmentEntity {
     }
 
     @OneToMany(mappedBy = "clsProtectionEquipmentByIdProtectionEquipment")
-    public Collection<TpPlantDiseaseAffectedCropEntity> getTpPlantDiseaseAffectedCropsById() {
+    @JsonIgnore
+public Collection<TpPlantDiseaseAffectedCropEntity> getTpPlantDiseaseAffectedCropsById() {
         return tpPlantDiseaseAffectedCropsById;
     }
 
@@ -193,7 +196,8 @@ public class ClsProtectionEquipmentEntity {
     }
 
     @OneToMany(mappedBy = "clsProtectionEquipmentByIdProtectionEquipment")
-    public Collection<TpPlantPestAffectedCropEntity> getTpPlantPestAffectedCropsById() {
+    @JsonIgnore
+public Collection<TpPlantPestAffectedCropEntity> getTpPlantPestAffectedCropsById() {
         return tpPlantPestAffectedCropsById;
     }
 

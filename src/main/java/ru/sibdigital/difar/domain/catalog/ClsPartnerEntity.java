@@ -1,5 +1,6 @@
 package ru.sibdigital.difar.domain.catalog;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.CreationTimestamp;
 import ru.sibdigital.difar.domain.document.DocAnimalSaleEntity;
 import ru.sibdigital.difar.domain.register.RegAnimalEntity;
@@ -140,7 +141,8 @@ public class ClsPartnerEntity {
     }
 
     @OneToMany(mappedBy = "clsPartnerByIdPartner")
-    public Collection<DocAnimalSaleEntity> getDocAnimalSalesById() {
+    @JsonIgnore
+public Collection<DocAnimalSaleEntity> getDocAnimalSalesById() {
         return docAnimalSalesById;
     }
 
@@ -149,7 +151,8 @@ public class ClsPartnerEntity {
     }
 
     @OneToMany(mappedBy = "clsPartnerByIdPartner")
-    public Collection<RegAnimalEntity> getRegAnimalsById() {
+    @JsonIgnore
+public Collection<RegAnimalEntity> getRegAnimalsById() {
         return regAnimalsById;
     }
 
@@ -158,7 +161,8 @@ public class ClsPartnerEntity {
     }
 
     @OneToMany(mappedBy = "clsPartnerByIdPartner")
-    public Collection<RegExternalAnimalEntity> getRegExternalAnimalsById() {
+    @JsonIgnore
+public Collection<RegExternalAnimalEntity> getRegExternalAnimalsById() {
         return regExternalAnimalsById;
     }
 
@@ -177,7 +181,8 @@ public class ClsPartnerEntity {
     }
 
     @OneToMany(mappedBy = "clsPartnerByIdPartner")
-    public Collection<RegOrganizationPartnerEntity> getRegOrganizationPartnersById() {
+    @JsonIgnore
+public Collection<RegOrganizationPartnerEntity> getRegOrganizationPartnersById() {
         return regOrganizationPartnersById;
     }
 

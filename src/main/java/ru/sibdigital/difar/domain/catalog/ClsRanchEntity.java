@@ -1,5 +1,6 @@
 package ru.sibdigital.difar.domain.catalog;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.CreationTimestamp;
 import ru.sibdigital.difar.domain.document.DocAnimalTransferEntity;
 import ru.sibdigital.difar.domain.register.*;
@@ -170,7 +171,8 @@ public class ClsRanchEntity {
 //    }
 
     @OneToMany(mappedBy = "clsRanchByIdRanch")
-    public Collection<DocAnimalTransferEntity> getDocAnimalTransfersById() {
+    @JsonIgnore
+public Collection<DocAnimalTransferEntity> getDocAnimalTransfersById() {
         return docAnimalTransfersById;
     }
 
@@ -179,7 +181,8 @@ public class ClsRanchEntity {
     }
 
     @OneToMany(mappedBy = "clsRanchByIdRanchCurrent")
-    public Collection<DocAnimalTransferEntity> getDocAnimalTransfersById_0() {
+    @JsonIgnore
+public Collection<DocAnimalTransferEntity> getDocAnimalTransfersById_0() {
         return docAnimalTransfersById_0;
     }
 
@@ -188,7 +191,8 @@ public class ClsRanchEntity {
     }
 
     @OneToMany(mappedBy = "clsRanchByIdRanch")
-    public Collection<RegAnimalGroupEntity> getRegAnimalGroupsById() {
+    @JsonIgnore
+public Collection<RegAnimalGroupEntity> getRegAnimalGroupsById() {
         return regAnimalGroupsById;
     }
 
@@ -197,7 +201,8 @@ public class ClsRanchEntity {
     }
 
     @OneToMany(mappedBy = "clsRanchByIdRanch")
-    public Collection<RegAnimalLocalEntity> getRegAnimalLocalsById() {
+    @JsonIgnore
+public Collection<RegAnimalLocalEntity> getRegAnimalLocalsById() {
         return regAnimalLocalsById;
     }
 
@@ -206,7 +211,8 @@ public class ClsRanchEntity {
     }
 
     @OneToMany(mappedBy = "clsRanchByIdRanch")
-    public Collection<RegAnimalParamEntity> getRegAnimalParamsById() {
+    @JsonIgnore
+public Collection<RegAnimalParamEntity> getRegAnimalParamsById() {
         return regAnimalParamsById;
     }
 
@@ -215,7 +221,8 @@ public class ClsRanchEntity {
     }
 
     @OneToMany(mappedBy = "clsRanchByIdRanch")
-    public Collection<RegAnimalStateEntity> getRegAnimalStatesById() {
+    @JsonIgnore
+public Collection<RegAnimalStateEntity> getRegAnimalStatesById() {
         return regAnimalStatesById;
     }
 
@@ -224,7 +231,8 @@ public class ClsRanchEntity {
     }
 
     @OneToMany(mappedBy = "clsRanchByIdRanch")
-    public Collection<ClsEquipmentBaseEntity> getClsEquipmentBasesById() {
+    @JsonIgnore
+public Collection<ClsEquipmentBaseEntity> getClsEquipmentBasesById() {
         return clsEquipmentBasesById;
     }
 
@@ -263,7 +271,8 @@ public class ClsRanchEntity {
     }
 
     @OneToMany(mappedBy = "clsRanchByIdRanch")
-    public Collection<RegEquipmentBaseLocalEntity> getRegEquipmentBaseLocalsById() {
+    @JsonIgnore
+public Collection<RegEquipmentBaseLocalEntity> getRegEquipmentBaseLocalsById() {
         return regEquipmentBaseLocalsById;
     }
 

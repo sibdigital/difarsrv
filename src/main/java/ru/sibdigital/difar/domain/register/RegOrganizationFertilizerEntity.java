@@ -1,5 +1,6 @@
 package ru.sibdigital.difar.domain.register;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.vladmihalcea.hibernate.type.json.JsonNodeBinaryType;
 import org.hibernate.annotations.Type;
@@ -167,7 +168,8 @@ public class RegOrganizationFertilizerEntity {
     }
 
     @OneToMany(mappedBy = "regOrganizationFertilizerByIdOrganizationFertilizer")
-    public Collection<RegExecRoutingFertilizerEntity> getRegExecRoutingFertilizersById() {
+    @JsonIgnore
+public Collection<RegExecRoutingFertilizerEntity> getRegExecRoutingFertilizersById() {
         return regExecRoutingFertilizersById;
     }
 
@@ -176,7 +178,8 @@ public class RegOrganizationFertilizerEntity {
     }
 
     @OneToMany(mappedBy = "regOrganizationFertilizerByIdRoutingFertilizer")
-    public Collection<RegExecRoutingFertilizerEntity> getRegExecRoutingFertilizersById_0() {
+    @JsonIgnore
+public Collection<RegExecRoutingFertilizerEntity> getRegExecRoutingFertilizersById_0() {
         return regExecRoutingFertilizersById_0;
     }
 
@@ -205,7 +208,8 @@ public class RegOrganizationFertilizerEntity {
     }
 
     @OneToMany(mappedBy = "regOrganizationFertilizerByIdOrganizationFertilizer")
-    public Collection<TpRoutingFertilizerEntity> getTpRoutingFertilizersById() {
+    @JsonIgnore
+public Collection<TpRoutingFertilizerEntity> getTpRoutingFertilizersById() {
         return tpRoutingFertilizersById;
     }
 

@@ -1,5 +1,6 @@
 package ru.sibdigital.difar.domain.catalog;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.vladmihalcea.hibernate.type.json.JsonNodeBinaryType;
 import org.hibernate.annotations.CreationTimestamp;
@@ -259,7 +260,8 @@ public class ClsPlantDiseaseEntity {
     }
 
     @OneToMany(mappedBy = "clsPlantDiseaseByIdPlantDisease")
-    public Collection<TpPlantDiseaseAffectedCropEntity> getTpPlantDiseaseAffectedCropsById() {
+    @JsonIgnore
+public Collection<TpPlantDiseaseAffectedCropEntity> getTpPlantDiseaseAffectedCropsById() {
         return tpPlantDiseaseAffectedCropsById;
     }
 
@@ -268,7 +270,8 @@ public class ClsPlantDiseaseEntity {
     }
 
     @OneToMany(mappedBy = "clsPlantDiseaseByIdPlantDisease")
-    public Collection<TpPlantDiseaseDiseaseFeatureEntity> getTpPlantDiseaseDiseaseFeaturesById() {
+    @JsonIgnore
+public Collection<TpPlantDiseaseDiseaseFeatureEntity> getTpPlantDiseaseDiseaseFeaturesById() {
         return tpPlantDiseaseDiseaseFeaturesById;
     }
 
@@ -277,7 +280,8 @@ public class ClsPlantDiseaseEntity {
     }
 
     @OneToMany(mappedBy = "clsPlantDiseaseByIdPlantDisease")
-    public Collection<TpPlantDiseasePeriodEntity> getTpPlantDiseasePeriodsById() {
+    @JsonIgnore
+public Collection<TpPlantDiseasePeriodEntity> getTpPlantDiseasePeriodsById() {
         return tpPlantDiseasePeriodsById;
     }
 
@@ -286,7 +290,8 @@ public class ClsPlantDiseaseEntity {
     }
 
     @OneToMany(mappedBy = "clsPlantDiseaseByIdPlantDisease")
-    public Collection<TpPlantDiseasePlantOrganEntity> getTpPlantDiseasePlantOrgansById() {
+    @JsonIgnore
+public Collection<TpPlantDiseasePlantOrganEntity> getTpPlantDiseasePlantOrgansById() {
         return tpPlantDiseasePlantOrgansById;
     }
 
@@ -295,7 +300,8 @@ public class ClsPlantDiseaseEntity {
     }
 
     @OneToMany(mappedBy = "clsPlantDiseaseByIdPlantDisease")
-    public Collection<TpPlantDiseaseTypicalAreaEntity> getTpPlantDiseaseTypicalAreasById() {
+    @JsonIgnore
+public Collection<TpPlantDiseaseTypicalAreaEntity> getTpPlantDiseaseTypicalAreasById() {
         return tpPlantDiseaseTypicalAreasById;
     }
 

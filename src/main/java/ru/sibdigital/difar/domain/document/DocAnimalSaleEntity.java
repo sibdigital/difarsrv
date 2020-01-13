@@ -1,5 +1,6 @@
 package ru.sibdigital.difar.domain.document;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import ru.sibdigital.difar.domain.catalog.ClsPartnerEntity;
 import ru.sibdigital.difar.domain.catalog.ClsTypeAnimalEventEntity;
 import ru.sibdigital.difar.domain.tableparts.TpAnimalSaleAnimalEntity;
@@ -182,7 +183,8 @@ public class DocAnimalSaleEntity {
     }
 
     @OneToMany(mappedBy = "docAnimalSaleByIdAnimalSale")
-    public Collection<TpAnimalSaleAnimalEntity> getTpAnimalSaleAnimalsById() {
+    @JsonIgnore
+public Collection<TpAnimalSaleAnimalEntity> getTpAnimalSaleAnimalsById() {
         return tpAnimalSaleAnimalsById;
     }
 
@@ -191,7 +193,8 @@ public class DocAnimalSaleEntity {
     }
 
     @OneToMany(mappedBy = "docAnimalSaleByIdAnimalSale")
-    public Collection<TpAnimalSaleAnimalGroupEntity> getTpAnimalSaleAnimalGroupsById() {
+    @JsonIgnore
+public Collection<TpAnimalSaleAnimalGroupEntity> getTpAnimalSaleAnimalGroupsById() {
         return tpAnimalSaleAnimalGroupsById;
     }
 

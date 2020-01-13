@@ -1,5 +1,6 @@
 package ru.sibdigital.difar.domain.catalog;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.CreationTimestamp;
 import ru.sibdigital.difar.domain.register.RegOrganizationFertilizerEntity;
 
@@ -171,7 +172,8 @@ public class ClsFertilizerEntity {
     }
 
     @OneToMany(mappedBy = "clsFertilizerByIdFertilizer")
-    public Collection<RegOrganizationFertilizerEntity> getRegOrganizationFertilizersById() {
+    @JsonIgnore
+public Collection<RegOrganizationFertilizerEntity> getRegOrganizationFertilizersById() {
         return regOrganizationFertilizersById;
     }
 

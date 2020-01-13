@@ -1,5 +1,6 @@
 package ru.sibdigital.difar.domain.tableparts;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import ru.sibdigital.difar.domain.document.DocRoutingEntity;
 import ru.sibdigital.difar.domain.register.*;
 
@@ -127,7 +128,8 @@ public class TpRoutingWorkEntity {
 //    }
 
     @OneToMany(mappedBy = "tpRoutingWorkByIdRoutingWork")
-    public Collection<RegExecRoutingConsumEntity> getRegExecRoutingConsumsById() {
+    @JsonIgnore
+public Collection<RegExecRoutingConsumEntity> getRegExecRoutingConsumsById() {
         return regExecRoutingConsumsById;
     }
 
@@ -136,7 +138,8 @@ public class TpRoutingWorkEntity {
     }
 
     @OneToMany(mappedBy = "tpRoutingWorkByIdRoutingWork")
-    public Collection<RegExecRoutingEquipmentEntity> getRegExecRoutingEquipmentsById() {
+    @JsonIgnore
+public Collection<RegExecRoutingEquipmentEntity> getRegExecRoutingEquipmentsById() {
         return regExecRoutingEquipmentsById;
     }
 
@@ -145,7 +148,8 @@ public class TpRoutingWorkEntity {
     }
 
     @OneToMany(mappedBy = "tpRoutingWorkByIdRoutingWork")
-    public Collection<RegExecRoutingFertilizerEntity> getRegExecRoutingFertilizersById() {
+    @JsonIgnore
+public Collection<RegExecRoutingFertilizerEntity> getRegExecRoutingFertilizersById() {
         return regExecRoutingFertilizersById;
     }
 
@@ -154,7 +158,8 @@ public class TpRoutingWorkEntity {
     }
 
     @OneToMany(mappedBy = "tpRoutingWorkByIdRoutingWork")
-    public Collection<RegExecRoutingProtectionEquipmentEntity> getRegExecRoutingProtectionEquipmentsById() {
+    @JsonIgnore
+public Collection<RegExecRoutingProtectionEquipmentEntity> getRegExecRoutingProtectionEquipmentsById() {
         return regExecRoutingProtectionEquipmentsById;
     }
 
@@ -163,7 +168,8 @@ public class TpRoutingWorkEntity {
     }
 
     @OneToMany(mappedBy = "tpRoutingWorkByIdRoutingWork")
-    public Collection<RegExecRoutingWorkEntity> getRegExecRoutingWorksById() {
+    @JsonIgnore
+public Collection<RegExecRoutingWorkEntity> getRegExecRoutingWorksById() {
         return regExecRoutingWorksById;
     }
 
@@ -172,7 +178,8 @@ public class TpRoutingWorkEntity {
     }
 
     @OneToMany(mappedBy = "tpRoutingWorkByIdRoutingWork")
-    public Collection<TpRoutingConsumEntity> getTpRoutingConsumsById() {
+    @JsonIgnore
+public Collection<TpRoutingConsumEntity> getTpRoutingConsumsById() {
         return tpRoutingConsumsById;
     }
 
@@ -181,7 +188,8 @@ public class TpRoutingWorkEntity {
     }
 
     @OneToMany(mappedBy = "tpRoutingWorkByIdRoutingWork")
-    public Collection<TpRoutingEquipmentEntity> getTpRoutingEquipmentsById() {
+    @JsonIgnore
+public Collection<TpRoutingEquipmentEntity> getTpRoutingEquipmentsById() {
         return tpRoutingEquipmentsById;
     }
 
@@ -190,7 +198,8 @@ public class TpRoutingWorkEntity {
     }
 
     @OneToMany(mappedBy = "tpRoutingWorkByIdRoutingWork")
-    public Collection<TpRoutingFertilizerEntity> getTpRoutingFertilizersById() {
+    @JsonIgnore
+public Collection<TpRoutingFertilizerEntity> getTpRoutingFertilizersById() {
         return tpRoutingFertilizersById;
     }
 
@@ -199,7 +208,8 @@ public class TpRoutingWorkEntity {
     }
 
     @OneToMany(mappedBy = "tpRoutingWorkByIdRoutingWork")
-    public Collection<TpRoutingProtectionEquipmentEntity> getTpRoutingProtectionEquipmentsById() {
+    @JsonIgnore
+public Collection<TpRoutingProtectionEquipmentEntity> getTpRoutingProtectionEquipmentsById() {
         return tpRoutingProtectionEquipmentsById;
     }
 

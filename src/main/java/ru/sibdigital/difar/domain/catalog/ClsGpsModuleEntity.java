@@ -1,5 +1,6 @@
 package ru.sibdigital.difar.domain.catalog;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.vladmihalcea.hibernate.type.json.JsonNodeBinaryType;
 import org.hibernate.annotations.CreationTimestamp;
@@ -164,7 +165,8 @@ public class ClsGpsModuleEntity {
     }
 
     @OneToMany(mappedBy = "clsGpsModuleByIdGpsModule")
-    public Collection<RegGpsModuleOrganizationEquipmentEntity> getRegGpsModuleOrganizationEquipmentsById() {
+    @JsonIgnore
+public Collection<RegGpsModuleOrganizationEquipmentEntity> getRegGpsModuleOrganizationEquipmentsById() {
         return regGpsModuleOrganizationEquipmentsById;
     }
 
@@ -173,7 +175,8 @@ public class ClsGpsModuleEntity {
     }
 
     @OneToMany(mappedBy = "clsGpsModuleByIdGpsModule")
-    public Collection<RegGpsModuleReadingEntity> getRegGpsModuleReadingsById() {
+    @JsonIgnore
+public Collection<RegGpsModuleReadingEntity> getRegGpsModuleReadingsById() {
         return regGpsModuleReadingsById;
     }
 

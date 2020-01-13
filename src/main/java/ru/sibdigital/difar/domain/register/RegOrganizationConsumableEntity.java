@@ -1,5 +1,6 @@
 package ru.sibdigital.difar.domain.register;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import ru.sibdigital.difar.domain.catalog.ClsConsumableEntity;
 import ru.sibdigital.difar.domain.catalog.ClsOrganizationEntity;
 import ru.sibdigital.difar.domain.tableparts.TpRoutingConsumEntity;
@@ -162,7 +163,8 @@ public class RegOrganizationConsumableEntity {
     }
 
     @OneToMany(mappedBy = "regOrganizationConsumableByIdOrganizationConsum")
-    public Collection<RegExecRoutingConsumEntity> getRegExecRoutingConsumsById() {
+    @JsonIgnore
+public Collection<RegExecRoutingConsumEntity> getRegExecRoutingConsumsById() {
         return regExecRoutingConsumsById;
     }
 
@@ -171,7 +173,8 @@ public class RegOrganizationConsumableEntity {
     }
 
     @OneToMany(mappedBy = "regOrganizationConsumableByIdRoutingConsum")
-    public Collection<RegExecRoutingConsumEntity> getRegExecRoutingConsumsById_0() {
+    @JsonIgnore
+public Collection<RegExecRoutingConsumEntity> getRegExecRoutingConsumsById_0() {
         return regExecRoutingConsumsById_0;
     }
 
@@ -180,7 +183,8 @@ public class RegOrganizationConsumableEntity {
     }
 
     @OneToMany(mappedBy = "regOrganizationConsumableByIdOrganizationConsumable")
-    public Collection<TpRoutingConsumEntity> getTpRoutingConsumsById() {
+    @JsonIgnore
+public Collection<TpRoutingConsumEntity> getTpRoutingConsumsById() {
         return tpRoutingConsumsById;
     }
 

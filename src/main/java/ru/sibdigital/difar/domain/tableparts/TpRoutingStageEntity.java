@@ -1,5 +1,6 @@
 package ru.sibdigital.difar.domain.tableparts;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import ru.sibdigital.difar.domain.document.DocRoutingEntity;
 
 import javax.persistence.*;
@@ -114,7 +115,8 @@ public class TpRoutingStageEntity {
     }
 
     @OneToMany(mappedBy = "tpRoutingStageByIdRoutingStage")
-    public Collection<TpRoutingWorkEntity> getTpRoutingWorksById() {
+    @JsonIgnore
+public Collection<TpRoutingWorkEntity> getTpRoutingWorksById() {
         return tpRoutingWorksById;
     }
 

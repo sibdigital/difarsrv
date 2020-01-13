@@ -7,7 +7,7 @@ import ru.sibdigital.difar.repository.catalog.ClsKindAnimalRepository;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/kind")
+@RequestMapping("/kind-animal")
 public class ClsKindAnimalController {
 
     private ClsKindAnimalRepository clsKindAnimalRepository;

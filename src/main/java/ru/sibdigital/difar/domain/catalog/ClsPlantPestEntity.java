@@ -1,5 +1,6 @@
 package ru.sibdigital.difar.domain.catalog;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.vladmihalcea.hibernate.type.json.JsonNodeBinaryType;
 import org.hibernate.annotations.CreationTimestamp;
@@ -235,7 +236,8 @@ public class ClsPlantPestEntity {
     }
 
     @OneToMany(mappedBy = "clsPlantPestByIdPlantPest")
-    public Collection<TpPlantPestAffectedCropEntity> getTpPlantPestAffectedCropsById() {
+    @JsonIgnore
+public Collection<TpPlantPestAffectedCropEntity> getTpPlantPestAffectedCropsById() {
         return tpPlantPestAffectedCropsById;
     }
 
@@ -244,7 +246,8 @@ public class ClsPlantPestEntity {
     }
 
     @OneToMany(mappedBy = "clsPlantPestByIdPlantPest")
-    public Collection<TpPlantPestPeriodEntity> getTpPlantPestPeriodsById() {
+    @JsonIgnore
+public Collection<TpPlantPestPeriodEntity> getTpPlantPestPeriodsById() {
         return tpPlantPestPeriodsById;
     }
 
@@ -253,7 +256,8 @@ public class ClsPlantPestEntity {
     }
 
     @OneToMany(mappedBy = "clsPlantPestByIdPlantPest")
-    public Collection<TpPlantPestPlantOrganEntity> getTpPlantPestPlantOrgansById() {
+    @JsonIgnore
+public Collection<TpPlantPestPlantOrganEntity> getTpPlantPestPlantOrgansById() {
         return tpPlantPestPlantOrgansById;
     }
 
@@ -262,7 +266,8 @@ public class ClsPlantPestEntity {
     }
 
     @OneToMany(mappedBy = "clsPlantPestByIdPlantPest")
-    public Collection<TpPlantPestTypicalAreaEntity> getTpPlantPestTypicalAreasById() {
+    @JsonIgnore
+public Collection<TpPlantPestTypicalAreaEntity> getTpPlantPestTypicalAreasById() {
         return tpPlantPestTypicalAreasById;
     }
 

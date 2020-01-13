@@ -1,5 +1,6 @@
 package ru.sibdigital.difar.domain.catalog;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.CreationTimestamp;
 import ru.sibdigital.difar.domain.tableparts.TpPlantDiseasePlantOrganEntity;
 import ru.sibdigital.difar.domain.tableparts.TpPlantPestPlantOrganEntity;
@@ -122,7 +123,8 @@ public class ClsPlantOrganEntity {
     }
 
     @OneToMany(mappedBy = "clsPlantOrganByIdPlantOrgan")
-    public Collection<TpPlantDiseasePlantOrganEntity> getTpPlantDiseasePlantOrgansById() {
+    @JsonIgnore
+public Collection<TpPlantDiseasePlantOrganEntity> getTpPlantDiseasePlantOrgansById() {
         return tpPlantDiseasePlantOrgansById;
     }
 
@@ -131,7 +133,8 @@ public class ClsPlantOrganEntity {
     }
 
     @OneToMany(mappedBy = "clsPlantOrganByIdPlantOrgan")
-    public Collection<TpPlantPestPlantOrganEntity> getTpPlantPestPlantOrgansById() {
+    @JsonIgnore
+public Collection<TpPlantPestPlantOrganEntity> getTpPlantPestPlantOrgansById() {
         return tpPlantPestPlantOrgansById;
     }
 

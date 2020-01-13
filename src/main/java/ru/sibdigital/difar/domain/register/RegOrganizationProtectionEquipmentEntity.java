@@ -1,5 +1,6 @@
 package ru.sibdigital.difar.domain.register;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.vladmihalcea.hibernate.type.json.JsonNodeBinaryType;
 import org.hibernate.annotations.Type;
@@ -167,7 +168,8 @@ public class RegOrganizationProtectionEquipmentEntity {
     }
 
     @OneToMany(mappedBy = "regOrganizationProtectionEquipmentByIdOrganizationProtectionEquipment")
-    public Collection<RegExecRoutingProtectionEquipmentEntity> getRegExecRoutingProtectionEquipmentsById() {
+    @JsonIgnore
+public Collection<RegExecRoutingProtectionEquipmentEntity> getRegExecRoutingProtectionEquipmentsById() {
         return regExecRoutingProtectionEquipmentsById;
     }
 
@@ -176,7 +178,8 @@ public class RegOrganizationProtectionEquipmentEntity {
     }
 
     @OneToMany(mappedBy = "regOrganizationProtectionEquipmentByIdRoutingProtectionEquipment")
-    public Collection<RegExecRoutingProtectionEquipmentEntity> getRegExecRoutingProtectionEquipmentsById_0() {
+    @JsonIgnore
+public Collection<RegExecRoutingProtectionEquipmentEntity> getRegExecRoutingProtectionEquipmentsById_0() {
         return regExecRoutingProtectionEquipmentsById_0;
     }
 
@@ -205,7 +208,8 @@ public class RegOrganizationProtectionEquipmentEntity {
     }
 
     @OneToMany(mappedBy = "regOrganizationProtectionEquipmentByIdOrganizationProtectionEquipment")
-    public Collection<TpRoutingProtectionEquipmentEntity> getTpRoutingProtectionEquipmentsById() {
+    @JsonIgnore
+public Collection<TpRoutingProtectionEquipmentEntity> getTpRoutingProtectionEquipmentsById() {
         return tpRoutingProtectionEquipmentsById;
     }
 

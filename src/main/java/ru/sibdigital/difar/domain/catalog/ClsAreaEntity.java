@@ -1,5 +1,6 @@
 package ru.sibdigital.difar.domain.catalog;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.CreationTimestamp;
 import ru.sibdigital.difar.domain.register.RegAnimalEntity;
 import ru.sibdigital.difar.domain.register.RegExternalAnimalEntity;
@@ -129,7 +130,8 @@ public class ClsAreaEntity {
     }
 
     @OneToMany(mappedBy = "clsAreaByIdArea")
-    public Collection<RegFieldLocalEntity> getRegFieldLocalsById() {
+    @JsonIgnore
+public Collection<RegFieldLocalEntity> getRegFieldLocalsById() {
         return regFieldLocalsById;
     }
 
@@ -138,7 +140,8 @@ public class ClsAreaEntity {
     }
 
     @OneToMany(mappedBy = "clsAreaByIdArea")
-    public Collection<TpPlantDiseaseTypicalAreaEntity> getTpPlantDiseaseTypicalAreasById() {
+    @JsonIgnore
+public Collection<TpPlantDiseaseTypicalAreaEntity> getTpPlantDiseaseTypicalAreasById() {
         return tpPlantDiseaseTypicalAreasById;
     }
 
@@ -147,7 +150,8 @@ public class ClsAreaEntity {
     }
 
     @OneToMany(mappedBy = "clsAreaByIdArea")
-    public Collection<TpPlantPestTypicalAreaEntity> getTpPlantPestTypicalAreasById() {
+    @JsonIgnore
+public Collection<TpPlantPestTypicalAreaEntity> getTpPlantPestTypicalAreasById() {
         return tpPlantPestTypicalAreasById;
     }
 
@@ -156,7 +160,8 @@ public class ClsAreaEntity {
     }
 
     @OneToMany(mappedBy = "clsAreaByIdArea")
-    public Collection<RegAnimalEntity> getRegAnimalsById() {
+    @JsonIgnore
+public Collection<RegAnimalEntity> getRegAnimalsById() {
         return regAnimalsById;
     }
 
@@ -165,7 +170,8 @@ public class ClsAreaEntity {
     }
 
     @OneToMany(mappedBy = "clsAreaByIdArea")
-    public Collection<RegExternalAnimalEntity> getRegExternalAnimalsById() {
+    @JsonIgnore
+public Collection<RegExternalAnimalEntity> getRegExternalAnimalsById() {
         return regExternalAnimalsById;
     }
 
