@@ -21,7 +21,7 @@ public class ClsEquipmentKindEntity {
     private Collection<RegOrganizationEquipmentEntity> regOrganizationEquipmentsById;
 
     @Basic
-    @Column(name = "id_user_creator", nullable = false, insertable = false, updatable = false)
+    @Column(name = "id_user_creator", nullable = false)
     public long getIdUserCreator() {
         return idUserCreator;
     }

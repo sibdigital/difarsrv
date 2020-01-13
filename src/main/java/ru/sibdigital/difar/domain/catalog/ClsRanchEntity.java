@@ -1,8 +1,6 @@
 package ru.sibdigital.difar.domain.catalog;
 
 import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.Type;
-import org.locationtech.jts.geom.Geometry;
 import ru.sibdigital.difar.domain.document.DocAnimalTransferEntity;
 import ru.sibdigital.difar.domain.register.*;
 
@@ -36,7 +34,7 @@ public class ClsRanchEntity {
     private Collection<RegEquipmentBaseLocalEntity> regEquipmentBaseLocalsById;
 
     @Basic
-    @Column(name = "id_user_creator", nullable = false, insertable = false, updatable = false)
+    @Column(name = "id_user_creator", nullable = false)
     public long getIdUserCreator() {
         return idUserCreator;
     }

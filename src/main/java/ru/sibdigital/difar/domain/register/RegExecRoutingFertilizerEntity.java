@@ -37,7 +37,7 @@ public class RegExecRoutingFertilizerEntity {
     private ClsUnitEntity clsUnitByIdFertilizerUnit;
 
     @Basic
-    @Column(name = "id_user_creator", nullable = false, insertable = false, updatable = false)
+    @Column(name = "id_user_creator", nullable = false)
     public long getIdUserCreator() {
         return idUserCreator;
     }

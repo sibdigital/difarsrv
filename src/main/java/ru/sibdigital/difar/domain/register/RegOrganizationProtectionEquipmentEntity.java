@@ -33,7 +33,7 @@ public class RegOrganizationProtectionEquipmentEntity {
     private Collection<TpRoutingProtectionEquipmentEntity> tpRoutingProtectionEquipmentsById;
 
     @Basic
-    @Column(name = "id_user_creator", nullable = false, insertable = false, updatable = false)
+    @Column(name = "id_user_creator", nullable = false)
     public long getIdUserCreator() {
         return idUserCreator;
     }

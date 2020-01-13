@@ -30,7 +30,7 @@ public class DocAnimalCopulationEntity {
     private Collection<TpAnimalCopulationAnimalGroupFemaleEntity> tpAnimalCopulationAnimalGroupFemalesById;
 
     @Basic
-    @Column(name = "id_user_creator", nullable = false, insertable = false, updatable = false)
+    @Column(name = "id_user_creator", nullable = false)
     public long getIdUserCreator() {
         return idUserCreator;
     }

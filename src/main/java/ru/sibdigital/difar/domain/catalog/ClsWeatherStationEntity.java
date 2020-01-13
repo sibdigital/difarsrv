@@ -5,7 +5,6 @@ import com.vladmihalcea.hibernate.type.json.JsonNodeBinaryType;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.Type;
 import org.hibernate.annotations.TypeDef;
-import org.locationtech.jts.geom.Point;
 import ru.sibdigital.difar.domain.register.RegWeatherStationReadingEntity;
 
 import javax.persistence.*;
@@ -29,7 +28,7 @@ public class ClsWeatherStationEntity {
     private Collection<RegWeatherStationReadingEntity> regWeatherStationReadingsById;
 
     @Basic
-    @Column(name = "id_user_creator", nullable = false, insertable = false, updatable = false)
+    @Column(name = "id_user_creator", nullable = false)
     public long getIdUserCreator() {
         return idUserCreator;
     }

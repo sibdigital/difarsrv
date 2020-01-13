@@ -24,7 +24,7 @@ public class TpAnimalSaleAnimalEntity {
     private RegAnimalEntity regAnimalByIdAnimal;
 
     @Basic
-    @Column(name = "id_user_creator", nullable = false, insertable = false, updatable = false)
+    @Column(name = "id_user_creator", nullable = false)
     public long getIdUserCreator() {
         return idUserCreator;
     }

@@ -24,7 +24,7 @@ public class ClsAnimalRetirementCauseEntity {
     private Collection<TpAnimalRetirementAnimalGroupEntity> tpAnimalRetirementAnimalGroupsById;
 
     @Basic
-    @Column(name = "id_user_creator", nullable = false, insertable = false, updatable = false)
+    @Column(name = "id_user_creator", nullable = false)
     public long getIdUserCreator() {
         return idUserCreator;
     }

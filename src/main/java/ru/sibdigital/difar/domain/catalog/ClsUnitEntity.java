@@ -45,7 +45,7 @@ public class ClsUnitEntity {
     private Collection<ClsUnitRatioEntity> clsUnitRatiosById_0;
 
     @Basic
-    @Column(name = "id_user_creator", nullable = false, insertable = false, updatable = false)
+    @Column(name = "id_user_creator", nullable = false)
     public long getIdUserCreator() {
         return idUserCreator;
     }
