@@ -169,7 +169,7 @@ public class RegOrganizationFertilizerEntity {
 
     @OneToMany(mappedBy = "regOrganizationFertilizerByIdOrganizationFertilizer")
     @JsonIgnore
-public Collection<RegExecRoutingFertilizerEntity> getRegExecRoutingFertilizersById() {
+    public Collection<RegExecRoutingFertilizerEntity> getRegExecRoutingFertilizersById() {
         return regExecRoutingFertilizersById;
     }
 
@@ -179,7 +179,7 @@ public Collection<RegExecRoutingFertilizerEntity> getRegExecRoutingFertilizersBy
 
     @OneToMany(mappedBy = "regOrganizationFertilizerByIdRoutingFertilizer")
     @JsonIgnore
-public Collection<RegExecRoutingFertilizerEntity> getRegExecRoutingFertilizersById_0() {
+    public Collection<RegExecRoutingFertilizerEntity> getRegExecRoutingFertilizersById_0() {
         return regExecRoutingFertilizersById_0;
     }
 
@@ -209,7 +209,7 @@ public Collection<RegExecRoutingFertilizerEntity> getRegExecRoutingFertilizersBy
 
     @OneToMany(mappedBy = "regOrganizationFertilizerByIdOrganizationFertilizer")
     @JsonIgnore
-public Collection<TpRoutingFertilizerEntity> getTpRoutingFertilizersById() {
+    public Collection<TpRoutingFertilizerEntity> getTpRoutingFertilizersById() {
         return tpRoutingFertilizersById;
     }
 

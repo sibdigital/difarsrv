@@ -1,7 +1,6 @@
 package ru.sibdigital.difar.domain.catalog;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import org.hibernate.annotations.CreationTimestamp;
 import ru.sibdigital.difar.domain.tableparts.TpPlantDiseaseDiseaseFeatureEntity;
 
@@ -123,7 +122,7 @@ public class ClsDiseaseFeatureEntity {
 
     @OneToMany(mappedBy = "clsDiseaseFeatureByIdDiseaseFeature")
     @JsonIgnore
-public Collection<TpPlantDiseaseDiseaseFeatureEntity> getTpPlantDiseaseDiseaseFeaturesById() {
+    public Collection<TpPlantDiseaseDiseaseFeatureEntity> getTpPlantDiseaseDiseaseFeaturesById() {
         return tpPlantDiseaseDiseaseFeaturesById;
     }
 

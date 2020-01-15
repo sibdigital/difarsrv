@@ -1,7 +1,6 @@
 package ru.sibdigital.difar.domain.catalog;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import org.hibernate.annotations.CreationTimestamp;
 import ru.sibdigital.difar.domain.document.DocActualYieldEntity;
 import ru.sibdigital.difar.domain.document.DocRoutingEntity;
@@ -136,7 +135,7 @@ public class ClsCropEntity {
 
     @OneToMany(mappedBy = "clsCropByIdCrop")
     @JsonIgnore
-public Collection<ClsCropVarietyEntity> getClsCropVarietiesById() {
+    public Collection<ClsCropVarietyEntity> getClsCropVarietiesById() {
         return clsCropVarietiesById;
     }
 
@@ -146,7 +145,7 @@ public Collection<ClsCropVarietyEntity> getClsCropVarietiesById() {
 
     @OneToMany(mappedBy = "clsCropByIdCrop")
     @JsonIgnore
-public Collection<DocActualYieldEntity> getDocActualYieldsById() {
+    public Collection<DocActualYieldEntity> getDocActualYieldsById() {
         return docActualYieldsById;
     }
 
@@ -156,7 +155,7 @@ public Collection<DocActualYieldEntity> getDocActualYieldsById() {
 
     @OneToMany(mappedBy = "clsCropByIdCrop")
     @JsonIgnore
-public Collection<DocRoutingEntity> getDocRoutingsById() {
+    public Collection<DocRoutingEntity> getDocRoutingsById() {
         return docRoutingsById;
     }
 
@@ -166,7 +165,7 @@ public Collection<DocRoutingEntity> getDocRoutingsById() {
 
     @OneToMany(mappedBy = "clsCropByIdCrop")
     @JsonIgnore
-public Collection<TpPlantDiseaseAffectedCropEntity> getTpPlantDiseaseAffectedCropsById() {
+    public Collection<TpPlantDiseaseAffectedCropEntity> getTpPlantDiseaseAffectedCropsById() {
         return tpPlantDiseaseAffectedCropsById;
     }
 
@@ -176,7 +175,7 @@ public Collection<TpPlantDiseaseAffectedCropEntity> getTpPlantDiseaseAffectedCro
 
     @OneToMany(mappedBy = "clsCropByIdCrop")
     @JsonIgnore
-public Collection<TpPlantDiseaseDiseaseFeatureEntity> getTpPlantDiseaseDiseaseFeaturesById() {
+    public Collection<TpPlantDiseaseDiseaseFeatureEntity> getTpPlantDiseaseDiseaseFeaturesById() {
         return tpPlantDiseaseDiseaseFeaturesById;
     }
 
@@ -186,7 +185,7 @@ public Collection<TpPlantDiseaseDiseaseFeatureEntity> getTpPlantDiseaseDiseaseFe
 
     @OneToMany(mappedBy = "clsCropByIdCrop")
     @JsonIgnore
-public Collection<TpPlantDiseasePeriodEntity> getTpPlantDiseasePeriodsById() {
+    public Collection<TpPlantDiseasePeriodEntity> getTpPlantDiseasePeriodsById() {
         return tpPlantDiseasePeriodsById;
     }
 
@@ -196,7 +195,7 @@ public Collection<TpPlantDiseasePeriodEntity> getTpPlantDiseasePeriodsById() {
 
     @OneToMany(mappedBy = "clsCropByIdCrop")
     @JsonIgnore
-public Collection<TpPlantDiseasePlantOrganEntity> getTpPlantDiseasePlantOrgansById() {
+    public Collection<TpPlantDiseasePlantOrganEntity> getTpPlantDiseasePlantOrgansById() {
         return tpPlantDiseasePlantOrgansById;
     }
 
@@ -206,7 +205,7 @@ public Collection<TpPlantDiseasePlantOrganEntity> getTpPlantDiseasePlantOrgansBy
 
     @OneToMany(mappedBy = "clsCropByIdCrop")
     @JsonIgnore
-public Collection<TpPlantDiseaseTypicalAreaEntity> getTpPlantDiseaseTypicalAreasById() {
+    public Collection<TpPlantDiseaseTypicalAreaEntity> getTpPlantDiseaseTypicalAreasById() {
         return tpPlantDiseaseTypicalAreasById;
     }
 
@@ -216,7 +215,7 @@ public Collection<TpPlantDiseaseTypicalAreaEntity> getTpPlantDiseaseTypicalAreas
 
     @OneToMany(mappedBy = "clsCropByIdCrop")
     @JsonIgnore
-public Collection<TpPlantPestAffectedCropEntity> getTpPlantPestAffectedCropsById() {
+    public Collection<TpPlantPestAffectedCropEntity> getTpPlantPestAffectedCropsById() {
         return tpPlantPestAffectedCropsById;
     }
 
@@ -226,7 +225,7 @@ public Collection<TpPlantPestAffectedCropEntity> getTpPlantPestAffectedCropsById
 
     @OneToMany(mappedBy = "clsCropByIdCrop")
     @JsonIgnore
-public Collection<TpPlantPestPeriodEntity> getTpPlantPestPeriodsById() {
+    public Collection<TpPlantPestPeriodEntity> getTpPlantPestPeriodsById() {
         return tpPlantPestPeriodsById;
     }
 
@@ -236,7 +235,7 @@ public Collection<TpPlantPestPeriodEntity> getTpPlantPestPeriodsById() {
 
     @OneToMany(mappedBy = "clsCropByIdCrop")
     @JsonIgnore
-public Collection<TpPlantPestPlantOrganEntity> getTpPlantPestPlantOrgansById() {
+    public Collection<TpPlantPestPlantOrganEntity> getTpPlantPestPlantOrgansById() {
         return tpPlantPestPlantOrgansById;
     }
 
@@ -246,7 +245,7 @@ public Collection<TpPlantPestPlantOrganEntity> getTpPlantPestPlantOrgansById() {
 
     @OneToMany(mappedBy = "clsCropByIdCrop")
     @JsonIgnore
-public Collection<TpPlantPestTypicalAreaEntity> getTpPlantPestTypicalAreasById() {
+    public Collection<TpPlantPestTypicalAreaEntity> getTpPlantPestTypicalAreasById() {
         return tpPlantPestTypicalAreasById;
     }
 

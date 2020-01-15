@@ -137,7 +137,7 @@ public class ClsFieldEntity {
 
     @OneToMany(mappedBy = "clsFieldByIdField")
     @JsonIgnore
-public Collection<DocActualYieldEntity> getDocActualYieldsById() {
+    public Collection<DocActualYieldEntity> getDocActualYieldsById() {
         return docActualYieldsById;
     }
 
@@ -147,7 +147,7 @@ public Collection<DocActualYieldEntity> getDocActualYieldsById() {
 
     @OneToMany(mappedBy = "clsFieldByIdField")
     @JsonIgnore
-public Collection<DocRoutingEntity> getDocRoutingsById() {
+    public Collection<DocRoutingEntity> getDocRoutingsById() {
         return docRoutingsById;
     }
 
@@ -157,7 +157,7 @@ public Collection<DocRoutingEntity> getDocRoutingsById() {
 
     @OneToMany(mappedBy = "clsFieldByIdField")
     @JsonIgnore
-public Collection<RegFieldLocalEntity> getRegFieldLocalsById() {
+    public Collection<RegFieldLocalEntity> getRegFieldLocalsById() {
         return regFieldLocalsById;
     }
 

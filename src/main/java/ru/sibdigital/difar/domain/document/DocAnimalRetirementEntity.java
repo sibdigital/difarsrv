@@ -171,7 +171,7 @@ public class DocAnimalRetirementEntity {
 
     @OneToMany(mappedBy = "docAnimalRetirementByIdAnimalRetirement")
     @JsonIgnore
-public Collection<TpAnimalRetirementAnimalEntity> getTpAnimalRetirementAnimalsById() {
+    public Collection<TpAnimalRetirementAnimalEntity> getTpAnimalRetirementAnimalsById() {
         return tpAnimalRetirementAnimalsById;
     }
 
@@ -181,7 +181,7 @@ public Collection<TpAnimalRetirementAnimalEntity> getTpAnimalRetirementAnimalsBy
 
     @OneToMany(mappedBy = "docAnimalRetirementByIdAnimalRetirement")
     @JsonIgnore
-public Collection<TpAnimalRetirementAnimalGroupEntity> getTpAnimalRetirementAnimalGroupsById() {
+    public Collection<TpAnimalRetirementAnimalGroupEntity> getTpAnimalRetirementAnimalGroupsById() {
         return tpAnimalRetirementAnimalGroupsById;
     }
 

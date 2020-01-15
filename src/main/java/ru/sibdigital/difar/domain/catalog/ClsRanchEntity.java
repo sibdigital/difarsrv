@@ -21,7 +21,7 @@ public class ClsRanchEntity {
     private long idOrganization;
     private long idDepart;
     private long idDistrict;
-//    private Geometry coord;
+    //    private Geometry coord;
     private Collection<DocAnimalTransferEntity> docAnimalTransfersById;
     private Collection<DocAnimalTransferEntity> docAnimalTransfersById_0;
     private Collection<RegAnimalGroupEntity> regAnimalGroupsById;
@@ -172,7 +172,7 @@ public class ClsRanchEntity {
 
     @OneToMany(mappedBy = "clsRanchByIdRanch")
     @JsonIgnore
-public Collection<DocAnimalTransferEntity> getDocAnimalTransfersById() {
+    public Collection<DocAnimalTransferEntity> getDocAnimalTransfersById() {
         return docAnimalTransfersById;
     }
 
@@ -182,7 +182,7 @@ public Collection<DocAnimalTransferEntity> getDocAnimalTransfersById() {
 
     @OneToMany(mappedBy = "clsRanchByIdRanchCurrent")
     @JsonIgnore
-public Collection<DocAnimalTransferEntity> getDocAnimalTransfersById_0() {
+    public Collection<DocAnimalTransferEntity> getDocAnimalTransfersById_0() {
         return docAnimalTransfersById_0;
     }
 
@@ -192,7 +192,7 @@ public Collection<DocAnimalTransferEntity> getDocAnimalTransfersById_0() {
 
     @OneToMany(mappedBy = "clsRanchByIdRanch")
     @JsonIgnore
-public Collection<RegAnimalGroupEntity> getRegAnimalGroupsById() {
+    public Collection<RegAnimalGroupEntity> getRegAnimalGroupsById() {
         return regAnimalGroupsById;
     }
 
@@ -202,7 +202,7 @@ public Collection<RegAnimalGroupEntity> getRegAnimalGroupsById() {
 
     @OneToMany(mappedBy = "clsRanchByIdRanch")
     @JsonIgnore
-public Collection<RegAnimalLocalEntity> getRegAnimalLocalsById() {
+    public Collection<RegAnimalLocalEntity> getRegAnimalLocalsById() {
         return regAnimalLocalsById;
     }
 
@@ -212,7 +212,7 @@ public Collection<RegAnimalLocalEntity> getRegAnimalLocalsById() {
 
     @OneToMany(mappedBy = "clsRanchByIdRanch")
     @JsonIgnore
-public Collection<RegAnimalParamEntity> getRegAnimalParamsById() {
+    public Collection<RegAnimalParamEntity> getRegAnimalParamsById() {
         return regAnimalParamsById;
     }
 
@@ -222,7 +222,7 @@ public Collection<RegAnimalParamEntity> getRegAnimalParamsById() {
 
     @OneToMany(mappedBy = "clsRanchByIdRanch")
     @JsonIgnore
-public Collection<RegAnimalStateEntity> getRegAnimalStatesById() {
+    public Collection<RegAnimalStateEntity> getRegAnimalStatesById() {
         return regAnimalStatesById;
     }
 
@@ -232,7 +232,7 @@ public Collection<RegAnimalStateEntity> getRegAnimalStatesById() {
 
     @OneToMany(mappedBy = "clsRanchByIdRanch")
     @JsonIgnore
-public Collection<ClsEquipmentBaseEntity> getClsEquipmentBasesById() {
+    public Collection<ClsEquipmentBaseEntity> getClsEquipmentBasesById() {
         return clsEquipmentBasesById;
     }
 
@@ -272,7 +272,7 @@ public Collection<ClsEquipmentBaseEntity> getClsEquipmentBasesById() {
 
     @OneToMany(mappedBy = "clsRanchByIdRanch")
     @JsonIgnore
-public Collection<RegEquipmentBaseLocalEntity> getRegEquipmentBaseLocalsById() {
+    public Collection<RegEquipmentBaseLocalEntity> getRegEquipmentBaseLocalsById() {
         return regEquipmentBaseLocalsById;
     }
 

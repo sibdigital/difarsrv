@@ -261,7 +261,7 @@ public class ClsPlantDiseaseEntity {
 
     @OneToMany(mappedBy = "clsPlantDiseaseByIdPlantDisease")
     @JsonIgnore
-public Collection<TpPlantDiseaseAffectedCropEntity> getTpPlantDiseaseAffectedCropsById() {
+    public Collection<TpPlantDiseaseAffectedCropEntity> getTpPlantDiseaseAffectedCropsById() {
         return tpPlantDiseaseAffectedCropsById;
     }
 
@@ -271,7 +271,7 @@ public Collection<TpPlantDiseaseAffectedCropEntity> getTpPlantDiseaseAffectedCro
 
     @OneToMany(mappedBy = "clsPlantDiseaseByIdPlantDisease")
     @JsonIgnore
-public Collection<TpPlantDiseaseDiseaseFeatureEntity> getTpPlantDiseaseDiseaseFeaturesById() {
+    public Collection<TpPlantDiseaseDiseaseFeatureEntity> getTpPlantDiseaseDiseaseFeaturesById() {
         return tpPlantDiseaseDiseaseFeaturesById;
     }
 
@@ -281,7 +281,7 @@ public Collection<TpPlantDiseaseDiseaseFeatureEntity> getTpPlantDiseaseDiseaseFe
 
     @OneToMany(mappedBy = "clsPlantDiseaseByIdPlantDisease")
     @JsonIgnore
-public Collection<TpPlantDiseasePeriodEntity> getTpPlantDiseasePeriodsById() {
+    public Collection<TpPlantDiseasePeriodEntity> getTpPlantDiseasePeriodsById() {
         return tpPlantDiseasePeriodsById;
     }
 
@@ -291,7 +291,7 @@ public Collection<TpPlantDiseasePeriodEntity> getTpPlantDiseasePeriodsById() {
 
     @OneToMany(mappedBy = "clsPlantDiseaseByIdPlantDisease")
     @JsonIgnore
-public Collection<TpPlantDiseasePlantOrganEntity> getTpPlantDiseasePlantOrgansById() {
+    public Collection<TpPlantDiseasePlantOrganEntity> getTpPlantDiseasePlantOrgansById() {
         return tpPlantDiseasePlantOrgansById;
     }
 
@@ -301,7 +301,7 @@ public Collection<TpPlantDiseasePlantOrganEntity> getTpPlantDiseasePlantOrgansBy
 
     @OneToMany(mappedBy = "clsPlantDiseaseByIdPlantDisease")
     @JsonIgnore
-public Collection<TpPlantDiseaseTypicalAreaEntity> getTpPlantDiseaseTypicalAreasById() {
+    public Collection<TpPlantDiseaseTypicalAreaEntity> getTpPlantDiseaseTypicalAreasById() {
         return tpPlantDiseaseTypicalAreasById;
     }
 

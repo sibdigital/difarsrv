@@ -131,7 +131,7 @@ public class ClsAreaEntity {
 
     @OneToMany(mappedBy = "clsAreaByIdArea")
     @JsonIgnore
-public Collection<RegFieldLocalEntity> getRegFieldLocalsById() {
+    public Collection<RegFieldLocalEntity> getRegFieldLocalsById() {
         return regFieldLocalsById;
     }
 
@@ -141,7 +141,7 @@ public Collection<RegFieldLocalEntity> getRegFieldLocalsById() {
 
     @OneToMany(mappedBy = "clsAreaByIdArea")
     @JsonIgnore
-public Collection<TpPlantDiseaseTypicalAreaEntity> getTpPlantDiseaseTypicalAreasById() {
+    public Collection<TpPlantDiseaseTypicalAreaEntity> getTpPlantDiseaseTypicalAreasById() {
         return tpPlantDiseaseTypicalAreasById;
     }
 
@@ -151,7 +151,7 @@ public Collection<TpPlantDiseaseTypicalAreaEntity> getTpPlantDiseaseTypicalAreas
 
     @OneToMany(mappedBy = "clsAreaByIdArea")
     @JsonIgnore
-public Collection<TpPlantPestTypicalAreaEntity> getTpPlantPestTypicalAreasById() {
+    public Collection<TpPlantPestTypicalAreaEntity> getTpPlantPestTypicalAreasById() {
         return tpPlantPestTypicalAreasById;
     }
 
@@ -161,7 +161,7 @@ public Collection<TpPlantPestTypicalAreaEntity> getTpPlantPestTypicalAreasById()
 
     @OneToMany(mappedBy = "clsAreaByIdArea")
     @JsonIgnore
-public Collection<RegAnimalEntity> getRegAnimalsById() {
+    public Collection<RegAnimalEntity> getRegAnimalsById() {
         return regAnimalsById;
     }
 
@@ -171,7 +171,7 @@ public Collection<RegAnimalEntity> getRegAnimalsById() {
 
     @OneToMany(mappedBy = "clsAreaByIdArea")
     @JsonIgnore
-public Collection<RegExternalAnimalEntity> getRegExternalAnimalsById() {
+    public Collection<RegExternalAnimalEntity> getRegExternalAnimalsById() {
         return regExternalAnimalsById;
     }
 

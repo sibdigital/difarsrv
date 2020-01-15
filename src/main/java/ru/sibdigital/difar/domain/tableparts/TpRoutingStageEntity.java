@@ -116,7 +116,7 @@ public class TpRoutingStageEntity {
 
     @OneToMany(mappedBy = "tpRoutingStageByIdRoutingStage")
     @JsonIgnore
-public Collection<TpRoutingWorkEntity> getTpRoutingWorksById() {
+    public Collection<TpRoutingWorkEntity> getTpRoutingWorksById() {
         return tpRoutingWorksById;
     }
 

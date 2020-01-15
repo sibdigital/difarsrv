@@ -133,7 +133,7 @@ public class ClsEquipmentKindEntity {
 
     @OneToMany(mappedBy = "clsEquipmentKindByIdEquipmentKind")
     @JsonIgnore
-public Collection<RegOrganizationEquipmentEntity> getRegOrganizationEquipmentsById() {
+    public Collection<RegOrganizationEquipmentEntity> getRegOrganizationEquipmentsById() {
         return regOrganizationEquipmentsById;
     }
 

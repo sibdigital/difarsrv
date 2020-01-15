@@ -1,7 +1,6 @@
 package ru.sibdigital.difar.domain.catalog;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import org.hibernate.annotations.CreationTimestamp;
 import ru.sibdigital.difar.domain.tableparts.TpAnimalRetirementAnimalEntity;
 import ru.sibdigital.difar.domain.tableparts.TpAnimalRetirementAnimalGroupEntity;
@@ -21,7 +20,7 @@ public class ClsAnimalRetirementCauseEntity {
     private String code;
     private long id;
     private long idParent;
-//    private String parentPath;
+    //    private String parentPath;
     private Collection<TpAnimalRetirementAnimalEntity> tpAnimalRetirementAnimalsById;
     private Collection<TpAnimalRetirementAnimalGroupEntity> tpAnimalRetirementAnimalGroupsById;
 
@@ -150,7 +149,7 @@ public class ClsAnimalRetirementCauseEntity {
 
     @OneToMany(mappedBy = "clsAnimalRetirementCauseByIdAnimalRetirementCause")
     @JsonIgnore
-public Collection<TpAnimalRetirementAnimalEntity> getTpAnimalRetirementAnimalsById() {
+    public Collection<TpAnimalRetirementAnimalEntity> getTpAnimalRetirementAnimalsById() {
         return tpAnimalRetirementAnimalsById;
     }
 
@@ -160,7 +159,7 @@ public Collection<TpAnimalRetirementAnimalEntity> getTpAnimalRetirementAnimalsBy
 
     @OneToMany(mappedBy = "clsAnimalRetirementCauseByIdAnimalRetirementCause")
     @JsonIgnore
-public Collection<TpAnimalRetirementAnimalGroupEntity> getTpAnimalRetirementAnimalGroupsById() {
+    public Collection<TpAnimalRetirementAnimalGroupEntity> getTpAnimalRetirementAnimalGroupsById() {
         return tpAnimalRetirementAnimalGroupsById;
     }
 

@@ -124,7 +124,7 @@ public class ClsPlantOrganEntity {
 
     @OneToMany(mappedBy = "clsPlantOrganByIdPlantOrgan")
     @JsonIgnore
-public Collection<TpPlantDiseasePlantOrganEntity> getTpPlantDiseasePlantOrgansById() {
+    public Collection<TpPlantDiseasePlantOrganEntity> getTpPlantDiseasePlantOrgansById() {
         return tpPlantDiseasePlantOrgansById;
     }
 
@@ -134,7 +134,7 @@ public Collection<TpPlantDiseasePlantOrganEntity> getTpPlantDiseasePlantOrgansBy
 
     @OneToMany(mappedBy = "clsPlantOrganByIdPlantOrgan")
     @JsonIgnore
-public Collection<TpPlantPestPlantOrganEntity> getTpPlantPestPlantOrgansById() {
+    public Collection<TpPlantPestPlantOrganEntity> getTpPlantPestPlantOrgansById() {
         return tpPlantPestPlantOrgansById;
     }
 

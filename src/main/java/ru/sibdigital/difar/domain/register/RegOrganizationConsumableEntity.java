@@ -164,7 +164,7 @@ public class RegOrganizationConsumableEntity {
 
     @OneToMany(mappedBy = "regOrganizationConsumableByIdOrganizationConsum")
     @JsonIgnore
-public Collection<RegExecRoutingConsumEntity> getRegExecRoutingConsumsById() {
+    public Collection<RegExecRoutingConsumEntity> getRegExecRoutingConsumsById() {
         return regExecRoutingConsumsById;
     }
 
@@ -174,7 +174,7 @@ public Collection<RegExecRoutingConsumEntity> getRegExecRoutingConsumsById() {
 
     @OneToMany(mappedBy = "regOrganizationConsumableByIdRoutingConsum")
     @JsonIgnore
-public Collection<RegExecRoutingConsumEntity> getRegExecRoutingConsumsById_0() {
+    public Collection<RegExecRoutingConsumEntity> getRegExecRoutingConsumsById_0() {
         return regExecRoutingConsumsById_0;
     }
 
@@ -184,7 +184,7 @@ public Collection<RegExecRoutingConsumEntity> getRegExecRoutingConsumsById_0() {
 
     @OneToMany(mappedBy = "regOrganizationConsumableByIdOrganizationConsumable")
     @JsonIgnore
-public Collection<TpRoutingConsumEntity> getTpRoutingConsumsById() {
+    public Collection<TpRoutingConsumEntity> getTpRoutingConsumsById() {
         return tpRoutingConsumsById;
     }
 

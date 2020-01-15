@@ -24,7 +24,7 @@ public class ClsWeatherStationEntity {
     private long id;
     private long idOrganization;
     private JsonNode description;
-//    private Point point;
+    //    private Point point;
     private ClsOrganizationEntity clsOrganizationByIdOrganization;
     private Collection<RegWeatherStationReadingEntity> regWeatherStationReadingsById;
 
@@ -164,7 +164,7 @@ public class ClsWeatherStationEntity {
 
     @OneToMany(mappedBy = "clsWeatherStationByIdWeatherStation")
     @JsonIgnore
-public Collection<RegWeatherStationReadingEntity> getRegWeatherStationReadingsById() {
+    public Collection<RegWeatherStationReadingEntity> getRegWeatherStationReadingsById() {
         return regWeatherStationReadingsById;
     }
 

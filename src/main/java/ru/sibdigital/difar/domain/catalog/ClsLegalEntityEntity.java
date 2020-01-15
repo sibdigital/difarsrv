@@ -141,7 +141,7 @@ public class ClsLegalEntityEntity {
 
     @OneToMany(mappedBy = "clsLegalEntityByIdLegalEntity")
     @JsonIgnore
-public Collection<ClsOrganizationEntity> getClsOrganizationsById() {
+    public Collection<ClsOrganizationEntity> getClsOrganizationsById() {
         return clsOrganizationsById;
     }
 
@@ -151,7 +151,7 @@ public Collection<ClsOrganizationEntity> getClsOrganizationsById() {
 
     @OneToMany(mappedBy = "clsLegalEntityByIdLegalEntity")
     @JsonIgnore
-public Collection<ClsPartnerEntity> getClsPartnersById() {
+    public Collection<ClsPartnerEntity> getClsPartnersById() {
         return clsPartnersById;
     }
 
@@ -161,7 +161,7 @@ public Collection<ClsPartnerEntity> getClsPartnersById() {
 
     @OneToMany(mappedBy = "clsLegalEntityByIdLegalEntity")
     @JsonIgnore
-public Collection<ClsDepartEntity> getClsDepartsById() {
+    public Collection<ClsDepartEntity> getClsDepartsById() {
         return clsDepartsById;
     }
 

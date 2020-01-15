@@ -203,7 +203,7 @@ public class DocRoutingEntity {
 
     @OneToMany(mappedBy = "docRoutingByIdRouting")
     @JsonIgnore
-public Collection<DocActualYieldEntity> getDocActualYieldsById() {
+    public Collection<DocActualYieldEntity> getDocActualYieldsById() {
         return docActualYieldsById;
     }
 
@@ -263,7 +263,7 @@ public Collection<DocActualYieldEntity> getDocActualYieldsById() {
 
     @OneToMany(mappedBy = "docRoutingByIdRouting")
     @JsonIgnore
-public Collection<RegExecRoutingConsumEntity> getRegExecRoutingConsumsById() {
+    public Collection<RegExecRoutingConsumEntity> getRegExecRoutingConsumsById() {
         return regExecRoutingConsumsById;
     }
 
@@ -273,7 +273,7 @@ public Collection<RegExecRoutingConsumEntity> getRegExecRoutingConsumsById() {
 
     @OneToMany(mappedBy = "docRoutingByIdRouting")
     @JsonIgnore
-public Collection<RegExecRoutingEquipmentEntity> getRegExecRoutingEquipmentsById() {
+    public Collection<RegExecRoutingEquipmentEntity> getRegExecRoutingEquipmentsById() {
         return regExecRoutingEquipmentsById;
     }
 
@@ -283,7 +283,7 @@ public Collection<RegExecRoutingEquipmentEntity> getRegExecRoutingEquipmentsById
 
     @OneToMany(mappedBy = "docRoutingByIdRouting")
     @JsonIgnore
-public Collection<RegExecRoutingFertilizerEntity> getRegExecRoutingFertilizersById() {
+    public Collection<RegExecRoutingFertilizerEntity> getRegExecRoutingFertilizersById() {
         return regExecRoutingFertilizersById;
     }
 
@@ -293,7 +293,7 @@ public Collection<RegExecRoutingFertilizerEntity> getRegExecRoutingFertilizersBy
 
     @OneToMany(mappedBy = "docRoutingByIdRouting")
     @JsonIgnore
-public Collection<RegExecRoutingProtectionEquipmentEntity> getRegExecRoutingProtectionEquipmentsById() {
+    public Collection<RegExecRoutingProtectionEquipmentEntity> getRegExecRoutingProtectionEquipmentsById() {
         return regExecRoutingProtectionEquipmentsById;
     }
 
@@ -303,7 +303,7 @@ public Collection<RegExecRoutingProtectionEquipmentEntity> getRegExecRoutingProt
 
     @OneToMany(mappedBy = "docRoutingByIdRouting")
     @JsonIgnore
-public Collection<RegExecRoutingWorkEntity> getRegExecRoutingWorksById() {
+    public Collection<RegExecRoutingWorkEntity> getRegExecRoutingWorksById() {
         return regExecRoutingWorksById;
     }
 
@@ -313,7 +313,7 @@ public Collection<RegExecRoutingWorkEntity> getRegExecRoutingWorksById() {
 
     @OneToMany(mappedBy = "docRoutingByIdRouting")
     @JsonIgnore
-public Collection<TpRoutingConsumEntity> getTpRoutingConsumsById() {
+    public Collection<TpRoutingConsumEntity> getTpRoutingConsumsById() {
         return tpRoutingConsumsById;
     }
 
@@ -323,7 +323,7 @@ public Collection<TpRoutingConsumEntity> getTpRoutingConsumsById() {
 
     @OneToMany(mappedBy = "docRoutingByIdRouting")
     @JsonIgnore
-public Collection<TpRoutingEquipmentEntity> getTpRoutingEquipmentsById() {
+    public Collection<TpRoutingEquipmentEntity> getTpRoutingEquipmentsById() {
         return tpRoutingEquipmentsById;
     }
 
@@ -333,7 +333,7 @@ public Collection<TpRoutingEquipmentEntity> getTpRoutingEquipmentsById() {
 
     @OneToMany(mappedBy = "docRoutingByIdRouting")
     @JsonIgnore
-public Collection<TpRoutingFertilizerEntity> getTpRoutingFertilizersById() {
+    public Collection<TpRoutingFertilizerEntity> getTpRoutingFertilizersById() {
         return tpRoutingFertilizersById;
     }
 
@@ -343,7 +343,7 @@ public Collection<TpRoutingFertilizerEntity> getTpRoutingFertilizersById() {
 
     @OneToMany(mappedBy = "docRoutingByIdRouting")
     @JsonIgnore
-public Collection<TpRoutingProtectionEquipmentEntity> getTpRoutingProtectionEquipmentsById() {
+    public Collection<TpRoutingProtectionEquipmentEntity> getTpRoutingProtectionEquipmentsById() {
         return tpRoutingProtectionEquipmentsById;
     }
 
@@ -353,7 +353,7 @@ public Collection<TpRoutingProtectionEquipmentEntity> getTpRoutingProtectionEqui
 
     @OneToMany(mappedBy = "docRoutingByIdRouting")
     @JsonIgnore
-public Collection<TpRoutingStageEntity> getTpRoutingStagesById() {
+    public Collection<TpRoutingStageEntity> getTpRoutingStagesById() {
         return tpRoutingStagesById;
     }
 
@@ -363,7 +363,7 @@ public Collection<TpRoutingStageEntity> getTpRoutingStagesById() {
 
     @OneToMany(mappedBy = "docRoutingByIdRouting")
     @JsonIgnore
-public Collection<TpRoutingWorkEntity> getTpRoutingWorksById() {
+    public Collection<TpRoutingWorkEntity> getTpRoutingWorksById() {
         return tpRoutingWorksById;
     }
 

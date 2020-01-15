@@ -237,7 +237,7 @@ public class ClsPlantPestEntity {
 
     @OneToMany(mappedBy = "clsPlantPestByIdPlantPest")
     @JsonIgnore
-public Collection<TpPlantPestAffectedCropEntity> getTpPlantPestAffectedCropsById() {
+    public Collection<TpPlantPestAffectedCropEntity> getTpPlantPestAffectedCropsById() {
         return tpPlantPestAffectedCropsById;
     }
 
@@ -247,7 +247,7 @@ public Collection<TpPlantPestAffectedCropEntity> getTpPlantPestAffectedCropsById
 
     @OneToMany(mappedBy = "clsPlantPestByIdPlantPest")
     @JsonIgnore
-public Collection<TpPlantPestPeriodEntity> getTpPlantPestPeriodsById() {
+    public Collection<TpPlantPestPeriodEntity> getTpPlantPestPeriodsById() {
         return tpPlantPestPeriodsById;
     }
 
@@ -257,7 +257,7 @@ public Collection<TpPlantPestPeriodEntity> getTpPlantPestPeriodsById() {
 
     @OneToMany(mappedBy = "clsPlantPestByIdPlantPest")
     @JsonIgnore
-public Collection<TpPlantPestPlantOrganEntity> getTpPlantPestPlantOrgansById() {
+    public Collection<TpPlantPestPlantOrganEntity> getTpPlantPestPlantOrgansById() {
         return tpPlantPestPlantOrgansById;
     }
 
@@ -267,7 +267,7 @@ public Collection<TpPlantPestPlantOrganEntity> getTpPlantPestPlantOrgansById() {
 
     @OneToMany(mappedBy = "clsPlantPestByIdPlantPest")
     @JsonIgnore
-public Collection<TpPlantPestTypicalAreaEntity> getTpPlantPestTypicalAreasById() {
+    public Collection<TpPlantPestTypicalAreaEntity> getTpPlantPestTypicalAreasById() {
         return tpPlantPestTypicalAreasById;
     }
 

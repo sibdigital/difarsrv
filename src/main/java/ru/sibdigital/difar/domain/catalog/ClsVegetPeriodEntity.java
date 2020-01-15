@@ -128,7 +128,7 @@ public class ClsVegetPeriodEntity {
 
     @OneToMany(mappedBy = "clsVegetPeriodByIdVegetPeriod")
     @JsonIgnore
-public Collection<TpPlantDiseaseAffectedCropEntity> getTpPlantDiseaseAffectedCropsById() {
+    public Collection<TpPlantDiseaseAffectedCropEntity> getTpPlantDiseaseAffectedCropsById() {
         return tpPlantDiseaseAffectedCropsById;
     }
 
@@ -138,7 +138,7 @@ public Collection<TpPlantDiseaseAffectedCropEntity> getTpPlantDiseaseAffectedCro
 
     @OneToMany(mappedBy = "clsVegetPeriodByIdVegetPeriod")
     @JsonIgnore
-public Collection<TpPlantDiseasePeriodEntity> getTpPlantDiseasePeriodsById() {
+    public Collection<TpPlantDiseasePeriodEntity> getTpPlantDiseasePeriodsById() {
         return tpPlantDiseasePeriodsById;
     }
 
@@ -148,7 +148,7 @@ public Collection<TpPlantDiseasePeriodEntity> getTpPlantDiseasePeriodsById() {
 
     @OneToMany(mappedBy = "clsVegetPeriodByIdVegetPeriod")
     @JsonIgnore
-public Collection<TpPlantPestAffectedCropEntity> getTpPlantPestAffectedCropsById() {
+    public Collection<TpPlantPestAffectedCropEntity> getTpPlantPestAffectedCropsById() {
         return tpPlantPestAffectedCropsById;
     }
 
@@ -158,7 +158,7 @@ public Collection<TpPlantPestAffectedCropEntity> getTpPlantPestAffectedCropsById
 
     @OneToMany(mappedBy = "clsVegetPeriodByIdVegetPeriod")
     @JsonIgnore
-public Collection<TpPlantPestPeriodEntity> getTpPlantPestPeriodsById() {
+    public Collection<TpPlantPestPeriodEntity> getTpPlantPestPeriodsById() {
         return tpPlantPestPeriodsById;
     }
 

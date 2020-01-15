@@ -165,7 +165,7 @@ public class RegOrganizationEquipmentEntity {
 
     @OneToMany(mappedBy = "regOrganizationEquipmentByIdOrganizationEquipment")
     @JsonIgnore
-public Collection<RegExecRoutingEquipmentEntity> getRegExecRoutingEquipmentsById() {
+    public Collection<RegExecRoutingEquipmentEntity> getRegExecRoutingEquipmentsById() {
         return regExecRoutingEquipmentsById;
     }
 
@@ -175,7 +175,7 @@ public Collection<RegExecRoutingEquipmentEntity> getRegExecRoutingEquipmentsById
 
     @OneToMany(mappedBy = "regOrganizationEquipmentByIdRoutingEquipment")
     @JsonIgnore
-public Collection<RegExecRoutingEquipmentEntity> getRegExecRoutingEquipmentsById_0() {
+    public Collection<RegExecRoutingEquipmentEntity> getRegExecRoutingEquipmentsById_0() {
         return regExecRoutingEquipmentsById_0;
     }
 
@@ -185,7 +185,7 @@ public Collection<RegExecRoutingEquipmentEntity> getRegExecRoutingEquipmentsById
 
     @OneToMany(mappedBy = "regOrganizationEquipmentByIdOrganizationEquipment")
     @JsonIgnore
-public Collection<TpRoutingEquipmentEntity> getTpRoutingEquipmentsById() {
+    public Collection<TpRoutingEquipmentEntity> getTpRoutingEquipmentsById() {
         return tpRoutingEquipmentsById;
     }
 
@@ -195,7 +195,7 @@ public Collection<TpRoutingEquipmentEntity> getTpRoutingEquipmentsById() {
 
     @OneToMany(mappedBy = "regOrganizationEquipmentByIdOrganizationEquipment")
     @JsonIgnore
-public Collection<RegEquipmentBaseLocalEntity> getRegEquipmentBaseLocalsById() {
+    public Collection<RegEquipmentBaseLocalEntity> getRegEquipmentBaseLocalsById() {
         return regEquipmentBaseLocalsById;
     }
 

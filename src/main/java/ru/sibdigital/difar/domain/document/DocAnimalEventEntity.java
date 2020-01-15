@@ -202,7 +202,7 @@ public class DocAnimalEventEntity {
 
     @OneToMany(mappedBy = "docAnimalEventByIdAnimalEvent")
     @JsonIgnore
-public Collection<TpAnimalEventAnimalEntity> getTpAnimalEventAnimalsById() {
+    public Collection<TpAnimalEventAnimalEntity> getTpAnimalEventAnimalsById() {
         return tpAnimalEventAnimalsById;
     }
 
@@ -212,7 +212,7 @@ public Collection<TpAnimalEventAnimalEntity> getTpAnimalEventAnimalsById() {
 
     @OneToMany(mappedBy = "docAnimalEventByIdAnimalEvent")
     @JsonIgnore
-public Collection<TpAnimalEventAnimalGroupEntity> getTpAnimalEventAnimalGroupsById() {
+    public Collection<TpAnimalEventAnimalGroupEntity> getTpAnimalEventAnimalGroupsById() {
         return tpAnimalEventAnimalGroupsById;
     }
 

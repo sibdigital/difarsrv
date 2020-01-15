@@ -171,7 +171,7 @@ public class DocAnimalAppraisalEntity {
 
     @OneToMany(mappedBy = "docAnimalAppraisalByIdAnimalAppraisal")
     @JsonIgnore
-public Collection<TpAnimalAppraisalAnimalEntity> getTpAnimalAppraisalAnimalsById() {
+    public Collection<TpAnimalAppraisalAnimalEntity> getTpAnimalAppraisalAnimalsById() {
         return tpAnimalAppraisalAnimalsById;
     }
 
@@ -181,7 +181,7 @@ public Collection<TpAnimalAppraisalAnimalEntity> getTpAnimalAppraisalAnimalsById
 
     @OneToMany(mappedBy = "docAnimalAppraisalByIdAnimalAppraisal")
     @JsonIgnore
-public Collection<TpAnimalAppraisalAnimalGroupEntity> getTpAnimalAppraisalAnimalGroupsById() {
+    public Collection<TpAnimalAppraisalAnimalGroupEntity> getTpAnimalAppraisalAnimalGroupsById() {
         return tpAnimalAppraisalAnimalGroupsById;
     }
 

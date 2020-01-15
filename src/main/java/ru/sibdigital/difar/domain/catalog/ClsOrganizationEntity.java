@@ -170,7 +170,7 @@ public class ClsOrganizationEntity {
 
     @OneToMany(mappedBy = "clsOrganizationByIdOrganization")
     @JsonIgnore
-public Collection<ClsUserEntity> getClsUsersById() {
+    public Collection<ClsUserEntity> getClsUsersById() {
         return clsUsersById;
     }
 
@@ -180,7 +180,7 @@ public Collection<ClsUserEntity> getClsUsersById() {
 
     @OneToMany(mappedBy = "clsOrganizationByIdOrganization")
     @JsonIgnore
-public Collection<ClsFieldEntity> getClsFieldsById() {
+    public Collection<ClsFieldEntity> getClsFieldsById() {
         return clsFieldsById;
     }
 
@@ -190,7 +190,7 @@ public Collection<ClsFieldEntity> getClsFieldsById() {
 
     @OneToMany(mappedBy = "clsOrganizationByIdOrganization")
     @JsonIgnore
-public Collection<ClsGpsModuleEntity> getClsGpsModulesById() {
+    public Collection<ClsGpsModuleEntity> getClsGpsModulesById() {
         return clsGpsModulesById;
     }
 
@@ -200,7 +200,7 @@ public Collection<ClsGpsModuleEntity> getClsGpsModulesById() {
 
     @OneToMany(mappedBy = "clsOrganizationByIdOrganization")
     @JsonIgnore
-public Collection<ClsWeatherStationEntity> getClsWeatherStationsById() {
+    public Collection<ClsWeatherStationEntity> getClsWeatherStationsById() {
         return clsWeatherStationsById;
     }
 
@@ -210,7 +210,7 @@ public Collection<ClsWeatherStationEntity> getClsWeatherStationsById() {
 
     @OneToMany(mappedBy = "clsOrganizationByIdOrganization")
     @JsonIgnore
-public Collection<DocActualYieldEntity> getDocActualYieldsById() {
+    public Collection<DocActualYieldEntity> getDocActualYieldsById() {
         return docActualYieldsById;
     }
 
@@ -220,7 +220,7 @@ public Collection<DocActualYieldEntity> getDocActualYieldsById() {
 
     @OneToMany(mappedBy = "clsOrganizationByIdOrganization")
     @JsonIgnore
-public Collection<DocRoutingEntity> getDocRoutingsById() {
+    public Collection<DocRoutingEntity> getDocRoutingsById() {
         return docRoutingsById;
     }
 
@@ -230,7 +230,7 @@ public Collection<DocRoutingEntity> getDocRoutingsById() {
 
     @OneToMany(mappedBy = "clsOrganizationByIdOrganization")
     @JsonIgnore
-public Collection<RegGpsModuleOrganizationEquipmentEntity> getRegGpsModuleOrganizationEquipmentsById() {
+    public Collection<RegGpsModuleOrganizationEquipmentEntity> getRegGpsModuleOrganizationEquipmentsById() {
         return regGpsModuleOrganizationEquipmentsById;
     }
 
@@ -240,7 +240,7 @@ public Collection<RegGpsModuleOrganizationEquipmentEntity> getRegGpsModuleOrgani
 
     @OneToMany(mappedBy = "clsOrganizationByIdOrganization")
     @JsonIgnore
-public Collection<RegGpsModuleReadingEntity> getRegGpsModuleReadingsById() {
+    public Collection<RegGpsModuleReadingEntity> getRegGpsModuleReadingsById() {
         return regGpsModuleReadingsById;
     }
 
@@ -250,7 +250,7 @@ public Collection<RegGpsModuleReadingEntity> getRegGpsModuleReadingsById() {
 
     @OneToMany(mappedBy = "clsOrganizationByIdOrganization")
     @JsonIgnore
-public Collection<RegOrganizationFertilizerEntity> getRegOrganizationFertilizersById() {
+    public Collection<RegOrganizationFertilizerEntity> getRegOrganizationFertilizersById() {
         return regOrganizationFertilizersById;
     }
 
@@ -260,7 +260,7 @@ public Collection<RegOrganizationFertilizerEntity> getRegOrganizationFertilizers
 
     @OneToMany(mappedBy = "clsOrganizationByIdOrganization")
     @JsonIgnore
-public Collection<RegOrganizationProtectionEquipmentEntity> getRegOrganizationProtectionEquipmentsById() {
+    public Collection<RegOrganizationProtectionEquipmentEntity> getRegOrganizationProtectionEquipmentsById() {
         return regOrganizationProtectionEquipmentsById;
     }
 
@@ -270,7 +270,7 @@ public Collection<RegOrganizationProtectionEquipmentEntity> getRegOrganizationPr
 
     @OneToMany(mappedBy = "clsOrganizationByIdOrganization")
     @JsonIgnore
-public Collection<RegWeatherStationReadingEntity> getRegWeatherStationReadingsById() {
+    public Collection<RegWeatherStationReadingEntity> getRegWeatherStationReadingsById() {
         return regWeatherStationReadingsById;
     }
 
@@ -280,7 +280,7 @@ public Collection<RegWeatherStationReadingEntity> getRegWeatherStationReadingsBy
 
     @OneToMany(mappedBy = "clsOrganizationByIdOrganization")
     @JsonIgnore
-public Collection<DocAnimalAppraisalEntity> getDocAnimalAppraisalsById() {
+    public Collection<DocAnimalAppraisalEntity> getDocAnimalAppraisalsById() {
         return docAnimalAppraisalsById;
     }
 
@@ -290,7 +290,7 @@ public Collection<DocAnimalAppraisalEntity> getDocAnimalAppraisalsById() {
 
     @OneToMany(mappedBy = "clsOrganizationByIdOrganization")
     @JsonIgnore
-public Collection<DocAnimalBeatingEntity> getDocAnimalBeatingsById() {
+    public Collection<DocAnimalBeatingEntity> getDocAnimalBeatingsById() {
         return docAnimalBeatingsById;
     }
 
@@ -300,7 +300,7 @@ public Collection<DocAnimalBeatingEntity> getDocAnimalBeatingsById() {
 
     @OneToMany(mappedBy = "clsOrganizationByIdOrganization")
     @JsonIgnore
-public Collection<DocAnimalCalvingEntity> getDocAnimalCalvingsById() {
+    public Collection<DocAnimalCalvingEntity> getDocAnimalCalvingsById() {
         return docAnimalCalvingsById;
     }
 
@@ -310,7 +310,7 @@ public Collection<DocAnimalCalvingEntity> getDocAnimalCalvingsById() {
 
     @OneToMany(mappedBy = "clsOrganizationByIdOrganization")
     @JsonIgnore
-public Collection<DocAnimalCopulationEntity> getDocAnimalCopulationsById() {
+    public Collection<DocAnimalCopulationEntity> getDocAnimalCopulationsById() {
         return docAnimalCopulationsById;
     }
 
@@ -320,7 +320,7 @@ public Collection<DocAnimalCopulationEntity> getDocAnimalCopulationsById() {
 
     @OneToMany(mappedBy = "clsOrganizationByIdOrganization")
     @JsonIgnore
-public Collection<DocAnimalEventEntity> getDocAnimalEventsById() {
+    public Collection<DocAnimalEventEntity> getDocAnimalEventsById() {
         return docAnimalEventsById;
     }
 
@@ -330,7 +330,7 @@ public Collection<DocAnimalEventEntity> getDocAnimalEventsById() {
 
     @OneToMany(mappedBy = "clsOrganizationByIdOrganization")
     @JsonIgnore
-public Collection<DocAnimalRetirementEntity> getDocAnimalRetirementsById() {
+    public Collection<DocAnimalRetirementEntity> getDocAnimalRetirementsById() {
         return docAnimalRetirementsById;
     }
 
@@ -340,7 +340,7 @@ public Collection<DocAnimalRetirementEntity> getDocAnimalRetirementsById() {
 
     @OneToMany(mappedBy = "clsOrganizationByIdOrganization")
     @JsonIgnore
-public Collection<DocAnimalTransferEntity> getDocAnimalTransfersById() {
+    public Collection<DocAnimalTransferEntity> getDocAnimalTransfersById() {
         return docAnimalTransfersById;
     }
 
@@ -350,7 +350,7 @@ public Collection<DocAnimalTransferEntity> getDocAnimalTransfersById() {
 
     @OneToMany(mappedBy = "clsOrganizationByIdOrganization")
     @JsonIgnore
-public Collection<RegAnimalEntity> getRegAnimalsById() {
+    public Collection<RegAnimalEntity> getRegAnimalsById() {
         return regAnimalsById;
     }
 
@@ -360,7 +360,7 @@ public Collection<RegAnimalEntity> getRegAnimalsById() {
 
     @OneToMany(mappedBy = "clsOrganizationByIdOrganization")
     @JsonIgnore
-public Collection<RegAnimalGroupEntity> getRegAnimalGroupsById() {
+    public Collection<RegAnimalGroupEntity> getRegAnimalGroupsById() {
         return regAnimalGroupsById;
     }
 
@@ -370,7 +370,7 @@ public Collection<RegAnimalGroupEntity> getRegAnimalGroupsById() {
 
     @OneToMany(mappedBy = "clsOrganizationByIdOrganization")
     @JsonIgnore
-public Collection<RegAnimalLocalEntity> getRegAnimalLocalsById() {
+    public Collection<RegAnimalLocalEntity> getRegAnimalLocalsById() {
         return regAnimalLocalsById;
     }
 
@@ -380,7 +380,7 @@ public Collection<RegAnimalLocalEntity> getRegAnimalLocalsById() {
 
     @OneToMany(mappedBy = "clsOrganizationByIdOrganization")
     @JsonIgnore
-public Collection<RegAnimalParamEntity> getRegAnimalParamsById() {
+    public Collection<RegAnimalParamEntity> getRegAnimalParamsById() {
         return regAnimalParamsById;
     }
 
@@ -390,7 +390,7 @@ public Collection<RegAnimalParamEntity> getRegAnimalParamsById() {
 
     @OneToMany(mappedBy = "clsOrganizationByIdOrganization")
     @JsonIgnore
-public Collection<RegAnimalStateEntity> getRegAnimalStatesById() {
+    public Collection<RegAnimalStateEntity> getRegAnimalStatesById() {
         return regAnimalStatesById;
     }
 
@@ -400,7 +400,7 @@ public Collection<RegAnimalStateEntity> getRegAnimalStatesById() {
 
     @OneToMany(mappedBy = "clsOrganizationByIdOrganization")
     @JsonIgnore
-public Collection<RegExternalAnimalEntity> getRegExternalAnimalsById() {
+    public Collection<RegExternalAnimalEntity> getRegExternalAnimalsById() {
         return regExternalAnimalsById;
     }
 
@@ -410,7 +410,7 @@ public Collection<RegExternalAnimalEntity> getRegExternalAnimalsById() {
 
     @OneToMany(mappedBy = "clsOrganizationByIdOrganization")
     @JsonIgnore
-public Collection<ClsArbitraryPeriodEntity> getClsArbitraryPeriodsById() {
+    public Collection<ClsArbitraryPeriodEntity> getClsArbitraryPeriodsById() {
         return ClsArbitraryPeriodsById;
     }
 
@@ -430,7 +430,7 @@ public Collection<ClsArbitraryPeriodEntity> getClsArbitraryPeriodsById() {
 
     @OneToMany(mappedBy = "clsOrganizationByIdOrganization")
     @JsonIgnore
-public Collection<RegOrganizationPartnerEntity> getRegOrganizationPartnersById() {
+    public Collection<RegOrganizationPartnerEntity> getRegOrganizationPartnersById() {
         return regOrganizationPartnersById;
     }
 
@@ -440,7 +440,7 @@ public Collection<RegOrganizationPartnerEntity> getRegOrganizationPartnersById()
 
     @OneToMany(mappedBy = "clsOrganizationByIdOrganization")
     @JsonIgnore
-public Collection<ClsDepartEntity> getClsDepartsById() {
+    public Collection<ClsDepartEntity> getClsDepartsById() {
         return clsDepartsById;
     }
 
@@ -450,7 +450,7 @@ public Collection<ClsDepartEntity> getClsDepartsById() {
 
     @OneToMany(mappedBy = "clsOrganizationByIdOrganization")
     @JsonIgnore
-public Collection<ClsEmployeeEntity> getClsEmployeesById() {
+    public Collection<ClsEmployeeEntity> getClsEmployeesById() {
         return clsEmployeesById;
     }
 
@@ -460,7 +460,7 @@ public Collection<ClsEmployeeEntity> getClsEmployeesById() {
 
     @OneToMany(mappedBy = "clsOrganizationByIdOrganization")
     @JsonIgnore
-public Collection<ClsEquipmentBaseEntity> getClsEquipmentBasesById() {
+    public Collection<ClsEquipmentBaseEntity> getClsEquipmentBasesById() {
         return clsEquipmentBasesById;
     }
 
@@ -470,7 +470,7 @@ public Collection<ClsEquipmentBaseEntity> getClsEquipmentBasesById() {
 
     @OneToMany(mappedBy = "clsOrganizationByIdOrganization")
     @JsonIgnore
-public Collection<ClsPositionEntity> getClsPositionsById() {
+    public Collection<ClsPositionEntity> getClsPositionsById() {
         return clsPositionsById;
     }
 
@@ -480,7 +480,7 @@ public Collection<ClsPositionEntity> getClsPositionsById() {
 
     @OneToMany(mappedBy = "clsOrganizationByIdOrganization")
     @JsonIgnore
-public Collection<ClsRanchEntity> getClsRanchesById() {
+    public Collection<ClsRanchEntity> getClsRanchesById() {
         return clsRanchesById;
     }
 
@@ -490,7 +490,7 @@ public Collection<ClsRanchEntity> getClsRanchesById() {
 
     @OneToMany(mappedBy = "clsOrganizationByIdOrganization")
     @JsonIgnore
-public Collection<RegEquipmentBaseLocalEntity> getRegEquipmentBaseLocalsById() {
+    public Collection<RegEquipmentBaseLocalEntity> getRegEquipmentBaseLocalsById() {
         return regEquipmentBaseLocalsById;
     }
 
@@ -500,7 +500,7 @@ public Collection<RegEquipmentBaseLocalEntity> getRegEquipmentBaseLocalsById() {
 
     @OneToMany(mappedBy = "clsOrganizationByIdOrganization")
     @JsonIgnore
-public Collection<RegOrganizationConsumableEntity> getRegOrganizationConsumablesById() {
+    public Collection<RegOrganizationConsumableEntity> getRegOrganizationConsumablesById() {
         return regOrganizationConsumablesById;
     }
 
@@ -510,7 +510,7 @@ public Collection<RegOrganizationConsumableEntity> getRegOrganizationConsumables
 
     @OneToMany(mappedBy = "clsOrganizationByIdOrganization")
     @JsonIgnore
-public Collection<RegOrganizationEquipmentEntity> getRegOrganizationEquipmentsById() {
+    public Collection<RegOrganizationEquipmentEntity> getRegOrganizationEquipmentsById() {
         return regOrganizationEquipmentsById;
     }
 

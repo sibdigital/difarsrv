@@ -186,7 +186,7 @@ public class ClsEmployeeEntity {
 
     @OneToMany(mappedBy = "clsEmployeeByIdEmployee")
     @JsonIgnore
-public Collection<ClsUserEntity> getClsUsersById() {
+    public Collection<ClsUserEntity> getClsUsersById() {
         return clsUsersById;
     }
 
@@ -196,7 +196,7 @@ public Collection<ClsUserEntity> getClsUsersById() {
 
     @OneToMany(mappedBy = "clsEmployeeByIdMaker")
     @JsonIgnore
-public Collection<RegExecRoutingConsumEntity> getRegExecRoutingConsumsById() {
+    public Collection<RegExecRoutingConsumEntity> getRegExecRoutingConsumsById() {
         return regExecRoutingConsumsById;
     }
 
@@ -206,7 +206,7 @@ public Collection<RegExecRoutingConsumEntity> getRegExecRoutingConsumsById() {
 
     @OneToMany(mappedBy = "clsEmployeeByIdEmployee")
     @JsonIgnore
-public Collection<RegExecRoutingConsumEntity> getRegExecRoutingConsumsById_0() {
+    public Collection<RegExecRoutingConsumEntity> getRegExecRoutingConsumsById_0() {
         return regExecRoutingConsumsById_0;
     }
 
@@ -216,7 +216,7 @@ public Collection<RegExecRoutingConsumEntity> getRegExecRoutingConsumsById_0() {
 
     @OneToMany(mappedBy = "clsEmployeeByIdMaker")
     @JsonIgnore
-public Collection<RegExecRoutingEquipmentEntity> getRegExecRoutingEquipmentsById() {
+    public Collection<RegExecRoutingEquipmentEntity> getRegExecRoutingEquipmentsById() {
         return regExecRoutingEquipmentsById;
     }
 
@@ -226,7 +226,7 @@ public Collection<RegExecRoutingEquipmentEntity> getRegExecRoutingEquipmentsById
 
     @OneToMany(mappedBy = "clsEmployeeByIdEmployee")
     @JsonIgnore
-public Collection<RegExecRoutingEquipmentEntity> getRegExecRoutingEquipmentsById_0() {
+    public Collection<RegExecRoutingEquipmentEntity> getRegExecRoutingEquipmentsById_0() {
         return regExecRoutingEquipmentsById_0;
     }
 
@@ -236,7 +236,7 @@ public Collection<RegExecRoutingEquipmentEntity> getRegExecRoutingEquipmentsById
 
     @OneToMany(mappedBy = "clsEmployeeByIdMaker")
     @JsonIgnore
-public Collection<RegExecRoutingFertilizerEntity> getRegExecRoutingFertilizersById() {
+    public Collection<RegExecRoutingFertilizerEntity> getRegExecRoutingFertilizersById() {
         return regExecRoutingFertilizersById;
     }
 
@@ -246,7 +246,7 @@ public Collection<RegExecRoutingFertilizerEntity> getRegExecRoutingFertilizersBy
 
     @OneToMany(mappedBy = "clsEmployeeByIdEmployee")
     @JsonIgnore
-public Collection<RegExecRoutingFertilizerEntity> getRegExecRoutingFertilizersById_0() {
+    public Collection<RegExecRoutingFertilizerEntity> getRegExecRoutingFertilizersById_0() {
         return regExecRoutingFertilizersById_0;
     }
 
@@ -256,7 +256,7 @@ public Collection<RegExecRoutingFertilizerEntity> getRegExecRoutingFertilizersBy
 
     @OneToMany(mappedBy = "clsEmployeeByIdMaker")
     @JsonIgnore
-public Collection<RegExecRoutingProtectionEquipmentEntity> getRegExecRoutingProtectionEquipmentsById() {
+    public Collection<RegExecRoutingProtectionEquipmentEntity> getRegExecRoutingProtectionEquipmentsById() {
         return regExecRoutingProtectionEquipmentsById;
     }
 
@@ -266,7 +266,7 @@ public Collection<RegExecRoutingProtectionEquipmentEntity> getRegExecRoutingProt
 
     @OneToMany(mappedBy = "clsEmployeeByIdEmployee")
     @JsonIgnore
-public Collection<RegExecRoutingProtectionEquipmentEntity> getRegExecRoutingProtectionEquipmentsById_0() {
+    public Collection<RegExecRoutingProtectionEquipmentEntity> getRegExecRoutingProtectionEquipmentsById_0() {
         return regExecRoutingProtectionEquipmentsById_0;
     }
 
@@ -276,7 +276,7 @@ public Collection<RegExecRoutingProtectionEquipmentEntity> getRegExecRoutingProt
 
     @OneToMany(mappedBy = "clsEmployeeByIdMaker")
     @JsonIgnore
-public Collection<RegExecRoutingWorkEntity> getRegExecRoutingWorksById() {
+    public Collection<RegExecRoutingWorkEntity> getRegExecRoutingWorksById() {
         return regExecRoutingWorksById;
     }
 
@@ -286,7 +286,7 @@ public Collection<RegExecRoutingWorkEntity> getRegExecRoutingWorksById() {
 
     @OneToMany(mappedBy = "clsEmployeeByIdEmployee")
     @JsonIgnore
-public Collection<RegExecRoutingWorkEntity> getRegExecRoutingWorksById_0() {
+    public Collection<RegExecRoutingWorkEntity> getRegExecRoutingWorksById_0() {
         return regExecRoutingWorksById_0;
     }
 

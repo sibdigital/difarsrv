@@ -135,7 +135,7 @@ public class ClsBreedEntity {
 
     @OneToMany(mappedBy = "clsBreedByIdBreed")
     @JsonIgnore
-public Collection<RegAnimalEntity> getRegAnimalsById() {
+    public Collection<RegAnimalEntity> getRegAnimalsById() {
         return regAnimalsById;
     }
 
@@ -145,7 +145,7 @@ public Collection<RegAnimalEntity> getRegAnimalsById() {
 
     @OneToMany(mappedBy = "clsBreedByIdBreed")
     @JsonIgnore
-public Collection<RegExternalAnimalEntity> getRegExternalAnimalsById() {
+    public Collection<RegExternalAnimalEntity> getRegExternalAnimalsById() {
         return regExternalAnimalsById;
     }
 

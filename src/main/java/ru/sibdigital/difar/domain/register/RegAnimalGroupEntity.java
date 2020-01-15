@@ -166,7 +166,7 @@ public class RegAnimalGroupEntity {
 
     @OneToMany(mappedBy = "regAnimalGroupByIdGroupMother")
     @JsonIgnore
-public Collection<RegAnimalEntity> getRegAnimalsById() {
+    public Collection<RegAnimalEntity> getRegAnimalsById() {
         return regAnimalsById;
     }
 
@@ -176,7 +176,7 @@ public Collection<RegAnimalEntity> getRegAnimalsById() {
 
     @OneToMany(mappedBy = "regAnimalGroupByIdGroupFather")
     @JsonIgnore
-public Collection<RegAnimalEntity> getRegAnimalsById_0() {
+    public Collection<RegAnimalEntity> getRegAnimalsById_0() {
         return regAnimalsById_0;
     }
 
@@ -226,7 +226,7 @@ public Collection<RegAnimalEntity> getRegAnimalsById_0() {
 
     @OneToMany(mappedBy = "regAnimalGroupByIdAnimalGroup")
     @JsonIgnore
-public Collection<TpAnimalAppraisalAnimalGroupEntity> getTpAnimalAppraisalAnimalGroupsById() {
+    public Collection<TpAnimalAppraisalAnimalGroupEntity> getTpAnimalAppraisalAnimalGroupsById() {
         return tpAnimalAppraisalAnimalGroupsById;
     }
 
@@ -236,7 +236,7 @@ public Collection<TpAnimalAppraisalAnimalGroupEntity> getTpAnimalAppraisalAnimal
 
     @OneToMany(mappedBy = "regAnimalGroupByIdAnimalMotherGroup")
     @JsonIgnore
-public Collection<TpAnimalBeatingAnimalGroupEntity> getTpAnimalBeatingAnimalGroupsById() {
+    public Collection<TpAnimalBeatingAnimalGroupEntity> getTpAnimalBeatingAnimalGroupsById() {
         return tpAnimalBeatingAnimalGroupsById;
     }
 
@@ -246,7 +246,7 @@ public Collection<TpAnimalBeatingAnimalGroupEntity> getTpAnimalBeatingAnimalGrou
 
     @OneToMany(mappedBy = "regAnimalGroupByIdAnimalMotherGroup")
     @JsonIgnore
-public Collection<TpAnimalCalvingAnimalGroupEntity> getTpAnimalCalvingAnimalGroupsById() {
+    public Collection<TpAnimalCalvingAnimalGroupEntity> getTpAnimalCalvingAnimalGroupsById() {
         return tpAnimalCalvingAnimalGroupsById;
     }
 
@@ -256,7 +256,7 @@ public Collection<TpAnimalCalvingAnimalGroupEntity> getTpAnimalCalvingAnimalGrou
 
     @OneToMany(mappedBy = "regAnimalGroupByIdAnimalFatherGroup")
     @JsonIgnore
-public Collection<TpAnimalCalvingAnimalGroupEntity> getTpAnimalCalvingAnimalGroupsById_0() {
+    public Collection<TpAnimalCalvingAnimalGroupEntity> getTpAnimalCalvingAnimalGroupsById_0() {
         return tpAnimalCalvingAnimalGroupsById_0;
     }
 
@@ -266,7 +266,7 @@ public Collection<TpAnimalCalvingAnimalGroupEntity> getTpAnimalCalvingAnimalGrou
 
     @OneToMany(mappedBy = "regAnimalGroupByIdAnimalFemaleGroup")
     @JsonIgnore
-public Collection<TpAnimalCopulationAnimalGroupEntity> getTpAnimalCopulationAnimalGroupsById() {
+    public Collection<TpAnimalCopulationAnimalGroupEntity> getTpAnimalCopulationAnimalGroupsById() {
         return tpAnimalCopulationAnimalGroupsById;
     }
 
@@ -276,7 +276,7 @@ public Collection<TpAnimalCopulationAnimalGroupEntity> getTpAnimalCopulationAnim
 
     @OneToMany(mappedBy = "regAnimalGroupByIdAnimalMaleGroup")
     @JsonIgnore
-public Collection<TpAnimalCopulationAnimalGroupEntity> getTpAnimalCopulationAnimalGroupsById_0() {
+    public Collection<TpAnimalCopulationAnimalGroupEntity> getTpAnimalCopulationAnimalGroupsById_0() {
         return tpAnimalCopulationAnimalGroupsById_0;
     }
 
@@ -286,7 +286,7 @@ public Collection<TpAnimalCopulationAnimalGroupEntity> getTpAnimalCopulationAnim
 
     @OneToMany(mappedBy = "regAnimalGroupByIdAnimalFemaleGroup")
     @JsonIgnore
-public Collection<TpAnimalCopulationAnimalGroupFemaleEntity> getTpAnimalCopulationAnimalGroupFemalesById() {
+    public Collection<TpAnimalCopulationAnimalGroupFemaleEntity> getTpAnimalCopulationAnimalGroupFemalesById() {
         return tpAnimalCopulationAnimalGroupFemalesById;
     }
 
@@ -296,7 +296,7 @@ public Collection<TpAnimalCopulationAnimalGroupFemaleEntity> getTpAnimalCopulati
 
     @OneToMany(mappedBy = "regAnimalGroupByIdAnimalMale")
     @JsonIgnore
-public Collection<TpAnimalCopulationAnimalGroupFemaleEntity> getTpAnimalCopulationAnimalGroupFemalesById_0() {
+    public Collection<TpAnimalCopulationAnimalGroupFemaleEntity> getTpAnimalCopulationAnimalGroupFemalesById_0() {
         return tpAnimalCopulationAnimalGroupFemalesById_0;
     }
 
@@ -306,7 +306,7 @@ public Collection<TpAnimalCopulationAnimalGroupFemaleEntity> getTpAnimalCopulati
 
     @OneToMany(mappedBy = "regAnimalGroupByIdAnimalGroup1")
     @JsonIgnore
-public Collection<TpAnimalEventAnimalGroupEntity> getTpAnimalEventAnimalGroupsById() {
+    public Collection<TpAnimalEventAnimalGroupEntity> getTpAnimalEventAnimalGroupsById() {
         return tpAnimalEventAnimalGroupsById;
     }
 
@@ -316,7 +316,7 @@ public Collection<TpAnimalEventAnimalGroupEntity> getTpAnimalEventAnimalGroupsBy
 
     @OneToMany(mappedBy = "regAnimalGroupByIdAnimalGroup2")
     @JsonIgnore
-public Collection<TpAnimalEventAnimalGroupEntity> getTpAnimalEventAnimalGroupsById_0() {
+    public Collection<TpAnimalEventAnimalGroupEntity> getTpAnimalEventAnimalGroupsById_0() {
         return tpAnimalEventAnimalGroupsById_0;
     }
 
@@ -326,7 +326,7 @@ public Collection<TpAnimalEventAnimalGroupEntity> getTpAnimalEventAnimalGroupsBy
 
     @OneToMany(mappedBy = "regAnimalGroupByIdAnimalGroup")
     @JsonIgnore
-public Collection<TpAnimalRetirementAnimalGroupEntity> getTpAnimalRetirementAnimalGroupsById() {
+    public Collection<TpAnimalRetirementAnimalGroupEntity> getTpAnimalRetirementAnimalGroupsById() {
         return tpAnimalRetirementAnimalGroupsById;
     }
 
@@ -336,7 +336,7 @@ public Collection<TpAnimalRetirementAnimalGroupEntity> getTpAnimalRetirementAnim
 
     @OneToMany(mappedBy = "regAnimalGroupByIdAnimalGroup")
     @JsonIgnore
-public Collection<TpAnimalSaleAnimalGroupEntity> getTpAnimalSaleAnimalGroupsById() {
+    public Collection<TpAnimalSaleAnimalGroupEntity> getTpAnimalSaleAnimalGroupsById() {
         return tpAnimalSaleAnimalGroupsById;
     }
 
@@ -346,7 +346,7 @@ public Collection<TpAnimalSaleAnimalGroupEntity> getTpAnimalSaleAnimalGroupsById
 
     @OneToMany(mappedBy = "regAnimalGroupByIdAnimalGroup")
     @JsonIgnore
-public Collection<TpAnimalTransferAnimalGroupEntity> getTpAnimalTransferAnimalGroupsById() {
+    public Collection<TpAnimalTransferAnimalGroupEntity> getTpAnimalTransferAnimalGroupsById() {
         return tpAnimalTransferAnimalGroupsById;
     }
 

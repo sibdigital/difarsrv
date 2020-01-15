@@ -173,7 +173,7 @@ public class ClsFertilizerEntity {
 
     @OneToMany(mappedBy = "clsFertilizerByIdFertilizer")
     @JsonIgnore
-public Collection<RegOrganizationFertilizerEntity> getRegOrganizationFertilizersById() {
+    public Collection<RegOrganizationFertilizerEntity> getRegOrganizationFertilizersById() {
         return regOrganizationFertilizersById;
     }
 

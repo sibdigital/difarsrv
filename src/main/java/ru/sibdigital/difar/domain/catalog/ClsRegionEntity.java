@@ -132,7 +132,7 @@ public class ClsRegionEntity {
 
     @OneToMany(mappedBy = "clsRegionByIdRegion")
     @JsonIgnore
-public Collection<RegFieldLocalEntity> getRegFieldLocalsById() {
+    public Collection<RegFieldLocalEntity> getRegFieldLocalsById() {
         return regFieldLocalsById;
     }
 
@@ -142,7 +142,7 @@ public Collection<RegFieldLocalEntity> getRegFieldLocalsById() {
 
     @OneToMany(mappedBy = "clsRegionByIdRegion")
     @JsonIgnore
-public Collection<TpPlantDiseaseTypicalAreaEntity> getTpPlantDiseaseTypicalAreasById() {
+    public Collection<TpPlantDiseaseTypicalAreaEntity> getTpPlantDiseaseTypicalAreasById() {
         return tpPlantDiseaseTypicalAreasById;
     }
 
@@ -152,7 +152,7 @@ public Collection<TpPlantDiseaseTypicalAreaEntity> getTpPlantDiseaseTypicalAreas
 
     @OneToMany(mappedBy = "clsRegionByIdRegion")
     @JsonIgnore
-public Collection<TpPlantPestTypicalAreaEntity> getTpPlantPestTypicalAreasById() {
+    public Collection<TpPlantPestTypicalAreaEntity> getTpPlantPestTypicalAreasById() {
         return tpPlantPestTypicalAreasById;
     }
 
@@ -162,7 +162,7 @@ public Collection<TpPlantPestTypicalAreaEntity> getTpPlantPestTypicalAreasById()
 
     @OneToMany(mappedBy = "clsRegionByIdRegion")
     @JsonIgnore
-public Collection<RegAnimalEntity> getRegAnimalsById() {
+    public Collection<RegAnimalEntity> getRegAnimalsById() {
         return regAnimalsById;
     }
 
@@ -172,7 +172,7 @@ public Collection<RegAnimalEntity> getRegAnimalsById() {
 
     @OneToMany(mappedBy = "clsRegionByIdRegion")
     @JsonIgnore
-public Collection<RegExternalAnimalEntity> getRegExternalAnimalsById() {
+    public Collection<RegExternalAnimalEntity> getRegExternalAnimalsById() {
         return regExternalAnimalsById;
     }
 
@@ -182,7 +182,7 @@ public Collection<RegExternalAnimalEntity> getRegExternalAnimalsById() {
 
     @OneToMany(mappedBy = "clsRegionByIdRegion")
     @JsonIgnore
-public Collection<ClsArbitraryPeriodEntity> getClsArbitraryPeriodsById() {
+    public Collection<ClsArbitraryPeriodEntity> getClsArbitraryPeriodsById() {
         return ClsArbitraryPeriodsById;
     }
 
@@ -192,7 +192,7 @@ public Collection<ClsArbitraryPeriodEntity> getClsArbitraryPeriodsById() {
 
     @OneToMany(mappedBy = "clsRegionByIdRegion")
     @JsonIgnore
-public Collection<ClsDistrictEntity> getClsDistrictsById() {
+    public Collection<ClsDistrictEntity> getClsDistrictsById() {
         return clsDistrictsById;
     }
 

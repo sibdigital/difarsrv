@@ -142,7 +142,7 @@ public class ClsPartnerEntity {
 
     @OneToMany(mappedBy = "clsPartnerByIdPartner")
     @JsonIgnore
-public Collection<DocAnimalSaleEntity> getDocAnimalSalesById() {
+    public Collection<DocAnimalSaleEntity> getDocAnimalSalesById() {
         return docAnimalSalesById;
     }
 
@@ -152,7 +152,7 @@ public Collection<DocAnimalSaleEntity> getDocAnimalSalesById() {
 
     @OneToMany(mappedBy = "clsPartnerByIdPartner")
     @JsonIgnore
-public Collection<RegAnimalEntity> getRegAnimalsById() {
+    public Collection<RegAnimalEntity> getRegAnimalsById() {
         return regAnimalsById;
     }
 
@@ -162,7 +162,7 @@ public Collection<RegAnimalEntity> getRegAnimalsById() {
 
     @OneToMany(mappedBy = "clsPartnerByIdPartner")
     @JsonIgnore
-public Collection<RegExternalAnimalEntity> getRegExternalAnimalsById() {
+    public Collection<RegExternalAnimalEntity> getRegExternalAnimalsById() {
         return regExternalAnimalsById;
     }
 
@@ -182,7 +182,7 @@ public Collection<RegExternalAnimalEntity> getRegExternalAnimalsById() {
 
     @OneToMany(mappedBy = "clsPartnerByIdPartner")
     @JsonIgnore
-public Collection<RegOrganizationPartnerEntity> getRegOrganizationPartnersById() {
+    public Collection<RegOrganizationPartnerEntity> getRegOrganizationPartnersById() {
         return regOrganizationPartnersById;
     }
 

@@ -25,7 +25,7 @@ public class ClsGpsModuleEntity {
     private long id;
     private long idOrganization;
     private JsonNode description;
-//    private Point point;
+    //    private Point point;
     private ClsOrganizationEntity clsOrganizationByIdOrganization;
     private Collection<RegGpsModuleOrganizationEquipmentEntity> regGpsModuleOrganizationEquipmentsById;
     private Collection<RegGpsModuleReadingEntity> regGpsModuleReadingsById;
@@ -166,7 +166,7 @@ public class ClsGpsModuleEntity {
 
     @OneToMany(mappedBy = "clsGpsModuleByIdGpsModule")
     @JsonIgnore
-public Collection<RegGpsModuleOrganizationEquipmentEntity> getRegGpsModuleOrganizationEquipmentsById() {
+    public Collection<RegGpsModuleOrganizationEquipmentEntity> getRegGpsModuleOrganizationEquipmentsById() {
         return regGpsModuleOrganizationEquipmentsById;
     }
 
@@ -176,7 +176,7 @@ public Collection<RegGpsModuleOrganizationEquipmentEntity> getRegGpsModuleOrgani
 
     @OneToMany(mappedBy = "clsGpsModuleByIdGpsModule")
     @JsonIgnore
-public Collection<RegGpsModuleReadingEntity> getRegGpsModuleReadingsById() {
+    public Collection<RegGpsModuleReadingEntity> getRegGpsModuleReadingsById() {
         return regGpsModuleReadingsById;
     }
 

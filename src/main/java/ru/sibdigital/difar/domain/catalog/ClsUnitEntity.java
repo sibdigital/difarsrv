@@ -159,7 +159,7 @@ public class ClsUnitEntity {
 
     @OneToMany(mappedBy = "clsUnitByIdUnit")
     @JsonIgnore
-public Collection<ClsFertilizerEntity> getClsFertilizersById() {
+    public Collection<ClsFertilizerEntity> getClsFertilizersById() {
         return clsFertilizersById;
     }
 
@@ -169,7 +169,7 @@ public Collection<ClsFertilizerEntity> getClsFertilizersById() {
 
     @OneToMany(mappedBy = "clsUnitByIdUnit")
     @JsonIgnore
-public Collection<ClsPlantDiseaseEntity> getClsPlantDiseasesById() {
+    public Collection<ClsPlantDiseaseEntity> getClsPlantDiseasesById() {
         return clsPlantDiseasesById;
     }
 
@@ -179,7 +179,7 @@ public Collection<ClsPlantDiseaseEntity> getClsPlantDiseasesById() {
 
     @OneToMany(mappedBy = "clsUnitByIdUnit")
     @JsonIgnore
-public Collection<ClsPlantPestEntity> getClsPlantPestsById() {
+    public Collection<ClsPlantPestEntity> getClsPlantPestsById() {
         return clsPlantPestsById;
     }
 
@@ -189,7 +189,7 @@ public Collection<ClsPlantPestEntity> getClsPlantPestsById() {
 
     @OneToMany(mappedBy = "clsUnitByIdUnit")
     @JsonIgnore
-public Collection<ClsProtectionEquipmentEntity> getClsProtectionEquipmentsById() {
+    public Collection<ClsProtectionEquipmentEntity> getClsProtectionEquipmentsById() {
         return clsProtectionEquipmentsById;
     }
 
@@ -199,7 +199,7 @@ public Collection<ClsProtectionEquipmentEntity> getClsProtectionEquipmentsById()
 
     @OneToMany(mappedBy = "clsUnitByIdUnit")
     @JsonIgnore
-public Collection<DocActualYieldEntity> getDocActualYieldsById() {
+    public Collection<DocActualYieldEntity> getDocActualYieldsById() {
         return docActualYieldsById;
     }
 
@@ -209,7 +209,7 @@ public Collection<DocActualYieldEntity> getDocActualYieldsById() {
 
     @OneToMany(mappedBy = "clsUnitByIdActualProlificnessUnit")
     @JsonIgnore
-public Collection<DocActualYieldEntity> getDocActualYieldsById_0() {
+    public Collection<DocActualYieldEntity> getDocActualYieldsById_0() {
         return docActualYieldsById_0;
     }
 
@@ -219,7 +219,7 @@ public Collection<DocActualYieldEntity> getDocActualYieldsById_0() {
 
     @OneToMany(mappedBy = "clsUnitByIdUnit")
     @JsonIgnore
-public Collection<DocRoutingEntity> getDocRoutingsById() {
+    public Collection<DocRoutingEntity> getDocRoutingsById() {
         return docRoutingsById;
     }
 
@@ -229,7 +229,7 @@ public Collection<DocRoutingEntity> getDocRoutingsById() {
 
     @OneToMany(mappedBy = "clsUnitByIdConsumUnit")
     @JsonIgnore
-public Collection<RegExecRoutingConsumEntity> getRegExecRoutingConsumsById() {
+    public Collection<RegExecRoutingConsumEntity> getRegExecRoutingConsumsById() {
         return regExecRoutingConsumsById;
     }
 
@@ -239,7 +239,7 @@ public Collection<RegExecRoutingConsumEntity> getRegExecRoutingConsumsById() {
 
     @OneToMany(mappedBy = "clsUnitByIdUnit")
     @JsonIgnore
-public Collection<RegExecRoutingEquipmentEntity> getRegExecRoutingEquipmentsById() {
+    public Collection<RegExecRoutingEquipmentEntity> getRegExecRoutingEquipmentsById() {
         return regExecRoutingEquipmentsById;
     }
 
@@ -249,7 +249,7 @@ public Collection<RegExecRoutingEquipmentEntity> getRegExecRoutingEquipmentsById
 
     @OneToMany(mappedBy = "clsUnitByIdFertilizerUnit")
     @JsonIgnore
-public Collection<RegExecRoutingFertilizerEntity> getRegExecRoutingFertilizersById() {
+    public Collection<RegExecRoutingFertilizerEntity> getRegExecRoutingFertilizersById() {
         return regExecRoutingFertilizersById;
     }
 
@@ -259,7 +259,7 @@ public Collection<RegExecRoutingFertilizerEntity> getRegExecRoutingFertilizersBy
 
     @OneToMany(mappedBy = "clsUnitByIdProtectionEquipmentUnit")
     @JsonIgnore
-public Collection<RegExecRoutingProtectionEquipmentEntity> getRegExecRoutingProtectionEquipmentsById() {
+    public Collection<RegExecRoutingProtectionEquipmentEntity> getRegExecRoutingProtectionEquipmentsById() {
         return regExecRoutingProtectionEquipmentsById;
     }
 
@@ -269,7 +269,7 @@ public Collection<RegExecRoutingProtectionEquipmentEntity> getRegExecRoutingProt
 
     @OneToMany(mappedBy = "clsUnitByIdConsumableUnit")
     @JsonIgnore
-public Collection<TpRoutingConsumEntity> getTpRoutingConsumsById() {
+    public Collection<TpRoutingConsumEntity> getTpRoutingConsumsById() {
         return tpRoutingConsumsById;
     }
 
@@ -279,7 +279,7 @@ public Collection<TpRoutingConsumEntity> getTpRoutingConsumsById() {
 
     @OneToMany(mappedBy = "clsUnitByIdFuelUnit")
     @JsonIgnore
-public Collection<TpRoutingEquipmentEntity> getTpRoutingEquipmentsById() {
+    public Collection<TpRoutingEquipmentEntity> getTpRoutingEquipmentsById() {
         return tpRoutingEquipmentsById;
     }
 
@@ -289,7 +289,7 @@ public Collection<TpRoutingEquipmentEntity> getTpRoutingEquipmentsById() {
 
     @OneToMany(mappedBy = "clsUnitByIdFertilizerUnit")
     @JsonIgnore
-public Collection<TpRoutingFertilizerEntity> getTpRoutingFertilizersById() {
+    public Collection<TpRoutingFertilizerEntity> getTpRoutingFertilizersById() {
         return tpRoutingFertilizersById;
     }
 
@@ -299,7 +299,7 @@ public Collection<TpRoutingFertilizerEntity> getTpRoutingFertilizersById() {
 
     @OneToMany(mappedBy = "clsUnitByIdProtectionEquipmentUnit")
     @JsonIgnore
-public Collection<TpRoutingProtectionEquipmentEntity> getTpRoutingProtectionEquipmentsById() {
+    public Collection<TpRoutingProtectionEquipmentEntity> getTpRoutingProtectionEquipmentsById() {
         return tpRoutingProtectionEquipmentsById;
     }
 
@@ -309,7 +309,7 @@ public Collection<TpRoutingProtectionEquipmentEntity> getTpRoutingProtectionEqui
 
     @OneToMany(mappedBy = "clsUnitByIdUnitWeight")
     @JsonIgnore
-public Collection<RegAnimalParamEntity> getRegAnimalParamsById() {
+    public Collection<RegAnimalParamEntity> getRegAnimalParamsById() {
         return regAnimalParamsById;
     }
 
@@ -319,7 +319,7 @@ public Collection<RegAnimalParamEntity> getRegAnimalParamsById() {
 
     @OneToMany(mappedBy = "clsUnitByIdUnit")
     @JsonIgnore
-public Collection<ClsConsumableEntity> getClsConsumablesById() {
+    public Collection<ClsConsumableEntity> getClsConsumablesById() {
         return clsConsumablesById;
     }
 
@@ -329,7 +329,7 @@ public Collection<ClsConsumableEntity> getClsConsumablesById() {
 
     @OneToMany(mappedBy = "clsUnitByIdUnitFrom")
     @JsonIgnore
-public Collection<ClsUnitRatioEntity> getClsUnitRatiosById() {
+    public Collection<ClsUnitRatioEntity> getClsUnitRatiosById() {
         return clsUnitRatiosById;
     }
 
@@ -339,7 +339,7 @@ public Collection<ClsUnitRatioEntity> getClsUnitRatiosById() {
 
     @OneToMany(mappedBy = "clsUnitByIdUnitTo")
     @JsonIgnore
-public Collection<ClsUnitRatioEntity> getClsUnitRatiosById_0() {
+    public Collection<ClsUnitRatioEntity> getClsUnitRatiosById_0() {
         return clsUnitRatiosById_0;
     }
 

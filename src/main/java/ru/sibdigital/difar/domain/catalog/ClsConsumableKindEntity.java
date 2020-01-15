@@ -121,7 +121,7 @@ public class ClsConsumableKindEntity {
 
     @OneToMany(mappedBy = "clsConsumableKindByIdConsumableKind")
     @JsonIgnore
-public Collection<ClsConsumableEntity> getClsConsumablesById() {
+    public Collection<ClsConsumableEntity> getClsConsumablesById() {
         return clsConsumablesById;
     }
 

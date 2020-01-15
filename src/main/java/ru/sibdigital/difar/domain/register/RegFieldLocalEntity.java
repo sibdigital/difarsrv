@@ -19,7 +19,7 @@ public class RegFieldLocalEntity {
     private long idDistrict;
     private long idArea;
     private long idDepart;
-//    private Object bound;
+    //    private Object bound;
     private BigDecimal area;
     private ClsFieldEntity clsFieldByIdField;
     private ClsRegionEntity clsRegionByIdRegion;

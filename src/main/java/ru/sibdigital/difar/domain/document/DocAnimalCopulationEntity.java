@@ -186,7 +186,7 @@ public class DocAnimalCopulationEntity {
 
     @OneToMany(mappedBy = "docAnimalCopulationByIdAnimalCopulation")
     @JsonIgnore
-public Collection<TpAnimalCopulationAnimalEntity> getTpAnimalCopulationAnimalsById() {
+    public Collection<TpAnimalCopulationAnimalEntity> getTpAnimalCopulationAnimalsById() {
         return tpAnimalCopulationAnimalsById;
     }
 
@@ -196,7 +196,7 @@ public Collection<TpAnimalCopulationAnimalEntity> getTpAnimalCopulationAnimalsBy
 
     @OneToMany(mappedBy = "docAnimalCopulationByIdAnimalCopulation")
     @JsonIgnore
-public Collection<TpAnimalCopulationAnimalGroupEntity> getTpAnimalCopulationAnimalGroupsById() {
+    public Collection<TpAnimalCopulationAnimalGroupEntity> getTpAnimalCopulationAnimalGroupsById() {
         return tpAnimalCopulationAnimalGroupsById;
     }
 
@@ -206,7 +206,7 @@ public Collection<TpAnimalCopulationAnimalGroupEntity> getTpAnimalCopulationAnim
 
     @OneToMany(mappedBy = "docAnimalCopulationByIdAnimalCopulation")
     @JsonIgnore
-public Collection<TpAnimalCopulationAnimalGroupFemaleEntity> getTpAnimalCopulationAnimalGroupFemalesById() {
+    public Collection<TpAnimalCopulationAnimalGroupFemaleEntity> getTpAnimalCopulationAnimalGroupFemalesById() {
         return tpAnimalCopulationAnimalGroupFemalesById;
     }
 

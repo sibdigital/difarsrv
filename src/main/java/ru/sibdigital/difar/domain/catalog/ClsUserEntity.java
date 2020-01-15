@@ -170,7 +170,7 @@ public class ClsUserEntity {
 
     @OneToMany(mappedBy = "clsUserByIdUser")
     @JsonIgnore
-public Collection<RegUserRoleEntity> getRegUserRolesById() {
+    public Collection<RegUserRoleEntity> getRegUserRolesById() {
         return regUserRolesById;
     }
 

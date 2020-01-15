@@ -40,7 +40,7 @@ public class RegAnimalEntity {
     private String chipIdent;
     private JsonNode ident;
     private String nick;
-//    private Object motherPath;
+    //    private Object motherPath;
 //    private Object fatherPath;
     private ClsOrganizationEntity clsOrganizationByIdOrganization;
     private ClsPartnerEntity clsPartnerByIdPartner;
@@ -490,7 +490,7 @@ public class RegAnimalEntity {
 
     @OneToMany(mappedBy = "regAnimalByIdAnimal")
     @JsonIgnore
-public Collection<RegAnimalGroupEntity> getRegAnimalGroupsById() {
+    public Collection<RegAnimalGroupEntity> getRegAnimalGroupsById() {
         return regAnimalGroupsById;
     }
 
@@ -500,7 +500,7 @@ public Collection<RegAnimalGroupEntity> getRegAnimalGroupsById() {
 
     @OneToMany(mappedBy = "regAnimalByIdAnimal")
     @JsonIgnore
-public Collection<RegAnimalLocalEntity> getRegAnimalLocalsById() {
+    public Collection<RegAnimalLocalEntity> getRegAnimalLocalsById() {
         return regAnimalLocalsById;
     }
 
@@ -510,7 +510,7 @@ public Collection<RegAnimalLocalEntity> getRegAnimalLocalsById() {
 
     @OneToMany(mappedBy = "regAnimalByIdAnimal")
     @JsonIgnore
-public Collection<RegAnimalParamEntity> getRegAnimalParamsById() {
+    public Collection<RegAnimalParamEntity> getRegAnimalParamsById() {
         return regAnimalParamsById;
     }
 
@@ -520,7 +520,7 @@ public Collection<RegAnimalParamEntity> getRegAnimalParamsById() {
 
     @OneToMany(mappedBy = "regAnimalByIdAnimal")
     @JsonIgnore
-public Collection<RegAnimalStateEntity> getRegAnimalStatesById() {
+    public Collection<RegAnimalStateEntity> getRegAnimalStatesById() {
         return regAnimalStatesById;
     }
 
@@ -530,7 +530,7 @@ public Collection<RegAnimalStateEntity> getRegAnimalStatesById() {
 
     @OneToMany(mappedBy = "regAnimalByIdAnimal")
     @JsonIgnore
-public Collection<TpAnimalAppraisalAnimalEntity> getTpAnimalAppraisalAnimalsById() {
+    public Collection<TpAnimalAppraisalAnimalEntity> getTpAnimalAppraisalAnimalsById() {
         return tpAnimalAppraisalAnimalsById;
     }
 
@@ -540,7 +540,7 @@ public Collection<TpAnimalAppraisalAnimalEntity> getTpAnimalAppraisalAnimalsById
 
     @OneToMany(mappedBy = "regAnimalByIdAnimalMother")
     @JsonIgnore
-public Collection<TpAnimalBeatingAnimalEntity> getTpAnimalBeatingAnimalsById() {
+    public Collection<TpAnimalBeatingAnimalEntity> getTpAnimalBeatingAnimalsById() {
         return tpAnimalBeatingAnimalsById;
     }
 
@@ -550,7 +550,7 @@ public Collection<TpAnimalBeatingAnimalEntity> getTpAnimalBeatingAnimalsById() {
 
     @OneToMany(mappedBy = "regAnimalByIdAnimalChild")
     @JsonIgnore
-public Collection<TpAnimalBeatingAnimalEntity> getTpAnimalBeatingAnimalsById_0() {
+    public Collection<TpAnimalBeatingAnimalEntity> getTpAnimalBeatingAnimalsById_0() {
         return tpAnimalBeatingAnimalsById_0;
     }
 
@@ -560,7 +560,7 @@ public Collection<TpAnimalBeatingAnimalEntity> getTpAnimalBeatingAnimalsById_0()
 
     @OneToMany(mappedBy = "regAnimalByIdAnimalChild")
     @JsonIgnore
-public Collection<TpAnimalBeatingAnimalGroupEntity> getTpAnimalBeatingAnimalGroupsById() {
+    public Collection<TpAnimalBeatingAnimalGroupEntity> getTpAnimalBeatingAnimalGroupsById() {
         return tpAnimalBeatingAnimalGroupsById;
     }
 
@@ -570,7 +570,7 @@ public Collection<TpAnimalBeatingAnimalGroupEntity> getTpAnimalBeatingAnimalGrou
 
     @OneToMany(mappedBy = "regAnimalByIdAnimalMother")
     @JsonIgnore
-public Collection<TpAnimalCalvingAnimalEntity> getTpAnimalCalvingAnimalsById() {
+    public Collection<TpAnimalCalvingAnimalEntity> getTpAnimalCalvingAnimalsById() {
         return tpAnimalCalvingAnimalsById;
     }
 
@@ -580,7 +580,7 @@ public Collection<TpAnimalCalvingAnimalEntity> getTpAnimalCalvingAnimalsById() {
 
     @OneToMany(mappedBy = "regAnimalByIdAnimalFather")
     @JsonIgnore
-public Collection<TpAnimalCalvingAnimalEntity> getTpAnimalCalvingAnimalsById_0() {
+    public Collection<TpAnimalCalvingAnimalEntity> getTpAnimalCalvingAnimalsById_0() {
         return tpAnimalCalvingAnimalsById_0;
     }
 
@@ -590,7 +590,7 @@ public Collection<TpAnimalCalvingAnimalEntity> getTpAnimalCalvingAnimalsById_0()
 
     @OneToMany(mappedBy = "regAnimalByIdAnimalChild")
     @JsonIgnore
-public Collection<TpAnimalCalvingAnimalEntity> getTpAnimalCalvingAnimalsById_1() {
+    public Collection<TpAnimalCalvingAnimalEntity> getTpAnimalCalvingAnimalsById_1() {
         return tpAnimalCalvingAnimalsById_1;
     }
 
@@ -600,7 +600,7 @@ public Collection<TpAnimalCalvingAnimalEntity> getTpAnimalCalvingAnimalsById_1()
 
     @OneToMany(mappedBy = "regAnimalByIdAnimalChild")
     @JsonIgnore
-public Collection<TpAnimalCalvingAnimalGroupEntity> getTpAnimalCalvingAnimalGroupsById() {
+    public Collection<TpAnimalCalvingAnimalGroupEntity> getTpAnimalCalvingAnimalGroupsById() {
         return tpAnimalCalvingAnimalGroupsById;
     }
 
@@ -610,7 +610,7 @@ public Collection<TpAnimalCalvingAnimalGroupEntity> getTpAnimalCalvingAnimalGrou
 
     @OneToMany(mappedBy = "regAnimalByIdAnimalFemale")
     @JsonIgnore
-public Collection<TpAnimalCopulationAnimalEntity> getTpAnimalCopulationAnimalsById() {
+    public Collection<TpAnimalCopulationAnimalEntity> getTpAnimalCopulationAnimalsById() {
         return tpAnimalCopulationAnimalsById;
     }
 
@@ -620,7 +620,7 @@ public Collection<TpAnimalCopulationAnimalEntity> getTpAnimalCopulationAnimalsBy
 
     @OneToMany(mappedBy = "regAnimalByIdAnimalMale")
     @JsonIgnore
-public Collection<TpAnimalCopulationAnimalEntity> getTpAnimalCopulationAnimalsById_0() {
+    public Collection<TpAnimalCopulationAnimalEntity> getTpAnimalCopulationAnimalsById_0() {
         return tpAnimalCopulationAnimalsById_0;
     }
 
@@ -630,7 +630,7 @@ public Collection<TpAnimalCopulationAnimalEntity> getTpAnimalCopulationAnimalsBy
 
     @OneToMany(mappedBy = "regAnimalByIdAnimal1")
     @JsonIgnore
-public Collection<TpAnimalEventAnimalEntity> getTpAnimalEventAnimalsById() {
+    public Collection<TpAnimalEventAnimalEntity> getTpAnimalEventAnimalsById() {
         return tpAnimalEventAnimalsById;
     }
 
@@ -640,7 +640,7 @@ public Collection<TpAnimalEventAnimalEntity> getTpAnimalEventAnimalsById() {
 
     @OneToMany(mappedBy = "regAnimalByIdAnimal2")
     @JsonIgnore
-public Collection<TpAnimalEventAnimalEntity> getTpAnimalEventAnimalsById_0() {
+    public Collection<TpAnimalEventAnimalEntity> getTpAnimalEventAnimalsById_0() {
         return tpAnimalEventAnimalsById_0;
     }
 
@@ -650,7 +650,7 @@ public Collection<TpAnimalEventAnimalEntity> getTpAnimalEventAnimalsById_0() {
 
     @OneToMany(mappedBy = "regAnimalByIdAnimal")
     @JsonIgnore
-public Collection<TpAnimalRetirementAnimalEntity> getTpAnimalRetirementAnimalsById() {
+    public Collection<TpAnimalRetirementAnimalEntity> getTpAnimalRetirementAnimalsById() {
         return tpAnimalRetirementAnimalsById;
     }
 
@@ -660,7 +660,7 @@ public Collection<TpAnimalRetirementAnimalEntity> getTpAnimalRetirementAnimalsBy
 
     @OneToMany(mappedBy = "regAnimalByIdAnimal")
     @JsonIgnore
-public Collection<TpAnimalSaleAnimalEntity> getTpAnimalSaleAnimalsById() {
+    public Collection<TpAnimalSaleAnimalEntity> getTpAnimalSaleAnimalsById() {
         return tpAnimalSaleAnimalsById;
     }
 
@@ -670,7 +670,7 @@ public Collection<TpAnimalSaleAnimalEntity> getTpAnimalSaleAnimalsById() {
 
     @OneToMany(mappedBy = "regAnimalByIdAnimal")
     @JsonIgnore
-public Collection<TpAnimalTransferAnimalEntity> getTpAnimalTransferAnimalsById() {
+    public Collection<TpAnimalTransferAnimalEntity> getTpAnimalTransferAnimalsById() {
         return tpAnimalTransferAnimalsById;
     }
 

@@ -163,7 +163,7 @@ public class ClsTypeAnimalEventEntity {
 
     @OneToMany(mappedBy = "clsTypeAnimalEventByIdTypeAnimalEvent")
     @JsonIgnore
-public Collection<DocAnimalAppraisalEntity> getDocAnimalAppraisalsById() {
+    public Collection<DocAnimalAppraisalEntity> getDocAnimalAppraisalsById() {
         return docAnimalAppraisalsById;
     }
 
@@ -173,7 +173,7 @@ public Collection<DocAnimalAppraisalEntity> getDocAnimalAppraisalsById() {
 
     @OneToMany(mappedBy = "clsTypeAnimalEventByIdTypeAnimalEvent")
     @JsonIgnore
-public Collection<DocAnimalBeatingEntity> getDocAnimalBeatingsById() {
+    public Collection<DocAnimalBeatingEntity> getDocAnimalBeatingsById() {
         return docAnimalBeatingsById;
     }
 
@@ -183,7 +183,7 @@ public Collection<DocAnimalBeatingEntity> getDocAnimalBeatingsById() {
 
     @OneToMany(mappedBy = "clsTypeAnimalEventByIdTypeAnimalEvent")
     @JsonIgnore
-public Collection<DocAnimalCalvingEntity> getDocAnimalCalvingsById() {
+    public Collection<DocAnimalCalvingEntity> getDocAnimalCalvingsById() {
         return docAnimalCalvingsById;
     }
 
@@ -193,7 +193,7 @@ public Collection<DocAnimalCalvingEntity> getDocAnimalCalvingsById() {
 
     @OneToMany(mappedBy = "clsTypeAnimalEventByIdTypeAnimalEvent")
     @JsonIgnore
-public Collection<DocAnimalCopulationEntity> getDocAnimalCopulationsById() {
+    public Collection<DocAnimalCopulationEntity> getDocAnimalCopulationsById() {
         return docAnimalCopulationsById;
     }
 
@@ -203,7 +203,7 @@ public Collection<DocAnimalCopulationEntity> getDocAnimalCopulationsById() {
 
     @OneToMany(mappedBy = "clsTypeAnimalEventByIdTypeAnimalEvent")
     @JsonIgnore
-public Collection<DocAnimalEventEntity> getDocAnimalEventsById() {
+    public Collection<DocAnimalEventEntity> getDocAnimalEventsById() {
         return docAnimalEventsById;
     }
 
@@ -213,7 +213,7 @@ public Collection<DocAnimalEventEntity> getDocAnimalEventsById() {
 
     @OneToMany(mappedBy = "clsTypeAnimalEventByIdTypeAnimalEvent")
     @JsonIgnore
-public Collection<DocAnimalRetirementEntity> getDocAnimalRetirementsById() {
+    public Collection<DocAnimalRetirementEntity> getDocAnimalRetirementsById() {
         return docAnimalRetirementsById;
     }
 
@@ -223,7 +223,7 @@ public Collection<DocAnimalRetirementEntity> getDocAnimalRetirementsById() {
 
     @OneToMany(mappedBy = "clsTypeAnimalEventByIdTypeAnimalEvent")
     @JsonIgnore
-public Collection<DocAnimalSaleEntity> getDocAnimalSalesById() {
+    public Collection<DocAnimalSaleEntity> getDocAnimalSalesById() {
         return docAnimalSalesById;
     }
 
@@ -233,7 +233,7 @@ public Collection<DocAnimalSaleEntity> getDocAnimalSalesById() {
 
     @OneToMany(mappedBy = "clsTypeAnimalEventByIdTypeAnimalEvent")
     @JsonIgnore
-public Collection<DocAnimalTransferEntity> getDocAnimalTransfersById() {
+    public Collection<DocAnimalTransferEntity> getDocAnimalTransfersById() {
         return docAnimalTransfersById;
     }
 
@@ -243,7 +243,7 @@ public Collection<DocAnimalTransferEntity> getDocAnimalTransfersById() {
 
     @OneToMany(mappedBy = "clsTypeAnimalEventByIdTypeAnimalEvent")
     @JsonIgnore
-public Collection<RegAnimalStateEntity> getRegAnimalStatesById() {
+    public Collection<RegAnimalStateEntity> getRegAnimalStatesById() {
         return regAnimalStatesById;
     }
 

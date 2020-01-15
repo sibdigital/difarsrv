@@ -169,7 +169,7 @@ public class RegOrganizationProtectionEquipmentEntity {
 
     @OneToMany(mappedBy = "regOrganizationProtectionEquipmentByIdOrganizationProtectionEquipment")
     @JsonIgnore
-public Collection<RegExecRoutingProtectionEquipmentEntity> getRegExecRoutingProtectionEquipmentsById() {
+    public Collection<RegExecRoutingProtectionEquipmentEntity> getRegExecRoutingProtectionEquipmentsById() {
         return regExecRoutingProtectionEquipmentsById;
     }
 
@@ -179,7 +179,7 @@ public Collection<RegExecRoutingProtectionEquipmentEntity> getRegExecRoutingProt
 
     @OneToMany(mappedBy = "regOrganizationProtectionEquipmentByIdRoutingProtectionEquipment")
     @JsonIgnore
-public Collection<RegExecRoutingProtectionEquipmentEntity> getRegExecRoutingProtectionEquipmentsById_0() {
+    public Collection<RegExecRoutingProtectionEquipmentEntity> getRegExecRoutingProtectionEquipmentsById_0() {
         return regExecRoutingProtectionEquipmentsById_0;
     }
 
@@ -209,7 +209,7 @@ public Collection<RegExecRoutingProtectionEquipmentEntity> getRegExecRoutingProt
 
     @OneToMany(mappedBy = "regOrganizationProtectionEquipmentByIdOrganizationProtectionEquipment")
     @JsonIgnore
-public Collection<TpRoutingProtectionEquipmentEntity> getTpRoutingProtectionEquipmentsById() {
+    public Collection<TpRoutingProtectionEquipmentEntity> getTpRoutingProtectionEquipmentsById() {
         return tpRoutingProtectionEquipmentsById;
     }
 

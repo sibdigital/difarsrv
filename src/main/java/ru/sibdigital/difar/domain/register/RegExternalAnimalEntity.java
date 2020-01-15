@@ -33,7 +33,7 @@ public class RegExternalAnimalEntity {
     private String chipIdent;
     private JsonNode ident;
     private String nick;
-//    private Object motherPath;
+    //    private Object motherPath;
 //    private Object fatherPath;
     private ClsOrganizationEntity clsOrganizationByIdOrganization;
     private ClsPartnerEntity clsPartnerByIdPartner;

@@ -124,7 +124,7 @@ public class ClsRoleEntity {
 
     @OneToMany(mappedBy = "clsRoleByIdRole")
     @JsonIgnore
-public Collection<RegCvitantionEntity> getRegCvitantionsById() {
+    public Collection<RegCvitantionEntity> getRegCvitantionsById() {
         return regCvitantionsById;
     }
 
@@ -134,7 +134,7 @@ public Collection<RegCvitantionEntity> getRegCvitantionsById() {
 
     @OneToMany(mappedBy = "clsRoleByIdRole")
     @JsonIgnore
-public Collection<RegUserRoleEntity> getRegUserRolesById() {
+    public Collection<RegUserRoleEntity> getRegUserRolesById() {
         return regUserRolesById;
     }
 

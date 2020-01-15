@@ -149,7 +149,7 @@ public class ClsStandardPeriodEntity {
 
     @OneToMany(mappedBy = "clsStandardPeriodByIdStandardPeriod")
     @JsonIgnore
-public Collection<DocRoutingEntity> getDocRoutingsById() {
+    public Collection<DocRoutingEntity> getDocRoutingsById() {
         return docRoutingsById;
     }
 
@@ -159,7 +159,7 @@ public Collection<DocRoutingEntity> getDocRoutingsById() {
 
     @OneToMany(mappedBy = "clsStandardPeriodByIdStandardPeriod")
     @JsonIgnore
-public Collection<ClsArbitraryPeriodEntity> getClsArbitraryPeriodsById() {
+    public Collection<ClsArbitraryPeriodEntity> getClsArbitraryPeriodsById() {
         return ClsArbitraryPeriodsById;
     }
 

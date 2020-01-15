@@ -1,8 +1,8 @@
 package ru.sibdigital.difar.repository.catalog;
 
-import org.springframework.data.repository.CrudRepository;
 import ru.sibdigital.difar.domain.catalog.ClsAgeSexGroupEntity;
+import ru.sibdigital.difar.repository.base.BaseCrudRepository;
 
-public interface ClsAgeSexGroupRepository extends CrudRepository<ClsAgeSexGroupEntity, Long> {
+public interface ClsAgeSexGroupRepository extends BaseCrudRepository<ClsAgeSexGroupEntity> {
 
 }

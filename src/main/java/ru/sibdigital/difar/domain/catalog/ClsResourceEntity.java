@@ -122,7 +122,7 @@ public class ClsResourceEntity {
 
     @OneToMany(mappedBy = "clsResourceByIdResource")
     @JsonIgnore
-public Collection<RegCvitantionEntity> getRegCvitantionsById() {
+    public Collection<RegCvitantionEntity> getRegCvitantionsById() {
         return regCvitantionsById;
     }
 

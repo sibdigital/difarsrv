@@ -122,7 +122,7 @@ public class ClsAnimalGroupKindEntity {
 
     @OneToMany(mappedBy = "clsAnimalGroupKindByIdAnimalGroupKind")
     @JsonIgnore
-public Collection<RegAnimalGroupEntity> getRegAnimalGroupsById() {
+    public Collection<RegAnimalGroupEntity> getRegAnimalGroupsById() {
         return regAnimalGroupsById;
     }
 
