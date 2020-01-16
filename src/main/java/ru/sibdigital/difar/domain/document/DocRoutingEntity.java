@@ -1,7 +1,11 @@
 package ru.sibdigital.difar.domain.document;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import ru.sibdigital.difar.domain.catalog.*;
+import ru.sibdigital.difar.domain.catalog.agrc.ClsCropEntity;
+import ru.sibdigital.difar.domain.catalog.agrc.ClsFieldEntity;
+import ru.sibdigital.difar.domain.catalog.dict.ClsOrganizationEntity;
+import ru.sibdigital.difar.domain.catalog.dict.ClsStandardPeriodEntity;
+import ru.sibdigital.difar.domain.catalog.dict.ClsUnitEntity;
 import ru.sibdigital.difar.domain.register.*;
 import ru.sibdigital.difar.domain.tableparts.*;
 

@@ -5,8 +5,8 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
-import ru.sibdigital.difar.domain.catalog.ClsAgeSexGroupEntity;
-import ru.sibdigital.difar.domain.catalog.ClsUserEntity;
+import ru.sibdigital.difar.domain.catalog.accs.ClsUserEntity;
+import ru.sibdigital.difar.domain.catalog.breed.ClsAgeSexGroupEntity;
 
 import static org.junit.Assert.*;
 
@@ -16,9 +16,6 @@ public class ClsAgeSexGroupRepositoryTest extends AbstractClsTest {
 
     @Autowired
     private ClsAgeSexGroupRepository ageSexGroupRepository;
-
-    @Autowired
-    private ClsUserRepository userRepository;
 
     private ClsAgeSexGroupEntity getEntityForSave() {
         String code = "А-00001";
@@ -47,7 +44,7 @@ public class ClsAgeSexGroupRepositoryTest extends AbstractClsTest {
     }
 
     @Test
-    public void youngCRUDTest() throws Exception {
+    public void CRUDTest() throws Exception {
         // сохранение
         ClsAgeSexGroupEntity entity = getEntityForSave();
         ClsAgeSexGroupEntity saved = ageSexGroupRepository.save(entity);

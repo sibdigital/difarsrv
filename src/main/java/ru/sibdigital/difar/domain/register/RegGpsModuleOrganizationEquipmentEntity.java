@@ -1,7 +1,7 @@
 package ru.sibdigital.difar.domain.register;
 
-import ru.sibdigital.difar.domain.catalog.ClsGpsModuleEntity;
-import ru.sibdigital.difar.domain.catalog.ClsOrganizationEntity;
+import ru.sibdigital.difar.domain.catalog.agrc.ClsGpsModuleEntity;
+import ru.sibdigital.difar.domain.catalog.dict.ClsOrganizationEntity;
 
 import javax.persistence.*;
 import java.sql.Timestamp;

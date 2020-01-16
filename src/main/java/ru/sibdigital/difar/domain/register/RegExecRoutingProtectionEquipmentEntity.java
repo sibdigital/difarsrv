@@ -1,7 +1,7 @@
 package ru.sibdigital.difar.domain.register;
 
-import ru.sibdigital.difar.domain.catalog.ClsEmployeeEntity;
-import ru.sibdigital.difar.domain.catalog.ClsUnitEntity;
+import ru.sibdigital.difar.domain.catalog.dict.ClsUnitEntity;
+import ru.sibdigital.difar.domain.catalog.org.ClsEmployeeEntity;
 import ru.sibdigital.difar.domain.document.DocRoutingEntity;
 import ru.sibdigital.difar.domain.tableparts.TpRoutingWorkEntity;
 

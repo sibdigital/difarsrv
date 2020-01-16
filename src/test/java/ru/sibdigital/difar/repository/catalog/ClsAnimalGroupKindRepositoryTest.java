@@ -5,7 +5,7 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
-import ru.sibdigital.difar.domain.catalog.ClsAnimalGroupKindEntity;
+import ru.sibdigital.difar.domain.catalog.breed.ClsAnimalGroupKindEntity;
 
 import static org.junit.Assert.assertNotNull;
 

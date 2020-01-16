@@ -4,7 +4,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.vladmihalcea.hibernate.type.json.JsonNodeBinaryType;
 import org.hibernate.annotations.Type;
 import org.hibernate.annotations.TypeDef;
-import ru.sibdigital.difar.domain.catalog.ClsAnimalRetirementCauseEntity;
+import ru.sibdigital.difar.domain.catalog.breed.ClsAnimalRetirementCauseEntity;
 import ru.sibdigital.difar.domain.document.DocAnimalRetirementEntity;
 import ru.sibdigital.difar.domain.register.RegAnimalEntity;
 

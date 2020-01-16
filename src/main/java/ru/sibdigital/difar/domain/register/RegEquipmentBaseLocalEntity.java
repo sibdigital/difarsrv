@@ -1,7 +1,7 @@
 package ru.sibdigital.difar.domain.register;
 
-import ru.sibdigital.difar.domain.catalog.ClsOrganizationEntity;
-import ru.sibdigital.difar.domain.catalog.ClsRanchEntity;
+import ru.sibdigital.difar.domain.catalog.dict.ClsOrganizationEntity;
+import ru.sibdigital.difar.domain.catalog.org.ClsRanchEntity;
 
 import javax.persistence.*;
 import java.sql.Timestamp;

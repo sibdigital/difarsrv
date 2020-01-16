@@ -1,8 +1,8 @@
 package ru.sibdigital.difar.domain.document;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import ru.sibdigital.difar.domain.catalog.ClsPartnerEntity;
-import ru.sibdigital.difar.domain.catalog.ClsTypeAnimalEventEntity;
+import ru.sibdigital.difar.domain.catalog.breed.ClsTypeAnimalEventEntity;
+import ru.sibdigital.difar.domain.catalog.dict.ClsPartnerEntity;
 import ru.sibdigital.difar.domain.tableparts.TpAnimalSaleAnimalEntity;
 import ru.sibdigital.difar.domain.tableparts.TpAnimalSaleAnimalGroupEntity;
 

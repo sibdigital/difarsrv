@@ -5,8 +5,8 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.vladmihalcea.hibernate.type.json.JsonNodeBinaryType;
 import org.hibernate.annotations.Type;
 import org.hibernate.annotations.TypeDef;
-import ru.sibdigital.difar.domain.catalog.ClsOrganizationEntity;
-import ru.sibdigital.difar.domain.catalog.ClsTypeAnimalEventEntity;
+import ru.sibdigital.difar.domain.catalog.breed.ClsTypeAnimalEventEntity;
+import ru.sibdigital.difar.domain.catalog.dict.ClsOrganizationEntity;
 import ru.sibdigital.difar.domain.tableparts.TpAnimalEventAnimalEntity;
 import ru.sibdigital.difar.domain.tableparts.TpAnimalEventAnimalGroupEntity;
 

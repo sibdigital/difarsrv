@@ -1,7 +1,7 @@
 package ru.sibdigital.difar.domain.register;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import ru.sibdigital.difar.domain.catalog.ClsEmployeeEntity;
+import ru.sibdigital.difar.domain.catalog.org.ClsEmployeeEntity;
 import ru.sibdigital.difar.domain.document.DocRoutingEntity;
 import ru.sibdigital.difar.domain.tableparts.TpRoutingWorkEntity;
 

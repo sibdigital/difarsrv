@@ -1,7 +1,7 @@
 package ru.sibdigital.difar.controller;
 
 import org.springframework.web.bind.annotation.*;
-import ru.sibdigital.difar.domain.catalog.ClsUserEntity;
+import ru.sibdigital.difar.domain.catalog.accs.ClsUserEntity;
 import ru.sibdigital.difar.repository.catalog.ClsUserRepository;
 
 import java.util.Map;

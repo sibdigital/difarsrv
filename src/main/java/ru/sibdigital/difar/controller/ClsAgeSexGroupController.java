@@ -1,7 +1,7 @@
 package ru.sibdigital.difar.controller;
 
 import org.springframework.web.bind.annotation.*;
-import ru.sibdigital.difar.domain.catalog.ClsAgeSexGroupEntity;
+import ru.sibdigital.difar.domain.catalog.breed.ClsAgeSexGroupEntity;
 import ru.sibdigital.difar.repository.catalog.ClsAgeSexGroupRepository;
 
 import java.util.Optional;
