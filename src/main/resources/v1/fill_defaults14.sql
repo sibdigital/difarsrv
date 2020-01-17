@@ -92,3 +92,15 @@ values (base.default_name(), '-infinity', base.default_number(),
     1
 )
 ;
+insert into dict.cls_work_type(name, date_create, number,
+                               id_parent,
+                               id_user_creator,
+                               parent_path
+)
+values (base.default_name(), '-infinity', base.default_number(),
+        0,
+        1,
+        '000000000000000'
+       )
+;
+
