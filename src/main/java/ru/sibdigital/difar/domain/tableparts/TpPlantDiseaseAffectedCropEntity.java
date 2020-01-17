@@ -1,9 +1,9 @@
 package ru.sibdigital.difar.domain.tableparts;
 
-import ru.sibdigital.difar.domain.catalog.agrc.ClsCropEntity;
-import ru.sibdigital.difar.domain.catalog.agrc.ClsPlantDiseaseEntity;
-import ru.sibdigital.difar.domain.catalog.agrc.ClsProtectionEquipmentEntity;
-import ru.sibdigital.difar.domain.catalog.agrc.ClsVegetPeriodEntity;
+import ru.sibdigital.difar.domain.classifier.agrc.ClsCropEntity;
+import ru.sibdigital.difar.domain.classifier.agrc.ClsPlantDiseaseEntity;
+import ru.sibdigital.difar.domain.classifier.agrc.ClsProtectionEquipmentEntity;
+import ru.sibdigital.difar.domain.classifier.agrc.ClsVegetPeriodEntity;
 
 import javax.persistence.*;
 import java.math.BigDecimal;

@@ -5,9 +5,9 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.vladmihalcea.hibernate.type.json.JsonNodeBinaryType;
 import org.hibernate.annotations.Type;
 import org.hibernate.annotations.TypeDef;
-import ru.sibdigital.difar.domain.catalog.breed.ClsBreedEntity;
-import ru.sibdigital.difar.domain.catalog.breed.ClsKindAnimalEntity;
-import ru.sibdigital.difar.domain.catalog.dict.*;
+import ru.sibdigital.difar.domain.classifier.breed.ClsBreedEntity;
+import ru.sibdigital.difar.domain.classifier.breed.ClsKindAnimalEntity;
+import ru.sibdigital.difar.domain.classifier.dict.*;
 import ru.sibdigital.difar.domain.tableparts.*;
 
 import javax.persistence.*;

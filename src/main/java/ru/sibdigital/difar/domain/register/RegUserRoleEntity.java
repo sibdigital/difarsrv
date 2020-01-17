@@ -1,7 +1,7 @@
 package ru.sibdigital.difar.domain.register;
 
-import ru.sibdigital.difar.domain.catalog.accs.ClsRoleEntity;
-import ru.sibdigital.difar.domain.catalog.accs.ClsUserEntity;
+import ru.sibdigital.difar.domain.classifier.accs.ClsRoleEntity;
+import ru.sibdigital.difar.domain.classifier.accs.ClsUserEntity;
 
 import javax.persistence.*;
 import java.sql.Timestamp;

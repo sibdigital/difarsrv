@@ -5,8 +5,8 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.vladmihalcea.hibernate.type.json.JsonNodeBinaryType;
 import org.hibernate.annotations.Type;
 import org.hibernate.annotations.TypeDef;
-import ru.sibdigital.difar.domain.catalog.agrc.ClsProtectionEquipmentEntity;
-import ru.sibdigital.difar.domain.catalog.dict.ClsOrganizationEntity;
+import ru.sibdigital.difar.domain.classifier.agrc.ClsProtectionEquipmentEntity;
+import ru.sibdigital.difar.domain.classifier.dict.ClsOrganizationEntity;
 import ru.sibdigital.difar.domain.tableparts.TpRoutingProtectionEquipmentEntity;
 
 import javax.persistence.*;

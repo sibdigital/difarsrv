@@ -1,10 +1,10 @@
 package ru.sibdigital.difar.domain.tableparts;
 
-import ru.sibdigital.difar.domain.catalog.agrc.ClsCropEntity;
-import ru.sibdigital.difar.domain.catalog.agrc.ClsPlantPestEntity;
-import ru.sibdigital.difar.domain.catalog.dict.ClsAreaEntity;
-import ru.sibdigital.difar.domain.catalog.dict.ClsDistrictEntity;
-import ru.sibdigital.difar.domain.catalog.dict.ClsRegionEntity;
+import ru.sibdigital.difar.domain.classifier.agrc.ClsCropEntity;
+import ru.sibdigital.difar.domain.classifier.agrc.ClsPlantPestEntity;
+import ru.sibdigital.difar.domain.classifier.dict.ClsAreaEntity;
+import ru.sibdigital.difar.domain.classifier.dict.ClsDistrictEntity;
+import ru.sibdigital.difar.domain.classifier.dict.ClsRegionEntity;
 
 import javax.persistence.*;
 

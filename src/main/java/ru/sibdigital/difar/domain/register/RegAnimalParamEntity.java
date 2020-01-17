@@ -1,8 +1,8 @@
 package ru.sibdigital.difar.domain.register;
 
-import ru.sibdigital.difar.domain.catalog.dict.ClsOrganizationEntity;
-import ru.sibdigital.difar.domain.catalog.dict.ClsUnitEntity;
-import ru.sibdigital.difar.domain.catalog.org.ClsRanchEntity;
+import ru.sibdigital.difar.domain.classifier.dict.ClsOrganizationEntity;
+import ru.sibdigital.difar.domain.classifier.dict.ClsUnitEntity;
+import ru.sibdigital.difar.domain.classifier.org.ClsRanchEntity;
 
 import javax.persistence.*;
 import java.math.BigDecimal;

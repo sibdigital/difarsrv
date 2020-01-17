@@ -1,9 +1,9 @@
 package ru.sibdigital.difar.domain.document;
 
-import ru.sibdigital.difar.domain.catalog.agrc.ClsCropEntity;
-import ru.sibdigital.difar.domain.catalog.agrc.ClsFieldEntity;
-import ru.sibdigital.difar.domain.catalog.dict.ClsOrganizationEntity;
-import ru.sibdigital.difar.domain.catalog.dict.ClsUnitEntity;
+import ru.sibdigital.difar.domain.classifier.agrc.ClsCropEntity;
+import ru.sibdigital.difar.domain.classifier.agrc.ClsFieldEntity;
+import ru.sibdigital.difar.domain.classifier.dict.ClsOrganizationEntity;
+import ru.sibdigital.difar.domain.classifier.dict.ClsUnitEntity;
 
 import javax.persistence.*;
 import java.math.BigDecimal;

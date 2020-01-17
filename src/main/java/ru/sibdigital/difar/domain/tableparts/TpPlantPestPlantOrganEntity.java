@@ -4,9 +4,9 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.vladmihalcea.hibernate.type.json.JsonNodeBinaryType;
 import org.hibernate.annotations.Type;
 import org.hibernate.annotations.TypeDef;
-import ru.sibdigital.difar.domain.catalog.agrc.ClsCropEntity;
-import ru.sibdigital.difar.domain.catalog.agrc.ClsPlantOrganEntity;
-import ru.sibdigital.difar.domain.catalog.agrc.ClsPlantPestEntity;
+import ru.sibdigital.difar.domain.classifier.agrc.ClsCropEntity;
+import ru.sibdigital.difar.domain.classifier.agrc.ClsPlantOrganEntity;
+import ru.sibdigital.difar.domain.classifier.agrc.ClsPlantPestEntity;
 
 import javax.persistence.*;
 

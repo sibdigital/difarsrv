@@ -1,8 +1,8 @@
 package ru.sibdigital.difar.domain.register;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import ru.sibdigital.difar.domain.catalog.dict.ClsEquipmentKindEntity;
-import ru.sibdigital.difar.domain.catalog.dict.ClsOrganizationEntity;
+import ru.sibdigital.difar.domain.classifier.dict.ClsEquipmentKindEntity;
+import ru.sibdigital.difar.domain.classifier.dict.ClsOrganizationEntity;
 import ru.sibdigital.difar.domain.tableparts.TpRoutingEquipmentEntity;
 
 import javax.persistence.*;

@@ -1,8 +1,8 @@
 package ru.sibdigital.difar.controller;
 
 import org.springframework.web.bind.annotation.*;
-import ru.sibdigital.difar.domain.catalog.breed.ClsBreedEntity;
-import ru.sibdigital.difar.repository.catalog.ClsBreedRepository;
+import ru.sibdigital.difar.domain.classifier.breed.ClsBreedEntity;
+import ru.sibdigital.difar.repository.classifier.breed.ClsBreedRepository;
 
 import java.util.Optional;
 

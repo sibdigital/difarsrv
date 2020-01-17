@@ -1,9 +1,9 @@
 package ru.sibdigital.difar.domain.register;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import ru.sibdigital.difar.domain.catalog.breed.ClsAnimalGroupKindEntity;
-import ru.sibdigital.difar.domain.catalog.dict.ClsOrganizationEntity;
-import ru.sibdigital.difar.domain.catalog.org.ClsRanchEntity;
+import ru.sibdigital.difar.domain.classifier.breed.ClsAnimalGroupKindEntity;
+import ru.sibdigital.difar.domain.classifier.dict.ClsOrganizationEntity;
+import ru.sibdigital.difar.domain.classifier.org.ClsRanchEntity;
 import ru.sibdigital.difar.domain.tableparts.*;
 
 import javax.persistence.*;

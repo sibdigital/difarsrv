@@ -1,10 +1,10 @@
 package ru.sibdigital.difar.domain.register;
 
-import ru.sibdigital.difar.domain.catalog.agrc.ClsFieldEntity;
-import ru.sibdigital.difar.domain.catalog.dict.ClsAreaEntity;
-import ru.sibdigital.difar.domain.catalog.dict.ClsDistrictEntity;
-import ru.sibdigital.difar.domain.catalog.dict.ClsRegionEntity;
-import ru.sibdigital.difar.domain.catalog.org.ClsDepartEntity;
+import ru.sibdigital.difar.domain.classifier.agrc.ClsFieldEntity;
+import ru.sibdigital.difar.domain.classifier.dict.ClsAreaEntity;
+import ru.sibdigital.difar.domain.classifier.dict.ClsDistrictEntity;
+import ru.sibdigital.difar.domain.classifier.dict.ClsRegionEntity;
+import ru.sibdigital.difar.domain.classifier.org.ClsDepartEntity;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
