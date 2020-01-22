@@ -232,5 +232,13 @@ insert into agrc.cls_veget_period(id_user_creator, name, date_create, number, co
 values (base.get_default_relation('accs.cls_user'), base.default_name(),
         '-infinity', base.default_number(), base.default_code());
 
+insert into agrc.cls_gps_module(id_user_creator, name, date_create, number, id_organization, description, point)
+values (base.get_default_relation('accs.cls_user'), base.default_name(),
+        '-infinity', base.default_number(),
+        base.get_default_relation('dict.cls_organization'), '{
+    "value": "default"
+  }',
+        POINT(0, 0, 0));
+
 commit
 ;
