@@ -37,8 +37,8 @@ public class ClsPlantOrganRepositoryTest extends ClsBaseTest {
 
     @Test
     public void findDefaultEntryTest() {
-        ClsPlantOrganEntity clsAgeSexGroupEntity = repository.findById(DEFAULT_ID).get();
-        assertNotNull(clsAgeSexGroupEntity);
+        ClsPlantOrganEntity entity = repository.findById(DEFAULT_ID).get();
+        assertNotNull(entity);
     }
 
     @Test

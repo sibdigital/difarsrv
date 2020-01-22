@@ -37,8 +37,8 @@ public class ClsKindAnimalRepositoryTest extends ClsBaseTest {
 
     @Test
     public void findDefaultEntryTest() {
-        ClsKindAnimalEntity clsAgeSexGroupEntity = repository.findById(DEFAULT_ID).get();
-        assertNotNull(clsAgeSexGroupEntity);
+        ClsKindAnimalEntity entity = repository.findById(DEFAULT_ID).get();
+        assertNotNull(entity);
     }
 
     @Test

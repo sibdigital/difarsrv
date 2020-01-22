@@ -41,8 +41,8 @@ public class ClsUserRepositoryTest extends ClsBaseTest {
 
     @Test
     public void findDefaultEntryTest() {
-        ClsUserEntity clsAgeSexGroupEntity = repository.findById(DEFAULT_ID).get();
-        assertNotNull(clsAgeSexGroupEntity);
+        ClsUserEntity entity = repository.findById(DEFAULT_ID).get();
+        assertNotNull(entity);
     }
 
     @Test

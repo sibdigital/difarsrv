@@ -40,8 +40,8 @@ public class ClsFertilizerRepositoryTest extends ClsBaseTest {
 
     @Test
     public void findDefaultEntryTest() {
-        ClsFertilizerEntity clsAgeSexGroupEntity = repository.findById(DEFAULT_ID).get();
-        assertNotNull(clsAgeSexGroupEntity);
+        ClsFertilizerEntity entity = repository.findById(DEFAULT_ID).get();
+        assertNotNull(entity);
     }
 
     @Test

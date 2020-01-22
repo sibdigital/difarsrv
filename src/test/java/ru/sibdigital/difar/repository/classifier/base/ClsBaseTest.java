@@ -5,7 +5,9 @@ import ru.sibdigital.difar.repository.classifier.accs.ClsUserRepository;
 import ru.sibdigital.difar.repository.classifier.agrc.ClsCropRepository;
 import ru.sibdigital.difar.repository.classifier.breed.ClsKindAnimalRepository;
 import ru.sibdigital.difar.repository.classifier.dict.*;
+import ru.sibdigital.difar.repository.classifier.org.ClsDepartRepository;
 import ru.sibdigital.difar.repository.classifier.org.ClsEmployeeRepository;
+import ru.sibdigital.difar.repository.classifier.org.ClsRanchRepository;
 
 public abstract class ClsBaseTest {
 
@@ -50,5 +52,11 @@ public abstract class ClsBaseTest {
 
     @Autowired
     protected ClsLegalEntityRepository legalEntityRepository;
+
+    @Autowired
+    protected ClsDepartRepository departRepository;
+
+    @Autowired
+    protected ClsRanchRepository ranchRepository;
 
 }

@@ -9,31 +9,62 @@ import ru.sibdigital.difar.domain.classifier.accs.ClsUserEntity;
 import ru.sibdigital.difar.domain.classifier.dict.ClsWorkTypeEntity;
 import ru.sibdigital.difar.repository.classifier.base.ClsBaseTest;
 
-import static org.junit.Assert.assertNotNull;
+import java.util.Optional;
+
+import static org.junit.Assert.*;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class ClsWorkTypeRepositoryTest extends ClsBaseTest {
 
     @Autowired
-    private ClsWorkTypeRepository clsWorkTypeRepository;
+    private ClsWorkTypeRepository repository;
 
-    private ClsWorkTypeEntity workTypeRepair() {
+    private ClsWorkTypeEntity getEntityForSave() {
         String number = "00001";
-        String name = "Ремонт";
-        final ClsUserEntity user = userRepository.findById(DEFAULT_ID).get();
-        final ClsWorkTypeEntity entity = new ClsWorkTypeEntity()
-                .setName(name)
+        String name = "Вид работы";
+
+        ClsUserEntity user = userRepository.findById(DEFAULT_ID).get();
+        ClsWorkTypeEntity entity = new ClsWorkTypeEntity();
+        entity.setName(name)
                 .setNumber(number)
-                .setIdUserCreator(user.getId())
-                .setIdParent(EMPTY_PARENT);
+                .setIdUserCreator(user.getId());
+
         return entity;
     }
 
     @Test
-    public void findByIdTest() {
-        ClsWorkTypeEntity clsWorkTypeEntity = clsWorkTypeRepository.findById(1L).get();
-        assertNotNull(clsWorkTypeEntity);
+    public void findDefaultEntryTest() {
+        ClsWorkTypeEntity entity = repository.findById(DEFAULT_ID).get();
+        assertNotNull(entity);
+    }
+
+    @Test
+    public void CRUDTest() throws Exception {
+        // сохранение
+        ClsWorkTypeEntity entity = getEntityForSave();
+        ClsWorkTypeEntity saved = repository.save(entity);
+        assertNotNull(saved);
+        assertNotEquals(saved.getId(), 0L);
+
+        // обновление
+        ClsWorkTypeEntity forUpdate = repository.findByName(entity.getName());
+        String duplicateName = entity.getName() + entity.getName();
+        forUpdate.setName(duplicateName);
+        repository.save(forUpdate);
+        ClsWorkTypeEntity updated = repository.findByName(duplicateName);
+        assertEquals(updated.getName(), duplicateName);
+        assertNotEquals(updated.getName(), entity.getName());//????
+
+        // чтение
+        ClsWorkTypeEntity byNumber = repository.findByNumber(entity.getNumber());
+        assertNotNull(byNumber);
+        assertEquals(updated, byNumber);
+
+        // удаление
+        repository.delete(entity);
+        Optional<ClsWorkTypeEntity> optional = repository.findById(entity.getId());
+        assertFalse(optional.isPresent());
     }
 
 }
