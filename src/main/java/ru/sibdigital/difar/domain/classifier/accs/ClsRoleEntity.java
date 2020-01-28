@@ -93,7 +93,7 @@ public class ClsRoleEntity extends ClsBaseEntity {
     @Id
     @Column(name = "id", nullable = false)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "generator")
-    @SequenceGenerator(name = "generator", sequenceName = "cls_role_id_seq", schema = "accs")
+    @SequenceGenerator(name = "generator", sequenceName = "cls_role_id_seq", schema = "accs", allocationSize = 1)
     public long getId() {
         return id;
     }
