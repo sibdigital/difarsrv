@@ -8,7 +8,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import ru.sibdigital.difar.domain.classifier.accs.ClsUserEntity;
 import ru.sibdigital.difar.domain.classifier.agrc.ClsFertilizerEntity;
 import ru.sibdigital.difar.domain.classifier.dict.ClsUnitEntity;
-import ru.sibdigital.difar.repository.classifier.base.ClsBaseTest;
+import ru.sibdigital.difar.repository.classifier.base.ClsBaseRepositoryTest;
 
 import java.util.Optional;
 
@@ -16,7 +16,7 @@ import static org.junit.Assert.*;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class ClsFertilizerRepositoryTest extends ClsBaseTest {
+public class ClsFertilizerRepositoryTest extends ClsBaseRepositoryTest {
 
     @Autowired
     private ClsFertilizerRepository repository;

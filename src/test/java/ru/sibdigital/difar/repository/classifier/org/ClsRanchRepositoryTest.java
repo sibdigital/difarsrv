@@ -10,7 +10,7 @@ import ru.sibdigital.difar.domain.classifier.dict.ClsDistrictEntity;
 import ru.sibdigital.difar.domain.classifier.dict.ClsOrganizationEntity;
 import ru.sibdigital.difar.domain.classifier.org.ClsDepartEntity;
 import ru.sibdigital.difar.domain.classifier.org.ClsRanchEntity;
-import ru.sibdigital.difar.repository.classifier.base.ClsBaseTest;
+import ru.sibdigital.difar.repository.classifier.base.ClsBaseRepositoryTest;
 
 import java.util.Optional;
 
@@ -18,7 +18,7 @@ import static org.junit.Assert.*;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class ClsRanchRepositoryTest extends ClsBaseTest {
+public class ClsRanchRepositoryTest extends ClsBaseRepositoryTest {
 
     @Autowired
     private ClsRanchRepository repository;

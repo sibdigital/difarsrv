@@ -80,8 +80,8 @@ public class ClsWorkTypeEntity extends ClsBaseEntity {
 
     @Id
     @Column(name = "id", nullable = false)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "cls_work_type_id_seq")
-    @SequenceGenerator(name = "cls_work_type_id_seq", sequenceName = "cls_work_type_id_seq", schema = "breed")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "generator")
+    @SequenceGenerator(name = "generator", sequenceName = "cls_work_type_id_seq", schema = "dict")
     public long getId() {
         return id;
     }

@@ -8,7 +8,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import ru.sibdigital.difar.domain.classifier.accs.ClsUserEntity;
 import ru.sibdigital.difar.domain.classifier.dict.ClsOrganizationEntity;
 import ru.sibdigital.difar.domain.classifier.org.ClsPositionEntity;
-import ru.sibdigital.difar.repository.classifier.base.ClsBaseTest;
+import ru.sibdigital.difar.repository.classifier.base.ClsBaseRepositoryTest;
 
 import java.util.Optional;
 
@@ -16,7 +16,7 @@ import static org.junit.Assert.*;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class ClsPositionRepositoryTest extends ClsBaseTest {
+public class ClsPositionRepositoryTest extends ClsBaseRepositoryTest {
 
     @Autowired
     private ClsPositionRepository repository;

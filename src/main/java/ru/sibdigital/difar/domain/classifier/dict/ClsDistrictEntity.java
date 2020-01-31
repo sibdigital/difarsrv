@@ -98,8 +98,8 @@ public class ClsDistrictEntity extends ClsBaseEntity {
 
     @Id
     @Column(name = "id", nullable = false)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "cls_district_id_seq")
-    @SequenceGenerator(name = "cls_district_id_seq", sequenceName = "cls_district_id_seq", schema = "breed")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "generator")
+    @SequenceGenerator(name = "generator", sequenceName = "cls_district_id_seq", schema = "dict")
     public long getId() {
         return id;
     }
