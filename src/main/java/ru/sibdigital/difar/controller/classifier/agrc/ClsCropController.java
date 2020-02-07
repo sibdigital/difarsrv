@@ -41,4 +41,9 @@ public class ClsCropController {
         return optional.isPresent();
     }
 
+    @GetMapping
+    public Iterable<ClsCropEntity> get() {
+        return repository.findAll();
+    }
+
 }
