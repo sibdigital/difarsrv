@@ -17,7 +17,7 @@ public class ClsCropEntity extends ClsBaseEntity {
     private long idUserCreator;
     private String name;
     private Date dateCreate;
-    private Boolean isDeleted;
+    private Boolean isDeleted = false;
     private String number;
     private String code;
     private long id;
