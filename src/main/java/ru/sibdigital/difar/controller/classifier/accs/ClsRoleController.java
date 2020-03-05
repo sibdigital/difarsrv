@@ -4,7 +4,10 @@ import org.springframework.web.bind.annotation.*;
 import ru.sibdigital.difar.domain.classifier.accs.ClsRoleEntity;
 import ru.sibdigital.difar.repository.classifier.accs.ClsRoleRepository;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/role")
@@ -18,8 +21,7 @@ public class ClsRoleController {
 
     @PostMapping("/create")
     public ClsRoleEntity create(@RequestBody ClsRoleEntity entity) {
-        ClsRoleEntity saved = repository.save(entity);
-        return saved;
+        return repository.save(entity);
     }
 
     @GetMapping("/{id}")
@@ -30,15 +32,24 @@ public class ClsRoleController {
 
     @PutMapping("/update")
     public ClsRoleEntity update(@RequestBody ClsRoleEntity entityToUpdate) {
-        ClsRoleEntity updated = repository.save(entityToUpdate);
-        return updated;
+        return repository.save(entityToUpdate);
     }
 
     @DeleteMapping("/{id}")
     public boolean delete(@PathVariable long id) {
         Optional<ClsRoleEntity> optional = repository.findById(id);
-        optional.ifPresent(entity -> repository.delete(entity));
+        optional.ifPresent(entity -> {
+            entity.setDeleted(true);
+            repository.save(entity);
+        });
         return optional.isPresent();
+    }
+
+    @GetMapping
+    public Iterable<ClsRoleEntity> findAll() {
+        List<ClsRoleEntity> target = new ArrayList<>();
+        repository.findAll().forEach(target::add);
+        return target.stream().filter(element -> element.getDeleted() == null || !element.getDeleted()).collect(Collectors.toList());
     }
 
 }

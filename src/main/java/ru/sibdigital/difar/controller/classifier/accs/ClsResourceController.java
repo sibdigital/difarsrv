@@ -4,7 +4,10 @@ import org.springframework.web.bind.annotation.*;
 import ru.sibdigital.difar.domain.classifier.accs.ClsResourceEntity;
 import ru.sibdigital.difar.repository.classifier.accs.ClsResourceRepository;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/resource")
@@ -18,8 +21,7 @@ public class ClsResourceController {
 
     @PostMapping("/create")
     public ClsResourceEntity create(@RequestBody ClsResourceEntity entity) {
-        ClsResourceEntity saved = repository.save(entity);
-        return saved;
+        return repository.save(entity);
     }
 
     @GetMapping("/{id}")
@@ -30,15 +32,23 @@ public class ClsResourceController {
 
     @PutMapping("/update")
     public ClsResourceEntity update(@RequestBody ClsResourceEntity entityToUpdate) {
-        ClsResourceEntity updated = repository.save(entityToUpdate);
-        return updated;
+        return repository.save(entityToUpdate);
     }
 
     @DeleteMapping("/{id}")
     public boolean delete(@PathVariable long id) {
         Optional<ClsResourceEntity> optional = repository.findById(id);
-        optional.ifPresent(entity -> repository.delete(entity));
+        optional.ifPresent(entity -> {
+            entity.setDeleted(true);
+            repository.save(entity);
+        });
         return optional.isPresent();
     }
 
+    @GetMapping
+    public Iterable<ClsResourceEntity> findAll() {
+        List<ClsResourceEntity> target = new ArrayList<>();
+        repository.findAll().forEach(target::add);
+        return target.stream().filter(element -> element.getDeleted() == null || !element.getDeleted()).collect(Collectors.toList());
+    }
 }

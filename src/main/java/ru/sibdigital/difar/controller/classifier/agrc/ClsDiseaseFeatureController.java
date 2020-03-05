@@ -4,7 +4,10 @@ import org.springframework.web.bind.annotation.*;
 import ru.sibdigital.difar.domain.classifier.agrc.ClsDiseaseFeatureEntity;
 import ru.sibdigital.difar.repository.classifier.agrc.ClsDiseaseFeatureRepository;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/disease-feature")
@@ -18,8 +21,7 @@ public class ClsDiseaseFeatureController {
 
     @PostMapping("/create")
     public ClsDiseaseFeatureEntity create(@RequestBody ClsDiseaseFeatureEntity entity) {
-        ClsDiseaseFeatureEntity saved = repository.save(entity);
-        return saved;
+        return repository.save(entity);
     }
 
     @GetMapping("/{id}")
@@ -30,15 +32,24 @@ public class ClsDiseaseFeatureController {
 
     @PutMapping("/update")
     public ClsDiseaseFeatureEntity update(@RequestBody ClsDiseaseFeatureEntity entityToUpdate) {
-        ClsDiseaseFeatureEntity updated = repository.save(entityToUpdate);
-        return updated;
+        return repository.save(entityToUpdate);
     }
 
     @DeleteMapping("/{id}")
     public boolean delete(@PathVariable long id) {
         Optional<ClsDiseaseFeatureEntity> optional = repository.findById(id);
-        optional.ifPresent(entity -> repository.delete(entity));
+        optional.ifPresent(entity -> {
+            entity.setDeleted(true);
+            repository.save(entity);
+        });
         return optional.isPresent();
+    }
+
+    @GetMapping
+    public Iterable<ClsDiseaseFeatureEntity> findAll() {
+        List<ClsDiseaseFeatureEntity> target = new ArrayList<>();
+        repository.findAll().forEach(target::add);
+        return target.stream().filter(element -> element.getDeleted() == null || !element.getDeleted()).collect(Collectors.toList());
     }
 
 }

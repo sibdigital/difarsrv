@@ -4,7 +4,10 @@ import org.springframework.web.bind.annotation.*;
 import ru.sibdigital.difar.domain.classifier.breed.ClsBreedEntity;
 import ru.sibdigital.difar.repository.classifier.breed.ClsBreedRepository;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/breed")
@@ -18,8 +21,7 @@ public class ClsBreedController {
 
     @PostMapping("/create")
     public ClsBreedEntity create(@RequestBody ClsBreedEntity entity) {
-        ClsBreedEntity saved = repository.save(entity);
-        return saved;
+        return repository.save(entity);
     }
 
     @GetMapping("/{id}")
@@ -30,15 +32,24 @@ public class ClsBreedController {
 
     @PutMapping("/update")
     public ClsBreedEntity update(@RequestBody ClsBreedEntity entityToUpdate) {
-        ClsBreedEntity updated = repository.save(entityToUpdate);
-        return updated;
+        return repository.save(entityToUpdate);
     }
 
     @DeleteMapping("/{id}")
     public boolean delete(@PathVariable long id) {
         Optional<ClsBreedEntity> optional = repository.findById(id);
-        optional.ifPresent(entity -> repository.delete(entity));
+        optional.ifPresent(entity -> {
+            entity.setDeleted(true);
+            repository.save(entity);
+        });
         return optional.isPresent();
+    }
+
+    @GetMapping
+    public Iterable<ClsBreedEntity> findAll() {
+        List<ClsBreedEntity> target = new ArrayList<>();
+        repository.findAll().forEach(target::add);
+        return target.stream().filter(element -> element.getDeleted() == null || !element.getDeleted()).collect(Collectors.toList());
     }
 
 }

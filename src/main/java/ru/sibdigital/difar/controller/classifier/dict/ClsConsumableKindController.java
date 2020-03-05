@@ -4,7 +4,10 @@ import org.springframework.web.bind.annotation.*;
 import ru.sibdigital.difar.domain.classifier.dict.ClsConsumableKindEntity;
 import ru.sibdigital.difar.repository.classifier.dict.ClsConsumableKindRepository;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/consumable-kind")
@@ -18,8 +21,7 @@ public class ClsConsumableKindController {
 
     @PostMapping("/create")
     public ClsConsumableKindEntity create(@RequestBody ClsConsumableKindEntity entity) {
-        ClsConsumableKindEntity saved = repository.save(entity);
-        return saved;
+        return repository.save(entity);
     }
 
     @GetMapping("/{id}")
@@ -30,15 +32,24 @@ public class ClsConsumableKindController {
 
     @PutMapping("/update")
     public ClsConsumableKindEntity update(@RequestBody ClsConsumableKindEntity entityToUpdate) {
-        ClsConsumableKindEntity updated = repository.save(entityToUpdate);
-        return updated;
+        return repository.save(entityToUpdate);
     }
 
     @DeleteMapping("/{id}")
     public boolean delete(@PathVariable long id) {
         Optional<ClsConsumableKindEntity> optional = repository.findById(id);
-        optional.ifPresent(entity -> repository.delete(entity));
+        optional.ifPresent(entity -> {
+            entity.setDeleted(true);
+            repository.save(entity);
+        });
         return optional.isPresent();
+    }
+
+    @GetMapping
+    public Iterable<ClsConsumableKindEntity> findAll() {
+        List<ClsConsumableKindEntity> target = new ArrayList<>();
+        repository.findAll().forEach(target::add);
+        return target.stream().filter(element -> element.getDeleted() == null || !element.getDeleted()).collect(Collectors.toList());
     }
 
 }

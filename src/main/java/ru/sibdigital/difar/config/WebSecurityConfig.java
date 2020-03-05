@@ -1,4 +1,4 @@
-package ru.sibdigital.difar.controller.classifier.security;
+package ru.sibdigital.difar.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

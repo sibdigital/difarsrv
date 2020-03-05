@@ -45,12 +45,11 @@ public class ClsCropController {
         return optional.isPresent();
     }
 
-
     @GetMapping
     public Iterable<ClsCropEntity> findAll() {
         List<ClsCropEntity> target = new ArrayList<>();
         repository.findAll().forEach(target::add);
-        return target.stream().filter(element -> !element.getDeleted()).collect(Collectors.toList());
+        return target.stream().filter(element -> element.getDeleted() == null || !element.getDeleted()).collect(Collectors.toList());
     }
 
 }

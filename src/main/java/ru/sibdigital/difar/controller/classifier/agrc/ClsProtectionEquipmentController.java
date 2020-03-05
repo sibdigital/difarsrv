@@ -4,7 +4,10 @@ import org.springframework.web.bind.annotation.*;
 import ru.sibdigital.difar.domain.classifier.agrc.ClsProtectionEquipmentEntity;
 import ru.sibdigital.difar.repository.classifier.agrc.ClsProtectionEquipmentRepository;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/protection-equipment")
@@ -18,8 +21,7 @@ public class ClsProtectionEquipmentController {
 
     @PostMapping("/create")
     public ClsProtectionEquipmentEntity create(@RequestBody ClsProtectionEquipmentEntity entity) {
-        ClsProtectionEquipmentEntity saved = repository.save(entity);
-        return saved;
+        return repository.save(entity);
     }
 
     @GetMapping("/{id}")
@@ -30,15 +32,24 @@ public class ClsProtectionEquipmentController {
 
     @PutMapping("/update")
     public ClsProtectionEquipmentEntity update(@RequestBody ClsProtectionEquipmentEntity entityToUpdate) {
-        ClsProtectionEquipmentEntity updated = repository.save(entityToUpdate);
-        return updated;
+        return repository.save(entityToUpdate);
     }
 
     @DeleteMapping("/{id}")
     public boolean delete(@PathVariable long id) {
         Optional<ClsProtectionEquipmentEntity> optional = repository.findById(id);
-        optional.ifPresent(entity -> repository.delete(entity));
+        optional.ifPresent(entity -> {
+            entity.setDeleted(true);
+            repository.save(entity);
+        });
         return optional.isPresent();
+    }
+
+    @GetMapping
+    public Iterable<ClsProtectionEquipmentEntity> findAll() {
+        List<ClsProtectionEquipmentEntity> target = new ArrayList<>();
+        repository.findAll().forEach(target::add);
+        return target.stream().filter(element -> element.getDeleted() == null || !element.getDeleted()).collect(Collectors.toList());
     }
 
 }

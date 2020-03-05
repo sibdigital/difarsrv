@@ -4,7 +4,10 @@ import org.springframework.web.bind.annotation.*;
 import ru.sibdigital.difar.domain.classifier.agrc.ClsCropVarietyEntity;
 import ru.sibdigital.difar.repository.classifier.agrc.ClsCropVarietyRepository;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/crop-variety")
@@ -18,8 +21,7 @@ public class ClsCropVarietyController {
 
     @PostMapping("/create")
     public ClsCropVarietyEntity create(@RequestBody ClsCropVarietyEntity entity) {
-        ClsCropVarietyEntity saved = repository.save(entity);
-        return saved;
+        return repository.save(entity);
     }
 
     @GetMapping("/{id}")
@@ -30,15 +32,24 @@ public class ClsCropVarietyController {
 
     @PutMapping("/update")
     public ClsCropVarietyEntity update(@RequestBody ClsCropVarietyEntity entityToUpdate) {
-        ClsCropVarietyEntity updated = repository.save(entityToUpdate);
-        return updated;
+        return repository.save(entityToUpdate);
     }
 
     @DeleteMapping("/{id}")
     public boolean delete(@PathVariable long id) {
         Optional<ClsCropVarietyEntity> optional = repository.findById(id);
-        optional.ifPresent(entity -> repository.delete(entity));
+        optional.ifPresent(entity -> {
+            entity.setDeleted(true);
+            repository.save(entity);
+        });
         return optional.isPresent();
+    }
+
+    @GetMapping
+    public Iterable<ClsCropVarietyEntity> findAll() {
+        List<ClsCropVarietyEntity> target = new ArrayList<>();
+        repository.findAll().forEach(target::add);
+        return target.stream().filter(element -> element.getDeleted() == null || !element.getDeleted()).collect(Collectors.toList());
     }
 
 }

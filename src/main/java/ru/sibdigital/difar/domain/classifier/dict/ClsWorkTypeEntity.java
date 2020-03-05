@@ -16,7 +16,7 @@ public class ClsWorkTypeEntity extends ClsBaseEntity {
     private String number;
     private long id;
     private long idParent;
-//    private String parentPath;
+    private String parentPath;
 
     public ClsWorkTypeEntity() {
         setDeleted(false);
@@ -102,42 +102,43 @@ public class ClsWorkTypeEntity extends ClsBaseEntity {
         return this;
     }
 
-//    @Column(columnDefinition = "ltree", name = "parent_path", nullable = false)
-//    public String getParentPath() {
-//        return parentPath;
-//    }
-//
-//    public ClsWorkTypeEntity setParentPath(String parentPath) {
-//        this.parentPath = parentPath;
-//    }
+    @Column(columnDefinition = "ltree", name = "parent_path", nullable = false)
+    public String getParentPath() {
+        return parentPath;
+    }
 
-//    @Override
-//    public boolean equals(Object o) {
-//        if (this == o) return true;
-//        if (o == null || getClass() != o.getClass()) return false;
-//
-//        ClsWorkTypeEntity that = (ClsWorkTypeEntity) o;
-//
-//        if (idUserCreator != that.idUserCreator) return false;
-//        if (id != that.id) return false;
-//        if (idParent != that.idParent) return false;
-//        if (name != null ? !name.equals(that.name) : that.name != null) return false;
-//        if (dateCreate != null ? !dateCreate.equals(that.dateCreate) : that.dateCreate != null) return false;
-//        if (isDeleted != null ? !isDeleted.equals(that.isDeleted) : that.isDeleted != null) return false;
-//        if (number != null ? !number.equals(that.number) : that.number != null) return false;
-//        return parentPath != null ? parentPath.equals(that.parentPath) : that.parentPath == null;
-//    }
-//
-//    @Override
-//    public int hashCode() {
-//        int result = (int) (idUserCreator ^ (idUserCreator >>> 32));
-//        result = 31 * result + (name != null ? name.hashCode() : 0);
-//        result = 31 * result + (dateCreate != null ? dateCreate.hashCode() : 0);
-//        result = 31 * result + (isDeleted != null ? isDeleted.hashCode() : 0);
-//        result = 31 * result + (number != null ? number.hashCode() : 0);
-//        result = 31 * result + (int) (id ^ (id >>> 32));
-//        result = 31 * result + (int) (idParent ^ (idParent >>> 32));
-//        result = 31 * result + (parentPath != null ? parentPath.hashCode() : 0);
-//        return result;
-//    }
+    public ClsWorkTypeEntity setParentPath(String parentPath) {
+        this.parentPath = parentPath;
+        return this;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        ClsWorkTypeEntity that = (ClsWorkTypeEntity) o;
+
+        if (idUserCreator != that.idUserCreator) return false;
+        if (id != that.id) return false;
+        if (idParent != that.idParent) return false;
+        if (name != null ? !name.equals(that.name) : that.name != null) return false;
+        if (dateCreate != null ? !dateCreate.equals(that.dateCreate) : that.dateCreate != null) return false;
+        if (isDeleted != null ? !isDeleted.equals(that.isDeleted) : that.isDeleted != null) return false;
+        if (number != null ? !number.equals(that.number) : that.number != null) return false;
+        return parentPath != null ? parentPath.equals(that.parentPath) : that.parentPath == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = (int) (idUserCreator ^ (idUserCreator >>> 32));
+        result = 31 * result + (name != null ? name.hashCode() : 0);
+        result = 31 * result + (dateCreate != null ? dateCreate.hashCode() : 0);
+        result = 31 * result + (isDeleted != null ? isDeleted.hashCode() : 0);
+        result = 31 * result + (number != null ? number.hashCode() : 0);
+        result = 31 * result + (int) (id ^ (id >>> 32));
+        result = 31 * result + (int) (idParent ^ (idParent >>> 32));
+        result = 31 * result + (parentPath != null ? parentPath.hashCode() : 0);
+        return result;
+    }
 }

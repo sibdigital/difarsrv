@@ -4,7 +4,10 @@ import org.springframework.web.bind.annotation.*;
 import ru.sibdigital.difar.domain.classifier.dict.ClsUnitRatioEntity;
 import ru.sibdigital.difar.repository.classifier.dict.ClsUnitRatioRepository;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/unit-ratio")
@@ -18,8 +21,7 @@ public class ClsUnitRatioController {
 
     @PostMapping("/create")
     public ClsUnitRatioEntity create(@RequestBody ClsUnitRatioEntity entity) {
-        ClsUnitRatioEntity saved = repository.save(entity);
-        return saved;
+        return repository.save(entity);
     }
 
     @GetMapping("/{id}")
@@ -30,15 +32,24 @@ public class ClsUnitRatioController {
 
     @PutMapping("/update")
     public ClsUnitRatioEntity update(@RequestBody ClsUnitRatioEntity entityToUpdate) {
-        ClsUnitRatioEntity updated = repository.save(entityToUpdate);
-        return updated;
+        return repository.save(entityToUpdate);
     }
 
     @DeleteMapping("/{id}")
     public boolean delete(@PathVariable long id) {
         Optional<ClsUnitRatioEntity> optional = repository.findById(id);
-        optional.ifPresent(entity -> repository.delete(entity));
+        optional.ifPresent(entity -> {
+            entity.setDeleted(true);
+            repository.save(entity);
+        });
         return optional.isPresent();
+    }
+
+    @GetMapping
+    public Iterable<ClsUnitRatioEntity> findAll() {
+        List<ClsUnitRatioEntity> target = new ArrayList<>();
+        repository.findAll().forEach(target::add);
+        return target.stream().filter(element -> element.getDeleted() == null || !element.getDeleted()).collect(Collectors.toList());
     }
 
 }

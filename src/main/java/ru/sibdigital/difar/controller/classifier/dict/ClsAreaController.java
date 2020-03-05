@@ -4,7 +4,10 @@ import org.springframework.web.bind.annotation.*;
 import ru.sibdigital.difar.domain.classifier.dict.ClsAreaEntity;
 import ru.sibdigital.difar.repository.classifier.dict.ClsAreaRepository;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/area")
@@ -18,8 +21,7 @@ public class ClsAreaController {
 
     @PostMapping("/create")
     public ClsAreaEntity create(@RequestBody ClsAreaEntity entity) {
-        ClsAreaEntity saved = repository.save(entity);
-        return saved;
+        return repository.save(entity);
     }
 
     @GetMapping("/{id}")
@@ -30,15 +32,24 @@ public class ClsAreaController {
 
     @PutMapping("/update")
     public ClsAreaEntity update(@RequestBody ClsAreaEntity entityToUpdate) {
-        ClsAreaEntity updated = repository.save(entityToUpdate);
-        return updated;
+        return repository.save(entityToUpdate);
     }
 
     @DeleteMapping("/{id}")
     public boolean delete(@PathVariable long id) {
         Optional<ClsAreaEntity> optional = repository.findById(id);
-        optional.ifPresent(entity -> repository.delete(entity));
+        optional.ifPresent(entity -> {
+            entity.setDeleted(true);
+            repository.save(entity);
+        });
         return optional.isPresent();
+    }
+
+    @GetMapping
+    public Iterable<ClsAreaEntity> findAll() {
+        List<ClsAreaEntity> target = new ArrayList<>();
+        repository.findAll().forEach(target::add);
+        return target.stream().filter(element -> element.getDeleted() == null || !element.getDeleted()).collect(Collectors.toList());
     }
 
 }

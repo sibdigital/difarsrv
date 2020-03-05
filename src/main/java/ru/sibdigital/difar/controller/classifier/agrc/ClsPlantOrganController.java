@@ -4,7 +4,10 @@ import org.springframework.web.bind.annotation.*;
 import ru.sibdigital.difar.domain.classifier.agrc.ClsPlantOrganEntity;
 import ru.sibdigital.difar.repository.classifier.agrc.ClsPlantOrganRepository;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/plant-organ")
@@ -18,8 +21,7 @@ public class ClsPlantOrganController {
 
     @PostMapping("/create")
     public ClsPlantOrganEntity create(@RequestBody ClsPlantOrganEntity entity) {
-        ClsPlantOrganEntity saved = repository.save(entity);
-        return saved;
+        return repository.save(entity);
     }
 
     @GetMapping("/{id}")
@@ -30,15 +32,24 @@ public class ClsPlantOrganController {
 
     @PutMapping("/update")
     public ClsPlantOrganEntity update(@RequestBody ClsPlantOrganEntity entityToUpdate) {
-        ClsPlantOrganEntity updated = repository.save(entityToUpdate);
-        return updated;
+        return repository.save(entityToUpdate);
     }
 
     @DeleteMapping("/{id}")
     public boolean delete(@PathVariable long id) {
         Optional<ClsPlantOrganEntity> optional = repository.findById(id);
-        optional.ifPresent(entity -> repository.delete(entity));
+        optional.ifPresent(entity -> {
+            entity.setDeleted(true);
+            repository.save(entity);
+        });
         return optional.isPresent();
+    }
+
+    @GetMapping
+    public Iterable<ClsPlantOrganEntity> findAll() {
+        List<ClsPlantOrganEntity> target = new ArrayList<>();
+        repository.findAll().forEach(target::add);
+        return target.stream().filter(element -> element.getDeleted() == null || !element.getDeleted()).collect(Collectors.toList());
     }
 
 }
