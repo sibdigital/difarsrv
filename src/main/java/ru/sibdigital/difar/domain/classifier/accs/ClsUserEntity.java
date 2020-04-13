@@ -17,7 +17,7 @@ public class ClsUserEntity extends ClsBaseEntity {
     private long idUserCreator;
     private String name;
     private Date dateCreate;
-    private Boolean isDeleted;
+    private Boolean isDeleted = false;
     private String number;
     private long id;
     private String password;
@@ -26,6 +26,9 @@ public class ClsUserEntity extends ClsBaseEntity {
     private ClsOrganizationEntity clsOrganizationByIdOrganization;
     private ClsEmployeeEntity clsEmployeeByIdEmployee;
     private Collection<RegUserRoleEntity> regUserRolesById;
+
+    public ClsUserEntity() {
+    }
 
     @Basic
     @Column(name = "id_user_creator", nullable = false)
@@ -86,7 +89,7 @@ public class ClsUserEntity extends ClsBaseEntity {
     @Id
     @Column(name = "id", nullable = false)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "generator")
-    @SequenceGenerator(name = "generator", sequenceName = "cls_user_id_seq", schema = "accs")
+    @SequenceGenerator(name = "generator", sequenceName = "cls_user_id_seq", schema = "accs", allocationSize = 1)
     public long getId() {
         return id;
     }

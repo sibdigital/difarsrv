@@ -1,7 +1,8 @@
 package ru.sibdigital.difar.repository.classifier.accs;
 
+import org.springframework.data.jpa.repository.JpaRepository;
 import ru.sibdigital.difar.domain.classifier.accs.ClsUserEntity;
-import ru.sibdigital.difar.repository.classifier.base.ClsCrudRepository;
 
-public interface ClsUserRepository extends ClsCrudRepository<ClsUserEntity> {
+public interface ClsUserRepository extends JpaRepository<ClsUserEntity, Long> {
+    ClsUserEntity findByName(String name);
 }

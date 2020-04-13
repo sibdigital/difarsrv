@@ -51,5 +51,4 @@ public class ClsUserController {
         repository.findAll().forEach(target::add);
         return target.stream().filter(element -> element.getDeleted() == null || !element.getDeleted()).collect(Collectors.toList());
     }
-
 }

@@ -27,7 +27,7 @@ public class ClsCropController {
     @GetMapping("/{id}")
     public ClsCropEntity read(@PathVariable long id) {
         Optional<ClsCropEntity> optional = repository.findById(id);
-        return optional.isPresent() && !optional.get().getDeleted() ? optional.get() : null;
+        return optional.filter(clsCropEntity -> !clsCropEntity.getDeleted()).orElse(null);
     }
 
     @PutMapping("/update")
