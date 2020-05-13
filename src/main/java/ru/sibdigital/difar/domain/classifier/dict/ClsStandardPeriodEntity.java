@@ -1,5 +1,6 @@
 package ru.sibdigital.difar.domain.classifier.dict;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.CreationTimestamp;
 import ru.sibdigital.difar.domain.classifier.base.ClsBaseEntity;
@@ -104,8 +105,8 @@ public class ClsStandardPeriodEntity extends ClsBaseEntity {
         return this;
     }
 
-    @Basic
     @Column(name = "date_begin", nullable = true)
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     public Date getDateBegin() {
         return dateBegin;
     }
@@ -115,8 +116,8 @@ public class ClsStandardPeriodEntity extends ClsBaseEntity {
         return this;
     }
 
-    @Basic
     @Column(name = "date_end", nullable = true)
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     public Date getDateEnd() {
         return dateEnd;
     }

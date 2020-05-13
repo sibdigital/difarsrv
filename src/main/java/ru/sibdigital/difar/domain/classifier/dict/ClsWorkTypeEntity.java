@@ -5,6 +5,7 @@ import ru.sibdigital.difar.domain.classifier.base.ClsBaseEntity;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.Objects;
 
 @Entity
 @Table(name = "cls_work_type", schema = "dict")
@@ -16,7 +17,7 @@ public class ClsWorkTypeEntity extends ClsBaseEntity {
     private String number;
     private long id;
     private long idParent;
-    private String parentPath;
+//    private String parentPath;
 
     public ClsWorkTypeEntity() {
         setDeleted(false);
@@ -102,43 +103,33 @@ public class ClsWorkTypeEntity extends ClsBaseEntity {
         return this;
     }
 
-    @Column(columnDefinition = "ltree", name = "parent_path", nullable = false)
-    public String getParentPath() {
-        return parentPath;
-    }
+//    @Column(columnDefinition = "ltree", name = "parent_path", nullable = false)
+//    public String getParentPath() {
+//        return parentPath;
+//    }
+//
+//    public ClsWorkTypeEntity setParentPath(String parentPath) {
+//        this.parentPath = parentPath;
+//        return this;
+//    }
 
-    public ClsWorkTypeEntity setParentPath(String parentPath) {
-        this.parentPath = parentPath;
-        return this;
-    }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-
         ClsWorkTypeEntity that = (ClsWorkTypeEntity) o;
-
-        if (idUserCreator != that.idUserCreator) return false;
-        if (id != that.id) return false;
-        if (idParent != that.idParent) return false;
-        if (name != null ? !name.equals(that.name) : that.name != null) return false;
-        if (dateCreate != null ? !dateCreate.equals(that.dateCreate) : that.dateCreate != null) return false;
-        if (isDeleted != null ? !isDeleted.equals(that.isDeleted) : that.isDeleted != null) return false;
-        if (number != null ? !number.equals(that.number) : that.number != null) return false;
-        return parentPath != null ? parentPath.equals(that.parentPath) : that.parentPath == null;
+        return idUserCreator == that.idUserCreator &&
+                id == that.id &&
+                idParent == that.idParent &&
+                Objects.equals(name, that.name) &&
+                Objects.equals(dateCreate, that.dateCreate) &&
+                Objects.equals(isDeleted, that.isDeleted) &&
+                Objects.equals(number, that.number);
     }
 
     @Override
     public int hashCode() {
-        int result = (int) (idUserCreator ^ (idUserCreator >>> 32));
-        result = 31 * result + (name != null ? name.hashCode() : 0);
-        result = 31 * result + (dateCreate != null ? dateCreate.hashCode() : 0);
-        result = 31 * result + (isDeleted != null ? isDeleted.hashCode() : 0);
-        result = 31 * result + (number != null ? number.hashCode() : 0);
-        result = 31 * result + (int) (id ^ (id >>> 32));
-        result = 31 * result + (int) (idParent ^ (idParent >>> 32));
-        result = 31 * result + (parentPath != null ? parentPath.hashCode() : 0);
-        return result;
+        return Objects.hash(idUserCreator, name, dateCreate, isDeleted, number, id, idParent);
     }
 }

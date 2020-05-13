@@ -24,6 +24,11 @@ public class ClsEmployeeController {
         return repository.save(entity);
     }
 
+    @PutMapping("/update")
+    public ClsEmployeeEntity update(@RequestBody ClsEmployeeEntity entity) {
+        return repository.save(entity);
+    }
+
     @GetMapping("/{id}")
     public ClsEmployeeEntity read(@PathVariable long id) {
         Optional<ClsEmployeeEntity> optional = repository.findById(id);
