@@ -59,13 +59,13 @@ language 'plpgsql' immutable
 ;
 -----------------------------------------------------------------------------------------------------------------------
 insert into dict.cls_legal_entity(name, date_create, number, inn, description, id_user_creator)
-values (base.default_name(), '-infinity', base.default_number(), '', '{}'::json, 1)
+values (base.default_name(), '2020-01-01', base.default_number(), '', '{}'::json, 1)
 ;
 insert into dict.cls_organization(name, date_create, number, inn,
     id_legal_entity,
     id_user_creator
 )
-values (base.default_name(), '-infinity', base.default_number(), '',
+values (base.default_name(), '2020-01-01', base.default_number(), '',
     base.get_default_relation('dict.cls_legal_entity'),
     1
 )
@@ -75,7 +75,7 @@ insert into org.cls_depart(name, date_create, number,
     id_organization,
     id_user_creator
 )
-values (base.default_name(), '-infinity', base.default_number(),
+values (base.default_name(), '2020-01-01', base.default_number(),
     base.get_default_relation('dict.cls_legal_entity'),
     base.get_default_relation('dict.cls_organization'),
     1
@@ -86,7 +86,7 @@ insert into org.cls_employee(name, date_create, number,
     id_organization,
     id_user_creator
 )
-values (base.default_name(), '-infinity', base.default_number(),
+values (base.default_name(), '2020-01-01', base.default_number(),
     base.get_default_relation('org.cls_depart'),
     base.get_default_relation('dict.cls_organization'),
     1
@@ -97,7 +97,7 @@ insert into dict.cls_work_type(name, date_create, number,
                                id_user_creator,
                                parent_path
 )
-values (base.default_name(), '-infinity', base.default_number(),
+values (base.default_name(), '2020-01-01', base.default_number(),
         0,
         1,
         '000000000000000'

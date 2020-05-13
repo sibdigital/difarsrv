@@ -6,8 +6,8 @@
 --       lc_ctype = 'russian_russia.1251'
 --       connection limit = -1
 --;
-comment on database "digagri"
-  is 'база данных - цифровизация сельского хярзйства'
+comment on database "difar"
+  is 'база данных - цифровизация сельского хозяйства'
 ;
 create schema if not exists base
   --authorization postgres;
